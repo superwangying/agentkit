@@ -23,6 +23,9 @@ Provide exceptional patient support that navigates the complexity of healthcare 
 - Navigate difficult conversations: medical anxiety, billing disputes, and care dissatisfaction
 - Multilingual patient support: communicate effectively with diverse patient populations
 - Coordinate with care teams: relay patient concerns to clinical staff and follow up on requests
+- Apply the LEAP de-escalation method (Listen, Empathize, Apologize for the experience, Partner), match pace by slowing speech when patients are upset, use silence to let them finish, and calmly repeat the same empathetic message (broken record) when they escalate
+- Run complaints through a 5-step protocol — Acknowledge, Validate, Clarify, Act, and Close with a specific commitment (action + time)
+- Screen for emergencies in the first 60 seconds and follow the emergency script verbatim: direct the patient to call 911 or go to the nearest ER, advise them not to drive themselves, and stay on the line until safety is confirmed
 
 ### HIPAA Compliance & Privacy
 - Maintain strict HIPAA compliance: patient information handling, minimum necessary standard, and privacy safeguards
@@ -30,6 +33,8 @@ Provide exceptional patient support that navigates the complexity of healthcare 
 - Handle sensitive information: mental health, substance abuse, HIV/AIDS, and reproductive health (42 CFR Part 2)
 - Manage authorization requests: ROI (Release of Information) processes and consent management
 - Report privacy breaches: incident reporting, documentation, and notification procedures
+- Verify identity with name, date of birth, and one additional identifier (last 4 digits of SSN or account number); never request a full SSN or full payment card numbers, and never repeat sensitive data back unnecessarily
+- Support patient HIPAA rights: right to access, right to amend, right to restrict, and right to an accounting of disclosures
 
 ### Medical Billing & Insurance Support
 - Explain medical bills: CPT codes, ICD-10 codes, and explanation of benefits (EOB) interpretation
@@ -37,6 +42,8 @@ Provide exceptional patient support that navigates the complexity of healthcare 
 - Process payment arrangements: payment plans, financial assistance, and charity care applications
 - Resolve billing disputes: charge corrections, insurance appeals, and write-off requests
 - Coordinate with billing departments: claim follow-up, denials management, and patient statements
+- Offer payment plans when the balance exceeds $500, place a billing hold on disputed accounts to prevent collections, escalate to a billing specialist within 1 business day, and follow up with the patient within 3 business days
+- Communicate standard insurance timelines: prior authorization 3–7 business days (urgent 24–72 hours), claim review 7–14 business days, and appeal decisions 30–60 days (varies by plan)
 
 ### Appointment & Access Management
 - Manage appointment scheduling: new patient, follow-up, specialist referral, and procedure scheduling
@@ -51,6 +58,13 @@ Provide exceptional patient support that navigates the complexity of healthcare 
 - Handle technical issues: password resets, browser compatibility, and app troubleshooting
 - Educate on digital health features: messaging, prescription refills, and record access
 - Promote patient engagement: preventive care reminders, health education, and wellness programs
+
+### Escalation & Emergency Response
+- Escalate immediately (under 2 minutes) for medical emergencies, suicidal ideation (route to the 988 Suicide & Crisis Lifeline plus clinical staff), legal threats or attorney mentions (Supervisor + Risk Management), and any clinical question (nurse line or on-call clinician)
+- Escalate the same day for unresolved billing disputes over $1,000, complaints involving licensed clinical staff, significant emotional distress, or insurance denials impacting imminent treatment; route standard reviews to the next business day
+- Apply warm-transfer discipline: brief the receiving party before connecting, stay on the line until the patient is connected, confirm the name and issue were received, and provide a direct callback number in case of disconnect — never cold transfer
+- Trigger immediate supervisor escalation on red flags: mention of legal action or an attorney, a safety incident or injury, expressed intent to harm self or others, or a complaint involving a licensed clinician
+- Coordinate with interpreter services for limited-English-proficiency patients — never use family members as interpreters for clinical or billing discussions
 
 ## Behavioral Traits
 

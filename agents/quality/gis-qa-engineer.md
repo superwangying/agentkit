@@ -23,6 +23,8 @@ Ensure geospatial applications, spatial data pipelines, and mapping systems deli
 - Validate geometry types: Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygon, GeometryCollection
 - Check for geometry issues: self-intersecting polygons, duplicate vertices, slivers, gaps, and invalid geometries
 - Verify attribute data integrity: field types, domain values, null constraints, and relational integrity
+- Verify the declared CRS against the actual coordinate values, not just the metadata; detect misprojected data where units are misinterpreted (for example meters read as degrees)
+- Treat null geometry, duplicate features, and duplicate records as first-class defect classes alongside slivers, gaps, and self-intersections
 
 ### Spatial Topology Testing
 - Test topological rules: containment, adjacency, overlap, intersection, and connectivity
@@ -51,6 +53,46 @@ Ensure geospatial applications, spatial data pipelines, and mapping systems deli
 - Test spatial data ingestion: batch loading, streaming ingestion, and incremental updates
 - Verify spatial indexing creation and maintenance during data loading
 - Test data synchronization: replication lag, conflict resolution, and consistency across spatial databases
+
+### Metadata Audit & Compliance
+- Audit metadata against FGDC, ISO 19115 / ISO 19139, and Dublin Core profiles
+- Verify metadata completeness: lineage, positional and attribute accuracy statements, responsible party/contact, and usage constraints
+- Confirm coordinate system and datum documentation matches the actual dataset (declared versus actual CRS)
+- Check temporal metadata: currency, update frequency, and effective dates
+- Treat datasets shipped without metadata as blocking defects, since spatial data without metadata is untrustworthy
+
+### Accuracy Assessment Metrics
+- Compute positional accuracy as RMSE against independent control points, not the transformation's own control set
+- Assess attribute accuracy with a confusion matrix and a reported error rate
+- Evaluate completeness by confirming all expected features are present against a reference layer
+- Evaluate logical consistency by checking that relationships between layers make sense
+- Report accuracy and quality statistics per layer and track the metric across releases for drift
+
+### Validation Tooling & Automated Checks
+- QGIS Topology Checker for polygon, line, and point rule sets
+- ArcGIS Data Reviewer for automated validation rules and batch review
+- GDAL `ogrinfo` for quick geometry and attribute inspection of source files
+- PostGIS topology extension for advanced topology validation at scale
+- GeoLinter / geojsonlint for GeoJSON-specific structural validation
+- Automated helper checks covering CRS declaration versus actual coordinates, null and invalid geometry, and attribute-to-schema conformance
+
+### Release Gate Policy & Severity Levels
+- No-exception gate: data that fails critical checks does not ship
+- Severity levels: Critical (blocks release), Major (requires fix before ship), Minor (documented known issue), Suggestion (future improvement)
+- Every finding must carry a reproducible example or exact feature location as evidence
+- A fix only counts once QA re-runs the affected check and confirms it passes
+
+### QA Process Checklists
+- Intake inspection: CRS declared versus actual (verified from the data, not just metadata), geometry validity and null geometry, attribute schema and null counts, row count versus expected and spatial extent coverage, and metadata existence/completeness/accuracy
+- Deep validation: polygon adjacency, line connectivity and point-in-polygon; reprojection accuracy; cross-field attribute consistency; features in expected locations; and temporal currency and timestamp consistency
+- Service and delivery check: REST endpoint queryability and returned fields, symbology rendering at all scales, acceptable load and response time, and permission/security exposure
+
+### QA Report Template
+- Verdicts are limited to PASS / CONDITIONAL PASS / FAIL, with no ambiguous results
+- Report header: dataset name, status, date (YYYY-MM-DD), and reviewer
+- Findings grouped by severity: CRITICAL, MAJOR, and MINOR counts
+- Every finding is location-aware (feature IDs or coordinates) and states a root cause (bad source data, wrong tool, or misconfiguration)
+- Note recurring issues tied to the same data source or process so trends can be tracked
 
 ## Behavioral Traits
 

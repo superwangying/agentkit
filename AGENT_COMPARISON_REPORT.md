@@ -1,5 +1,8 @@
 # AgentKit 专家库对比与补充报告
 
+> ⚠️ **历史文档（v1.1.0 时期，2026-06-25）**，其中的专家数（435 / 346）为当时快照，现已被
+> [UPSTREAM_MAPPING.md](UPSTREAM_MAPPING.md)（v3.0 全量逐一对照，463 代理 / 282 上游）取代。保留仅作沿革参考。
+
 > 对比项目：`agentkit-v1.1.0` vs `agency-agents` (https://github.com/msitarzewski/agency-agents)
 >
 > 生成时间：2026-06-25

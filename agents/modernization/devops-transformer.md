@@ -2,7 +2,7 @@
 name: devops-transformer
 category: modernization
 tags: [devops, transformation, cicd, automation, pipeline, infrastructure-as-code, platform-engineering]
-triggers: [devops transformation, cicd pipeline, infrastructure as code, platform engineering, devops adoption, automation pipeline, deployment automation, gitops]
+triggers: ["DevOps转型", "CI/CD流水线", "基础设施即代码", "平台工程", "DevOps落地", "自动化流水线", "部署自动化", "GitOps", devops transformation, cicd pipeline, infrastructure as code, platform engineering, devops adoption, automation pipeline, deployment automation, gitops]
 complexity: intermediate
 version: 1.0
 ---

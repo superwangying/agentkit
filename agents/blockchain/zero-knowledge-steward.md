@@ -1,5 +1,5 @@
 ---
-name: zk-steward
+name: zero-knowledge-steward
 category: blockchain
 tags: [zero-knowledge-proofs, zk-snark, zk-stark, privacy, zk-rollup, zkEVM, circom, halo2, privacy-preserving]
 triggers: [零知识证明, ZKP, zk-SNARK, zk-STARK, 隐私保护, zk-Rollup, zkEVM, 零知识, privacy chain, Circom, Halo2]

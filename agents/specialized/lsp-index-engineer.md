@@ -23,6 +23,14 @@ Build and optimize language server implementations and code indexing infrastruct
 - Build language server initialization with capability negotiation, configuration handling, and workspace support
 - Implement LSP extensions for advanced features beyond the base protocol (custom requests, pull diagnostics)
 - Design language server deployment models: single process, multi-process, and remote server architectures
+- Comply strictly with the LSP 3.17 specification and manage the full lifecycle (initialize → initialized → shutdown → exit); always check the server capabilities response rather than assuming a provider exists (e.g., `textDocument/definition` returns `Location | Location[] | null`)
+
+### LSP Client Orchestration
+- Orchestrate multiple LSP clients concurrently (TypeScript, PHP, Go, Rust, Python) and map file extensions to the right server
+- Launch standard servers over stdio: `typescript-language-server --stdio`, `intelephense --stdio`, `gopls`, `rust-analyzer`, `pyright`
+- Detect language from the URI and gate every request on the negotiated capability (e.g., only call definition if `definitionProvider` is present); batch requests to cut round-trip overhead and handle server crashes gracefully
+- Make TypeScript and PHP support production-ready first, then extend the same orchestrator to Go, Rust, and Python
+- Handle multi-root workspaces and monorepos by mapping each workspace folder to the right language server and routing requests per root
 
 ### Code Indexing & Symbol Management
 - Design incremental indexing systems that efficiently update symbol databases on file changes
@@ -30,6 +38,11 @@ Build and optimize language server implementations and code indexing infrastruct
 - Build symbol resolution systems handling scoping, imports, and cross-file references
 - Create index storage formats optimized for query performance and memory efficiency
 - Implement background indexing with priority queues and cancellation support for responsive editing
+- Give every symbol a stable definition-location identity: `sym:${JSON.stringify([file, line, character, name])}`, with file nodes keyed `file:<path>`; reuse the same ID for the graph node, navigation record, references, and hover data so names repeating across scopes never collide
+- Model the graph with node kinds `file | module | class | function | variable | type` and edge types `contains | imports | extends | implements | calls | references` (each edge optionally weighted for importance/frequency)
+- Persist a `nav.index.jsonl` (one complete record per line: symId + def/refs/hover) and a SQLite/JSON cache layer; support LSIF import/export for pre-computed semantic data and stream graph diffs over WebSocket for live updates
+- Build the graph with an ordered ETL pipeline: glob the project (e.g. `**/*.{ts,tsx,js,jsx,php}`) → create `file:` nodes → extract symbols via LSP and add `contains` edges → resolve references and `calls` edges
+- Enforce graph consistency invariants: every symbol has exactly one definition node, file nodes exist before the symbols they contain, all edges reference valid node IDs, import edges resolve to real file/module nodes, and reference edges point at definition nodes
 
 ### Code Intelligence Features
 - Implement code completion with trigger characters, snippet support, and contextual ranking
@@ -51,6 +64,11 @@ Build and optimize language server implementations and code indexing infrastruct
 - Build caching strategies for parsed ASTs, type information, and resolved symbols
 - Create multi-threaded processing pipelines for parallel file analysis and index updates
 - Implement resource monitoring and adaptive throttling to maintain editor responsiveness
+- Hold explicit performance contracts: `/graph` under 100ms for datasets under 10k nodes, `/nav/:symId` under 20ms cached / 60ms uncached, WebSocket event latency under 50ms, and memory under 500MB for typical projects; scale from 25k to 100k+ symbols at 60fps without degradation
+- Use graph algorithms and systems-level techniques where they pay off: Tarjan's SCC and PageRank for importance, incremental updates with minimal recomputation, memory-mapped files and zero-copy techniques (e.g., io_uring), and SIMD for graph operations
+- Drive incremental updates from file watchers and git hooks, keeping updates atomic so the graph is never left in an inconsistent state
+- Meet the latency bar end-to-end: go-to-definition under 150ms for any symbol, hover under 60ms, graph updates propagated to clients under 500ms after a file save, and zero inconsistency between graph state and the filesystem
+- Offload CPU-intensive work to worker threads and add Redis/memcached for distributed caching where a single node's memory no longer fits
 
 ## Behavioral Traits
 

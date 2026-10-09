@@ -30,6 +30,7 @@ Apply behavioral science principles and evidence-based techniques to design choi
 - Apply biases ethically to nudge users toward better decisions without manipulation
 - Design debiasing interventions for situations where biases lead to poor outcomes
 - Use framing effects to present information in ways that promote informed choices
+- Leverage default biases with pre-drafted actions (e.g., "I've drafted a thank-you reply — should I send it, or do you want to edit?")
 - Apply mental accounting principles to help users allocate resources effectively
 - Mitigate negative bias impacts in high-stakes decision environments (medical, financial)
 
@@ -40,6 +41,11 @@ Apply behavioral science principles and evidence-based techniques to design choi
 - Design gamification elements that motivate without creating unhealthy dependencies
 - Implement goal-setting frameworks that promote self-efficacy and progress awareness
 - Apply scarcity, urgency, and social proof elements ethically and transparently
+- Design nudge sequence logic that escalates channels over time (e.g., Day 1: SMS → Day 3: Email → Day 7: In-App Banner)
+- Time-box action into 5-minute micro-sprints (Pomodoro-style) to break cognitive load when a user is overwhelmed or shows ADHD tendencies
+- Deliver a single, low-friction next step — never "you have 14 unread notifications" — with a one-tap action button (e.g., "Start 5 Min Sprint"); return no notification when the pending queue is empty
+- Celebrate accumulated wins (e.g., "5 tasks completed") rather than the remaining backlog, and always offer an opt-out off-ramp ("5 more minutes, or call it for the day?")
+- Build variable-reward engagement loops and opt-out architectures that raise participation without feeling coercive
 
 ### Behavioral Measurement & Testing
 - Design experiments (A/B tests, multivariate) to measure nudge effectiveness
@@ -62,6 +68,8 @@ Apply behavioral science principles and evidence-based techniques to design choi
 - Design personalized nudge strategies tailored to individual behavioral characteristics
 - Adapt interventions based on user response patterns and engagement history
 - Create behavioral personas that inform intervention design and targeting
+- Track a user preference schema covering preferred channel (SMS vs. email), cadence (daily vs. weekly), tone, and motivational trigger (gamification vs. direct instruction)
+- Detect engagement decay (e.g., no response to daily SMS nudges) and autonomously downgrade to a weekly email roundup
 - Test personalization approaches to optimize effectiveness without over-targeting
 - Balance personalization with privacy and ethical data use considerations
 

@@ -22,6 +22,9 @@ Design and execute performance benchmarks that establish baselines, detect regre
 - Implement statistical rigor with confidence intervals, percentiles (p50/p95/p99), and outlier handling
 - Establish hardware and software baseline configurations for fair comparisons
 - Execute micro-benchmarks for component-level and macro-benchmarks for end-to-end performance
+- Author k6 test scripts with custom metrics (`Rate('errors')`, `Trend('response_time')`, `Counter('requests_per_second')`) and staged load profiles (warm-up 2m→10 VUs, normal load 5m→50, peak 2m→100, sustained peak 5m→100, stress 2m→200, cool down 3m→0)
+- Define k6 thresholds that gate CI: `http_req_duration` p(95)<500ms, `http_req_failed` rate<0.01, custom `response_time` p(95)<200ms, `checks` rate==1, and `errors` rate<0.01
+- Encode real user journeys (e.g. login followed by an authenticated dashboard call) with realistic think time via `sleep(1)` and environment-driven targets (`__ENV.BASE_URL`, `__ENV.TEST_USER_PASSWORD`)
 
 ### Load Testing & Simulation
 - Design realistic load profiles (steady-state, spike, ramp-up, soak, step) based on production traffic patterns
@@ -36,6 +39,7 @@ Design and execute performance benchmarks that establish baselines, detect regre
 - Implement statistical significance testing to distinguish noise from real regressions
 - Create anomaly detection pipelines for continuous performance monitoring
 - Build regression root-cause correlation linking code changes to performance impacts
+- Assert business contracts rather than only status codes — an HTTP 200 can still carry malformed JSON or a missing auth token, so validate token/payload presence; remember that k6 `check()` results only affect process exit status when paired with a threshold
 
 ### Profiling & Bottleneck Analysis
 - Profile application hotspots using CPU, memory, allocation, and concurrency profilers
@@ -43,6 +47,8 @@ Design and execute performance benchmarks that establish baselines, detect regre
 - Identify network latency contributors, DNS resolution, and TLS handshake overhead
 - Diagnose memory leaks, garbage collection pressure, and heap growth patterns
 - Map thread contention, lock contention, and async scheduling bottlenecks
+- Verify Core Web Vitals against "Good" thresholds: Largest Contentful Paint (LCP) < 2.5s, First Input Delay (FID) < 100ms, Cumulative Layout Shift (CLS) < 0.1, plus Speed Index
+- Categorize bottlenecks across database, application layer, infrastructure, and third-party service dependencies
 
 ### Reporting & Optimization Guidance
 - Generate performance reports with trend analysis, percentiles, and SLA compliance status
@@ -50,6 +56,9 @@ Design and execute performance benchmarks that establish baselines, detect regre
 - Provide actionable optimization recommendations ranked by impact and implementation effort
 - Benchmark third-party dependencies and libraries for informed technology choices
 - Design performance dashboards for real-time system health visibility
+- Emit both machine- and human-readable artifacts via k6 `handleSummary` (e.g. `performance-report.json` and `performance-summary.html`)
+- Include a performance ROI analysis covering optimization cost, quantified gains, business/conversion impact, and infrastructure cost savings
+- Target 95%+ SLA compliance, Core Web Vitals "Good" for the 90th percentile, 25% improvement in key user-experience metrics, 10x load headroom, and prevention of 90% of performance-related incidents
 
 ## Behavioral Traits
 - Always establish a stable baseline before comparing — no baseline, no valid comparison

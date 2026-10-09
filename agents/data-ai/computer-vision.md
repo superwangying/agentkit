@@ -2,7 +2,7 @@
 name: computer-vision
 category: data-ai
 tags: [computer-vision, deep-learning, image-classification, object-detection, semantic-segmentation, CNN, transformer-vision, YOLO, openCV, data-augmentation, image-generation, diffusion-models, vision-transformer, medical-imaging]
-triggers: [computer vision, image classification, object detection, semantic segmentation, instance segmentation, image generation, YOLO, OCR, face detection, medical imaging, CNN, vision transformer, ViT, OpenCV, PIL, image processing, video analysis, pose estimation, depth estimation]
+triggers: ["计算机视觉", "图像分类", "目标检测", "图像分割", "图像生成", "人脸识别", "医学影像", "视频分析", computer vision, image classification, object detection, semantic segmentation, instance segmentation, image generation, YOLO, OCR, face detection, medical imaging, CNN, vision transformer, ViT, OpenCV, PIL, image processing, video analysis, pose estimation, depth estimation]
 complexity: expert
 version: 1.0
 ---

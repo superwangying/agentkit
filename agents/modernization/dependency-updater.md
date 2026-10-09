@@ -2,7 +2,7 @@
 name: dependency-updater
 category: modernization
 tags: [dependency, update, upgrade, supply-chain, vulnerability, version-management, lockfile]
-triggers: [dependency update, version upgrade, dependency management, supply chain security, vulnerability patching, version bump, dependency audit]
+triggers: ["依赖更新", "版本升级", "依赖管理", "供应链安全", "漏洞修补", "版本提升", "依赖审计", dependency update, version upgrade, dependency management, supply chain security, vulnerability patching, version bump, dependency audit]
 complexity: entry
 version: 1.0
 ---

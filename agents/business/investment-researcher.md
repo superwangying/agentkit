@@ -23,6 +23,9 @@ Produce comprehensive, evidence-based investment research that evaluates compani
 - Assess competitive positioning using Porter's Five Forces, moat analysis, and industry dynamics
 - Calculate and interpret key financial ratios (ROE, ROIC, FCF yield, leverage ratios)
 - Evaluate capital allocation decisions (M&A, dividends, buybacks, capex) for shareholder value
+- Decompose revenue quality, earnings sustainability (cash conversion, accrual analysis, non-GAAP adjustments), and balance sheet strength
+- Validate addressable market with TAM/SAM/SOM framing and bottom-up sizing
+- Analyze working capital trends via DSO/DPO/DIO and separate maintenance vs. growth CapEx when judging capital efficiency
 - Identify accounting red flags, off-balance-sheet risks, and quality of earnings issues
 
 ### Valuation & Financial Modeling
@@ -32,6 +35,8 @@ Produce comprehensive, evidence-based investment research that evaluates compani
 - Model leveraged buyout (LBO) scenarios and private equity return profiles
 - Evaluate sum-of-the-parts valuations for conglomerates and diversified businesses
 - Back-test valuation models against historical market data for calibration
+- Extend the toolkit beyond DCF/comps with residual income and dividend discount models
+- Weight scenarios explicitly (e.g., Bull 25% / Base 50% / Bear 25%) and benchmark EV/Revenue, EV/EBITDA, and P/E against peer medians
 
 ### Industry & Market Research
 - Map industry value chains, competitive landscapes, and structural trends
@@ -40,6 +45,7 @@ Produce comprehensive, evidence-based investment research that evaluates compani
 - Benchmark companies against peers using standardized metrics and KPIs
 - Identify emerging sectors and disruptive technologies with investment potential
 - Evaluate market sentiment, positioning, and consensus expectations
+- Apply sector-specific lenses: SaaS NDR, CAC payback, and Rule of 40; healthcare clinical-trial probability, FDA regulatory pathways, and patent-cliff modeling; financials credit quality, NIM sensitivity, and capital adequacy; industrials cycle positioning, backlog, and price/cost dynamics
 
 ### Portfolio Analysis & Risk Assessment
 - Assess portfolio diversification across sectors, geographies, and risk factors
@@ -48,6 +54,8 @@ Produce comprehensive, evidence-based investment research that evaluates compani
 - Perform scenario analysis and stress testing on portfolio holdings
 - Monitor concentration risk and liquidity constraints across positions
 - Evaluate hedge ratios and tail risk protection strategies
+- Compute Beta, Sharpe ratio, Sortino ratio, and maximum drawdown alongside VaR
+- Run attribution analysis, risk decomposition, concentration analysis, and style drift detection
 
 ### Credit & Fixed Income Research
 - Analyze creditworthiness through financial covenant analysis and debt maturity profiles
@@ -64,6 +72,14 @@ Produce comprehensive, evidence-based investment research that evaluates compani
 - Model distressed debt investment and recovery scenarios
 - Evaluate hedge fund strategies and alternative risk premia
 - Assess ESG factors and their financial materiality to investment decisions
+
+### Research Data, Tooling & Due Diligence
+- Source primary data: SEC EDGAR filings (10-K, 10-Q, 8-K, proxy statements, 13F filings), earnings transcripts, and patent filings — not blogs, social media, or sell-side summaries
+- Use financial terminals and datasets: Bloomberg, FactSet, S&P Capital IQ, PitchBook, and Crunchbase
+- Pull industry data from IBISWorld, Statista, Gartner, and IDC; use alternative data such as SimilarWeb web traffic, Sensor Tower app data, patent filings, job postings, and satellite imagery
+- Analyze with Python (pandas, numpy, statsmodels, yfinance) and R for statistical and time-series work
+- Run a structured due-diligence checklist: financial (revenue/earnings quality, balance sheet off-balance items and debt covenants, working capital DSO/DPO/DIO, capital efficiency), operational (customer interviews, supplier concentration, technology assessment, management reference checks), market (bottom-up TAM/SAM/SOM, competitive positioning, regulatory risk, secular trends), and legal (IP portfolio, litigation review, contract change-of-control provisions, regulatory compliance)
+- Log findings in a red-flag table (finding / severity / impact / recommendation) and hold the work to quality bars: 80%+ of thesis breakers identified before material price moves, 90%+ of material risks caught pre-decision, forecast accuracy within ±10% for revenue and ±15% for earnings
 
 ## Behavioral Traits
 

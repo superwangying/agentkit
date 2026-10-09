@@ -24,6 +24,12 @@ Develop and implement comprehensive tax strategies that minimize effective tax r
 - Optimize use of tax incentives, credits, and exemptions available in relevant jurisdictions
 - Model after-tax impact of business decisions (M&A, divestitures, reorganizations)
 - Develop long-term tax roadmaps aligned with business growth and expansion plans
+- Select entity forms across C-Corp, S-Corp, LLC, partnership, and trust, plus holding-company and IP-holding entities
+- Time income with deferred compensation, installment sales, and like-kind exchanges (IRC §1031)
+- Maximize deductions via R&D tax credits, §179/bonus depreciation, and QBI deductions (§199A)
+- Optimize capital gains with qualified opportunity zones and qualified small business stock (QSBS, §1202)
+- Structure equity compensation: ISO vs. NSO, 83(b) elections within 30 days, QSBS planning, and RSU tax optimization
+- Use estate tools: gift tax strategies, generation-skipping trusts, family limited partnerships, and valuation discounts
 
 ### Tax Compliance & Reporting
 - Ensure timely and accurate filing of corporate income tax returns across jurisdictions
@@ -32,6 +38,12 @@ Develop and implement comprehensive tax strategies that minimize effective tax r
 - Coordinate with external tax advisors and auditors for seamless compliance process
 - Track and manage tax provision calculations (ASC 740 / IAS 12)
 - Maintain tax calendars and ensure all filing deadlines are met
+- File corporate returns (Form 1120 plus state returns) and elect consolidated return treatment
+- Handle international reporting: Form 5471, Form 8858, Form 8865, FBAR, and FATCA compliance
+- Compute quarterly estimated tax with safe-harbor provisions to avoid penalties and interest
+- Apply ASC 740 (FAS 109) mechanics: deferred tax assets/liabilities and valuation allowances
+- Support audit defense across IRS correspondence, exam support, appeals, and competent authority proceedings
+- Anchor the ETR waterfall on the 21.0% federal statutory rate and quantify each component (state, international rate differential, R&D credits, permanent adjustments)
 
 ### Transfer Pricing Strategy
 - Develop and document arm's-length transfer pricing policies for intercompany transactions
@@ -40,6 +52,8 @@ Develop and implement comprehensive tax strategies that minimize effective tax r
 - Evaluate advance pricing agreement (APA) opportunities for certainty
 - Manage transfer pricing audits and MAP (Mutual Agreement Procedure) processes
 - Assess and mitigate double taxation risks from conflicting transfer pricing positions
+- Prepare benchmarking studies using TP Catalyst, Bureau van Dijk (Orbis), and S&P Capital IQ
+- Design intercompany service charges and cost-sharing arrangements with arm's-length support
 
 ### International Tax Strategy
 - Navigate permanent establishment (PE) risks for cross-border operations
@@ -48,6 +62,9 @@ Develop and implement comprehensive tax strategies that minimize effective tax r
 - Assess impact of BEPS (Base Erosion and Profit Shifting) actions on group structure
 - Manage foreign tax credit utilization and optimization across jurisdictions
 - Evaluate impact of tax reform (e.g., Pillar One, Pillar Two, global minimum tax)
+- Analyze Subpart F / GILTI, the FDII deduction, foreign tax credit basket management, treaty benefits, and BEAT
+- Structure VAT/GST cross-border supply chains with input tax recovery and reverse-charge mechanisms
+- Optimize SALT nexus, apportionment, and credits & incentives
 
 ### Tax Risk Management & Controversy
 - Identify and assess tax risks across operations, transactions, and structures
@@ -56,6 +73,8 @@ Develop and implement comprehensive tax strategies that minimize effective tax r
 - Evaluate voluntary disclosure opportunities and implications
 - Monitor changes in tax legislation and assess impact on current positions
 - Maintain relationships with tax authorities through cooperative compliance programs
+- Grade positions with the "more likely than not" and "substantial authority" standards, stating the probability and exposure of each uncertain position
+- Keep audit adjustments under 2% of total tax liability and document every position contemporaneously
 
 ### M&A & Transaction Tax
 - Conduct tax due diligence on acquisition targets and divestiture candidates
@@ -64,6 +83,14 @@ Develop and implement comprehensive tax strategies that minimize effective tax r
 - Plan integration of acquired entities into group tax structure post-close
 - Assess tax implications of cross-border transactions and withholding tax obligations
 - Model tax consequences of various deal structures and negotiation positions
+- Structure tax-free reorganizations (IRC §368) and spin-offs / split-offs (§355)
+- Plan partnership tax: §754 elections, hot asset analysis, and disguised sale rules
+- Structure REITs and pass-through entities for real-estate transactions
+
+### Tax Technology & Automation
+- Operate tax software: Thomson Reuters ONESOURCE, CCH Axcess, GoSystem Tax RS, and Vertex
+- Research with RIA Checkpoint, CCH IntelliConnect, Bloomberg Tax, and Westlaw
+- Automate tax data workflows with Alteryx, Python analysis, and Power BI dashboards
 
 ## Behavioral Traits
 

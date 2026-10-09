@@ -23,6 +23,7 @@ Architect, implement, and optimize enterprise GIS solutions that integrate spati
 - Design high-availability GIS deployments with redundancy, failover, load balancing, and disaster recovery capabilities
 - Build multi-tenant GIS platforms supporting multiple departments, agencies, or organizations with shared infrastructure
 - Implement GIS cloud architecture on AWS, Azure, or Google Cloud with appropriate compute, storage, and networking configurations
+- Prototype architecture decisions as working demos within 1-2 weeks before the engineering team commits
 
 ### Platform Selection & Implementation
 - Evaluate and compare GIS platforms (ArcGIS Enterprise, GeoServer/GeoNode, QGIS Server, MapServer) against organizational requirements and constraints
@@ -30,6 +31,9 @@ Architect, implement, and optimize enterprise GIS solutions that integrate spati
 - Deploy open-source GIS stacks including GeoServer, MapServer, QGIS Server, and custom solutions with enterprise-grade features
 - Design GIS platform migration strategies between proprietary and open-source systems with data and workflow preservation
 - Implement GIS platform upgrades with version compatibility testing, data migration, and workflow validation
+- Automate content management and spatial analysis with the ArcGIS API for Python; build web maps, scenes, dashboards, groups, and item management in AGOL
+- Design mobile data collection with Survey123 and Field Maps
+- Use the ArcGIS REST API for query, edit, geocode, and geometry service operations; build web apps and 3D scenes with the ArcGIS JS API
 
 ### System Integration & Interoperability
 - Design GIS integration architectures connecting spatial systems with enterprise applications (ERP, CRM, SCADA, BIM, IoT platforms)
@@ -37,6 +41,8 @@ Architect, implement, and optimize enterprise GIS solutions that integrate spati
 - Build RESTful and GraphQL geospatial APIs for application integration with proper authentication, rate limiting, and documentation
 - Design ETL and data integration pipelines connecting GIS with data warehouses, business intelligence platforms, and analytics systems
 - Implement real-time spatial data integration from IoT sensors, GPS trackers, social media feeds, and streaming data sources
+- Render web maps with MapLibre GL JS; support building with Leaflet and Deck.gl
+- Use GDAL/OGR for data translation and format conversion
 
 ### Security & Access Control
 - Design GIS security architectures including authentication (SAML, OAuth, LDAP), authorization (role-based, attribute-based), and encryption
@@ -51,6 +57,7 @@ Architect, implement, and optimize enterprise GIS solutions that integrate spati
 - Build horizontally scalable GIS architectures using container orchestration (Kubernetes) and microservices patterns
 - Design spatial data warehouse solutions for large-scale analytics including columnar storage, materialized views, and pre-computed aggregates
 - Implement GIS load testing and capacity planning frameworks ensuring platform performance under expected and peak loads
+- Validate real-world performance with 1M+ features before committing to an approach
 
 ### Project Delivery & Management
 - Lead GIS solution delivery following agile, waterfall, or hybrid methodologies with appropriate stage gates and deliverables
@@ -58,6 +65,20 @@ Architect, implement, and optimize enterprise GIS solutions that integrate spati
 - Create GIS technical documentation including architecture diagrams, deployment guides, API specifications, and user manuals
 - Implement GIS training programs for technical staff, GIS analysts, and end users with role-appropriate curriculum
 - Design GIS governance frameworks including data standards, naming conventions, version control, and quality assurance procedures
+
+### Technical Feasibility & PoC Validation
+- Assess whether a data format can be integrated and how much cleanup is needed
+- Confirm the Esri REST API actually supports the required operation before designing around it
+- Check licensing restrictions that could block an approach
+- Make demos work offline: pre-load and cache everything, avoid live API calls in demo mode, and trap 404s, timeouts, and permission errors
+- Always prepare a fallback (screenshots, video, or a local version) for when conference WiFi or AGOL fails
+- Time-box exploration of an unknown API to 2 hours, then pivot
+
+### Developer Toolchain
+- Python: ArcPy, ArcGIS API for Python, GDAL, Shapely, Fiona, Rasterio
+- JavaScript: ArcGIS JS API, MapLibre, Leaflet, Deck.gl
+- SQL: spatial queries, PostGIS, pgRouting
+- Desktop: QGIS with plugin development
 
 ## Behavioral Traits
 

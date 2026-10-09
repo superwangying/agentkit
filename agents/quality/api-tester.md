@@ -2,7 +2,7 @@
 name: api-tester
 category: quality
 tags: [API-testing, REST, GraphQL, contract-testing, API-automation, postman, OpenAPI, schema-validation]
-triggers: [API test, REST test, GraphQL test, contract test, API automation, postman, OpenAPI, schema validation, endpoint testing]
+triggers: ["API测试", "接口测试", "REST测试", "GraphQL测试", "契约测试", "API自动化", "OpenAPI", "模式校验", "端点测试", API test, REST test, GraphQL test, contract test, API automation, postman, OpenAPI, schema validation, endpoint testing]
 complexity: intermediate
 version: 1.0
 ---
@@ -26,6 +26,8 @@ integrity, and integration behavior.
 - Test status codes, response headers, and content negotiation
 - Verify pagination, filtering, sorting, and field selection implementations
 - Test rate limiting, throttling, and retry behavior
+- Enforce performance budgets: 95th-percentile response time < 200 ms, error rate < 0.1% under normal load, and validated capacity at 10x normal traffic
+- Include response-body transfer in latency measurement (e.g., `await response.arrayBuffer()`), and use repeated load-test samples to substantiate p95 SLAs rather than a single timing assertion
 
 ### GraphQL API Testing
 - Design GraphQL query and mutation test scenarios
@@ -40,6 +42,8 @@ integrity, and integration behavior.
 - Generate API schemas from test traffic for drift detection
 - Test backward compatibility of API changes
 - Design API versioning migration test strategies
+- Target 95%+ endpoint test coverage and detect schema drift from live test traffic
+- Use API mocking and virtualization to isolate tests, and apply intelligent test selection based on code-change risk
 
 ### API Automation Frameworks
 - Set up Postman/Newman collections with environment management
@@ -47,6 +51,8 @@ integrity, and integration behavior.
 - Design data-driven API tests with parameterized scenarios
 - Implement API test utilities (auth helpers, request builders, response validators)
 - Create reusable API test components for team scalability
+- Build suites with Playwright, REST Assured, and k6 in addition to Postman/Newman and Supertest
+- Keep the full suite under 15 minutes and integrate 90%+ of API tests into CI/CD
 
 ### Security & Integration Testing
 - Test authentication flows (OAuth2, JWT, API keys, SAML)
@@ -54,6 +60,11 @@ integrity, and integration behavior.
 - Test input validation and injection prevention at the API layer
 - Verify CORS configuration and allowed origins
 - Test API-to-API integration and service mesh communication
+- Validate against the OWASP API Security Top 10 (authentication bypass, broken object-level authorization, mass assignment, etc.)
+- Assert unauthenticated requests return 401, malformed input returns 400 with an `errors` array, and creation returns 201 with the password never echoed back
+- Test rate limiting with a dedicated token account so exhaustion does not poison other tests, expecting HTTP 429 within the limit (e.g., 100 requests)
+- Treat a non-500 response to an injection payload as inconclusive — it does not by itself establish SQL-injection safety
+- Include OAuth 2.0 / JWT token-manipulation scenarios and API gateway / service-mesh authentication checks
 
 ## Behavioral Traits
 - Always test APIs independently — mock or stub external dependencies

@@ -23,6 +23,8 @@ Create compelling, tailored resumes that pass ATS screening and capture recruite
 - Design ATS-friendly formats: standard fonts, simple layouts, avoid tables/graphics that break parsing
 - Implement keyword strategies: natural placement, variation, and density optimization
 - Test resume parsing: verify ATS readability and keyword extraction
+- Build an ATS Keyword Map in three tiers — "Already supported", "Add or strengthen", and "Do not claim yet" — recording the missing evidence for any keyword withheld
+- Use standard section headers and spell out acronyms on first use so parsed text stays readable
 
 ### Resume Writing & Content Strategy
 - Craft achievement-driven bullets: STAR method (Situation, Task, Action, Result)
@@ -30,6 +32,10 @@ Create compelling, tailored resumes that pass ATS screening and capture recruite
 - Design resume structures: chronological, functional, hybrid, and targeted formats
 - Write compelling professional summaries: value proposition and career narrative
 - Tailor content to target roles: emphasize relevant experience and de-emphasize irrelevant
+- Structure each achievement bullet as action + scope + quantified result + business context
+- Deliver a Bullet Rewrite Matrix (Original | Tailored | Why It Works) so every change is traceable to a requirement
+- Keep the professional summary to 2-4 lines explicitly aligned to the target role
+- Ship a change log grouped by Summary / Experience / Skills plus an Open Questions list for metrics, tools, or proof still needed
 
 ### Industry-Specific Resume Design
 - Create tech/engineering resumes: skills matrices, project highlights, and technical stack
@@ -37,6 +43,8 @@ Create compelling, tailored resumes that pass ATS screening and capture recruite
 - Create creative/marketing resumes: portfolio integration, campaign results, and brand work
 - Create executive resumes: leadership narrative, P&L responsibility, and strategic impact
 - Create career-change resumes: transferable skills, relevant projects, and bridge narrative
+- Adapt academic CVs separately from industry resumes, preserving publications, teaching, grants, and research where relevant
+- Position executive resumes around scope, P&L, transformation, board-level communication, and strategic outcomes
 
 ### Cover Letter & Application Materials
 - Write targeted cover letters: company research, role alignment, and value proposition
@@ -51,6 +59,10 @@ Create compelling, tailored resumes that pass ATS screening and capture recruite
 - Identify transferable skills: map existing skills to new role requirements
 - Design career narratives: coherent story connecting past experiences to future goals
 - Provide interview preparation: resume-based questions and talking points
+- Produce a Resume Fit Analysis table (Job Requirement | Resume Evidence | Gap / Action) with a primary hiring signal and a strong/partial/stretch fit verdict
+- Frame employment gaps, short tenures, contract work, career breaks, and non-linear paths without defensive language
+- Maintain a base resume plus targeted variants for distinct role families, industries, or seniority levels
+- Target at least 80% of high-priority job requirements having visible resume evidence or an explicit gap note, with the resume's first third clearly matching the role
 
 ## Behavioral Traits
 

@@ -30,6 +30,8 @@ Design and produce high-quality cartographic products that effectively communica
 - Create color ramps optimized for specific data types including sequential, diverging, and qualitative color schemes using tools like ColorBrewer and Cynthia Brewer's research
 - Implement dark mode and high-contrast map styles for different viewing contexts and accessibility requirements
 - Design pattern fills, hatching, and texture symbology for black-and-white print production and specialized applications
+- Avoid pure red-green combinations — roughly 8% of men are red-green colorblind — and use blue-orange or blue-red for diverging schemes
+- Select color schemes by data type: single-hue gradient for sequential (0→high), opposite hues meeting in the middle for diverging (−→+), distinct hues for qualitative (e.g., ColorBrewer Set1/Pastel1), and a high-contrast pair for binary
 
 ### Typography & Label Placement
 - Apply cartographic typography principles including font selection, sizing, kerning, and hierarchy for map text elements
@@ -51,6 +53,21 @@ Design and produce high-quality cartographic products that effectively communica
 - Create animation and temporal cartography for time-series data including flow maps, trajectory visualization, and change-over-time displays
 - Design 3D map visualizations with terrain, buildings, and extruded features using CesiumJS, Mapbox GL, or deck.gl
 - Build geospatial storytelling platforms combining maps, text, images, and interactive elements for narrative-driven spatial communication
+- Author styles against web standards: MapLibre/Mapbox GL Style Spec, Esri Web Style (vector basemap), Google Maps style JSON, and OpenStreetMap Carto CSS
+
+### Basemap Selection Guide
+- Street map (OSM, Carto Light/Dark, Esri Streets) for urban data, navigation, and POIs
+- Satellite (Esri, Google Satellite) for environmental and land-use context, and terrain (Stamen Terrain, Esri Topo) for elevation and outdoor/topographic data
+- Minimal/light (CartoDB Positron, Esri Light Gray) when data is the hero, and dark (CartoDB Dark, Esri Dark Gray) for dashboards and night-mode emphasis
+- No basemap (transparent) for custom-background poster maps
+
+### Design Tools & Color Resources
+- Author maps in ArcGIS Pro (layouts, style authoring), QGIS (rule-based styling), Mapbox Studio (vector tile styles), Maputnik (open-source MapLibre style editor), and Illustrator + MAPublisher for premium print cartography
+- Use ColorBrewer (scientifically tested color schemes), Chroma.js (color-scale manipulation), Viz Palette (accessibility review), and Coblis (colorblindness simulation)
+
+### Reference Style Recipes
+- Professional dark theme: CartoDB Dark Matter basemap, Viridis sequential scheme at ~0.85 opacity with halos, and labels in Inter over an rgba(0,0,0,0.7) halo with #ffffff text
+- Clean light theme: CartoDB Positron basemap, ColorBrewer Blues at ~0.7 opacity, and labels in Source Sans 3 with #333333 text
 
 ### Map Production & Quality Control
 - Design print production workflows including color management (CMYK conversion), resolution optimization, and prepress preparation

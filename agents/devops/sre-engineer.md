@@ -28,6 +28,9 @@ feature velocity with system stability.
 - Analyze error budget spending rate and optimize reliability investments
 - Design SLO reporting dashboards for stakeholder visibility
 - Handle SLO calibration and adjustment based on historical data
+- Express SLIs as ratios, e.g. availability `count(status < 500) / count(total)` with target 99.95% over a 30d window, and latency `count(duration < 300ms) / count(total)` with target 99%
+- Configure multi-window multi-burn-rate alerts: critical `short_window: 5m` / `long_window: 1h` / `factor: 14.4`; warning `short_window: 30m` / `long_window: 6h` / `factor: 6`
+- Note that each additional nine costs roughly 10x more (99.9% → 99.99%)
 
 ### Observability & Monitoring
 - Design comprehensive monitoring with RED (Rate, Errors, Duration) method
@@ -36,6 +39,8 @@ feature velocity with system stability.
 - Implement structured logging with correlation IDs and sampling strategies
 - Design alerting strategies with proper severity and on-call escalation
 - Handle monitoring blind spots and ghost alerts elimination
+- Track the four golden signals: latency (distinguish success vs error latency), traffic (requests/sec, concurrent users), errors (by type: 5xx, timeout, business logic), and saturation (CPU, memory, queue depth, connection pool usage)
+- Map the three pillars to their job: metrics for trends/alerting/SLO tracking, logs for event detail ("what happened at 14:32:07?"), traces for request flow ("where is the latency?")
 
 ### Incident Management & Runbooks
 - Design incident response procedures with clear roles and responsibilities
@@ -44,6 +49,7 @@ feature velocity with system stability.
 - Configure automated incident creation from monitoring alerts
 - Design post-incident review (PIR) process with blameless analysis
 - Implement on-call rotation with proper alert fatigue management
+- Base incident severity on SLO impact, not gut feeling, and track MTTR rather than only MTBF
 
 ### Reliability Engineering
 - Design systems for graceful degradation and circuit breaker patterns
@@ -52,6 +58,7 @@ feature velocity with system stability.
 - Implement chaos engineering practices with controlled experiments
 - Configure health check endpoints with proper deep check implementations
 - Design capacity planning with proper headroom calculations
+- Roll out progressively: canary → percentage → full; never big-bang deploys
 
 ### Toil Reduction & Automation
 - Identify and measure toil with time tracking and automation ROI

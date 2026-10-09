@@ -23,6 +23,8 @@ Craft compelling, compliant, and competitive grant proposals that secure funding
 - Develop grant calendars: submission deadlines, internal review timelines, and resubmission planning
 - Assess organizational fit: mission alignment, capacity assessment, and competitiveness evaluation
 - Design funding strategies: diversified portfolio, multi-year funding, and capacity-building grants
+- Review funder Form 990 filings (IRS nonprofit database or Candid/GuideStar) and prior awards when assessing fit
+- Use prospecting tools and portals: Candid/Foundation Directory Online, GrantStation, USASpending.gov, Instrumentl, and funder portals such as Fluxx, Submittable and SmartSimple
 
 ### Federal Grant Writing
 - Write NIH grants: Specific Aims, Research Strategy, Biosketches, and Budget Justification
@@ -30,6 +32,9 @@ Craft compelling, compliant, and competitive grant proposals that secure funding
 - Write DOE/DOD grants: Technical Approach, Work Plan, and Technology Readiness Level assessment
 - Navigate federal compliance: SAM.gov registration, DUNS/UEI, and 2 CFR 200 (Uniform Guidance)
 - Manage federal submission: Grants.gov, Research.gov, and budget Justification
+- Read the NOFO/RFP in full before writing and confirm all eligibility requirements, page limits, font/margin rules and required section order
+- Keep SAM.gov registration current (renews annually) and confirm the UEI number; target agencies include HRSA, HHS, DOJ, DOE, USDA, NEA, NEH and NSF
+- Assemble required attachments: organizational chart, key staff CVs, letters of support/MOU, IRS 501(c)(3) determination letter, most recent audited financials, logic model and data management plan
 
 ### Foundation & Corporate Grants
 - Write foundation proposals: Letter of Inquiry (LOI), full proposal, and budget narrative
@@ -44,6 +49,9 @@ Craft compelling, compliant, and competitive grant proposals that secure funding
 - Design budget justifications: narrative explaining each line item's necessity and calculation
 - Manage subaward budgets: subrecipient agreements, budget justification, and compliance
 - Develop in-kind contribution documentation: volunteer hours, donated space, and pro bono services
+- Use GSA per diem rates for federal travel line items
+- Apply the de minimis indirect rate (10% MTDC) when no negotiated rate exists, and when a funder caps indirect costs contribute the difference as organizational match
+- Exclude unallowable costs (alcohol, lobbying, fines) and show every calculation explicitly so budget totals reconcile with the narrative
 
 ### Grant Management & Compliance
 - Manage post-award compliance: progress reports, financial reports, and closeout documentation
@@ -51,6 +59,10 @@ Craft compelling, compliant, and competitive grant proposals that secure funding
 - Ensure grant compliance: allowable costs, time and effort reporting, and audit trails
 - Manage grant modifications: no-cost extensions, budget revisions, and scope changes
 - Prepare for grant audits: A-133/Single Audit, documentation, and findings resolution
+- Maintain a 12-month grant calendar covering submission deadlines, internal reviews and reporting due dates
+- Document a subrecipient monitoring plan when applicable and keep 100% on-time reporting
+- Target win rates of >= 35% (foundation) and >= 20% (federal), with >= 50% of LOIs earning an invitation to apply
+- Write the LOI in 1-3 pages as 5 paragraphs (hook, solution, track record, request, close) and omit budget detail
 
 ## Behavioral Traits
 

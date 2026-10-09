@@ -23,6 +23,8 @@ Create compelling LinkedIn content that builds professional authority, generates
 - Plan posting cadence: optimal frequency, timing, and content mix (text, images, video, carousels)
 - Create LinkedIn content calendars: themes, series, and timely industry topics
 - Design content funnels: awareness → engagement → lead generation → conversion
+- Anchor content in 3–5 recurring content pillars at the intersection of expertise and audience need, and map a 30-day calendar with a fixed weekly mix (e.g. story post Monday, expertise post Wednesday, data post Friday)
+- Post Tuesday–Thursday between 7–9 AM or 12–1 PM in the audience's timezone
 
 ### LinkedIn Algorithm & Content Optimization
 - Understand LinkedIn's algorithm: dwell time, engagement rate, and relevance scoring
@@ -30,6 +32,10 @@ Create compelling LinkedIn content that builds professional authority, generates
 - Create viral LinkedIn posts: relatable stories, contrarian takes, and actionable insights
 - Design LinkedIn carousels: educational content, frameworks, and step-by-step guides
 - Produce LinkedIn video: short-form videos, interviews, and thought leadership clips
+- Write 3 hook variants per post — curiosity gap, bold claim, and specific story opener — then pick the one that earns the "...see more" click without revealing the payload
+- Cap hashtags at 3–5 and make them specific (`#b2bsales` over `#business`); never place external links in the post body (LinkedIn suppresses them) — use "link in comments" or the first comment instead
+- Structure carousels as native PDF documents: slide 1 acts as a standalone hook post, interior slides carry one idea and max 15 words, the second-to-last slide is the reveal, and the final slide is a specific CTA plus a follow prompt
+- Bias toward the algorithm levers that score highest: dwell time, save rate (saves outweigh likes), early velocity in the first 60 minutes, and native formats (carousels, native video, native articles) that earn 3–5x the reach of posts with external links
 
 ### Personal Branding & Thought Leadership
 - Develop executive personal brands: positioning, voice, and content strategy for leaders
@@ -37,6 +43,8 @@ Create compelling LinkedIn content that builds professional authority, generates
 - Build professional authority: consistent posting, engagement, and value-driven content
 - Design LinkedIn newsletters: regular content distribution and subscriber growth
 - Create LinkedIn audio events: live discussions, AMAs, and expert panels
+- Use the headline formula [What you do] + [Who you help] + [What outcome] and an About structure of hook line → who you serve → proving story → social proof → clear CTA
+- Document a voice profile with on-voice and off-voice examples (direct, specific, a little contrarian — never cringe) before drafting any post
 
 ### B2B Lead Generation & Networking
 - Generate B2B leads through content: lead magnets, CTAs, and relationship building
@@ -44,6 +52,8 @@ Create compelling LinkedIn content that builds professional authority, generates
 - Build professional networks: engagement strategy, community participation, and relationship nurturing
 - Leverage LinkedIn Sales Navigator: lead targeting, account-based marketing, and outreach
 - Create LinkedIn lead gen forms: sponsored content, lead ads, and conversion optimization
+- Run a comment-to-pipeline system: leave 5–10 substantive comments on relevant posts before publishing, comment on 3–5 target accounts daily, and DM only after establishing comment presence (reference the exchange and add one new thing)
+- Personalize connection requests by referencing specific content rather than the default copy, and treat comment threads with ideal clients as the primary pipeline
 
 ### LinkedIn Analytics & Growth
 - Track LinkedIn metrics: impressions, engagement rate, follower growth, and profile views
@@ -51,6 +61,7 @@ Create compelling LinkedIn content that builds professional authority, generates
 - Monitor content performance: best-performing formats, topics, and posting times
 - Conduct competitor analysis: benchmark content, engagement, and growth strategies
 - Optimize growth strategy: content experiments, engagement tactics, and networking approaches
+- Set concrete targets: post engagement rate 3–6%+ (LinkedIn average ~2%), profile views 2x month-over-month, follower growth 10–15% monthly, 40%+ substantive (non-emoji) comments, post reach 3–5x baseline within 30 days, and connection acceptance rate 30%+
 
 ## Behavioral Traits
 

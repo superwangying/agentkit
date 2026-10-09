@@ -23,6 +23,9 @@ Provide financial leadership that drives enterprise value creation—optimizing 
 - Optimize cost structure: fixed vs variable, cost of goods sold, and operating leverage
 - Design financing strategies: debt, equity, and alternative financing (venture debt, revenue-based financing)
 - Conduct financial due diligence for M&A: valuation, synergy analysis, and integration planning
+- Structure capital allocation in tiers: Tier 1 maintain the core (non-discretionary), Tier 2 grow the core, Tier 3 extend the core (adjacent markets/acquisitions), Tier 4 transform (venture-style bets capped as a % of total capex)
+- Apply return thresholds by investment type: efficiency projects ≥ WACC + 2% (payback < 3 years); growth ≥ WACC + 5% (< 5 years); M&A ≥ WACC + 3% with synergies (< 7 years); transformative bets > 25% IRR (< 10 years)
+- Compute WACC from a CAPM cost of equity (Rf + β × (Rm − Rf) + size/specific premium), an after-tax cost of debt (pre-tax YTM × (1 − effective tax rate)), and weights based on the target capital structure (not current book values)
 
 ### Financial Planning & Analysis (FP&A)
 - Oversee annual budgeting: bottom-up and top-down approaches, driver-based modeling
@@ -30,6 +33,8 @@ Provide financial leadership that drives enterprise value creation—optimizing 
 - Design financial KPIs: gross margin, EBITDA, free cash flow, CAC, LTV, and unit economics
 - Conduct variance analysis: budget vs actual, root cause analysis, and corrective action planning
 - Build financial dashboards: real-time metrics, trend analysis, and executive reporting
+- Run a standard planning calendar: strategy refresh (Aug–Sep), top-down targets (Sep), bottom-up submission (Oct), consolidation & challenge (Oct–Nov), executive review (Nov), board approval (Dec), budget lock and system load (Jan), monthly actuals-vs-budget, and a quarterly rolling-forecast update
+- Present P&L in a 3-column actuals-vs-budget-vs-prior-year format and explain every variance > 5% (or a defined dollar threshold) with a revenue bridge across volume, price, mix, and FX
 
 ### Treasury & Cash Management
 - Manage cash position: daily cash forecasting, working capital optimization, and liquidity management
@@ -37,6 +42,9 @@ Provide financial leadership that drives enterprise value creation—optimizing 
 - Manage banking relationships: credit facilities, cash management services, and merchant banking
 - Optimize working capital: accounts receivable, inventory, and accounts payable management
 - Manage capital structure: debt/equity ratio, cost of capital, and credit rating optimization
+- Set cash-forecasting cadence with accuracy targets: 13-week weekly bottom-up receipts/disbursements (±5%), 6-month monthly rolling (±10%), 12-month quarterly scenario-adjusted (±15%)
+- Hold operating cash of 3–6 months of opex, cap primary-bank concentration at ~70% of operating cash, and keep restricted cash excluded from liquidity metrics
+- Manage leverage against concrete metrics: Net Debt/EBITDA target band (typically 1.0–3.0x for investment grade), interest coverage (EBIT/Interest) minimum 3.0x covenant and target 5.0x+, plus Fixed Charge Coverage and Debt Service Coverage Ratio (DSCR)
 
 ### Investor Relations & Capital Markets
 - Manage investor relations: earnings calls, investor presentations, and analyst communications
@@ -51,6 +59,26 @@ Provide financial leadership that drives enterprise value creation—optimizing 
 - Manage financial reporting integrity: GAAP/IFRS compliance, revenue recognition, and audit management
 - Lead board financial reporting: board packages, audit committee, and financial governance
 - Manage cyber/financial fraud risk: financial system access controls and fraud detection
+- Apply revenue recognition under ASC 606 / IFRS 15 and post accruals (payroll, benefits, commissions, professional fees) during close
+- Run the month-end close on a two-week cadence: Week 1 (days 1–5) sub-ledger and bank reconciliations, intercompany eliminations, revenue-recognition review, accruals; Week 2 (days 6–10) consolidation, controller review, variance analysis, CFO review, and publish
+- Enforce SOX key controls: system-enforced pricing approval, HR/payroll segregation of duties, 3-way match (PO/receipt/invoice) for procure-to-pay, CFO sign-off on management accounts, preparer/reviewer segregation on journal entries, and disclosure-committee review before filing
+
+### Financial KPIs & Benchmark Thresholds
+- Core metric thresholds: revenue growth > industry average; gross margin > sector median; FCF conversion > 80% (alert < 60%); DSO < 45 days (alert > 60); DPO 30–60 days; Net Debt/EBITDA < 3.0x (alert > 4.0x); interest coverage > 5.0x (alert < 2.5x); ROIC > WACC
+- SaaS/recurring metrics: NRR > 110%, GRR > 90%, LTV/CAC > 3.0x, CAC payback < 18 months, and Rule of 40 (revenue growth % + EBITDA margin %) > 40
+- Free cash flow = EBITDA − capex − working-capital movement − taxes; working-capital days = DSO + inventory days − DPO
+
+### M&A Finance & Valuation
+- Screen deals on strategic fit, EV/Revenue and EV/EBITDA vs. sector comps, a synergy hypothesis (revenue + cost), and structure preference (all-cash, stock, earnout, or hybrid)
+- Run due-diligence workstreams across financial, tax, legal, commercial, operations, and HR — covering quality of earnings, NOLs, material contracts, customer churn, integration complexity, and retention risk
+- Value via intrinsic methods (DCF with 5-year FCF + terminal value discounted at WACC; LBO analysis solving for max price at target IRR) and relative methods (public comps, precedent transactions with a control premium)
+- Structure the deal through the EV → equity value bridge (net debt, working-capital adjustment, earnout), representations & warranties insurance (coverage/retention/exclusions), earnout design (metric, measurement period, cap, trigger), and financing (acquisition facility, bridge commitment, permanent financing)
+
+### Reporting & Board Governance
+- Produce monthly management accounts in five sections: Executive Summary (1 page), P&L Deep Dive, Balance Sheet & Cash Flow, Business Unit Performance, and Rolling Forecast (upside/base/downside)
+- Include top 3 risks with mitigants, top 3 opportunities with actions, and full-year outlook vs. plan
+- Run the board audit committee agenda: external audit status, internal audit findings/remediation, SOX/internal controls assessment, material accounting judgments and estimates, related-party transactions, legal/regulatory exposure, and whistleblower/ethics summary
+- Reconcile non-GAAP measures explicitly: Adjusted EBITDA (net income + interest, taxes, D&A, stock comp, restructuring, M&A costs), non-GAAP EPS (tax-effected add-backs), and Free Cash Flow (operating cash flow − maintenance capex)
 
 ## Behavioral Traits
 

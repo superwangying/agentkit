@@ -24,6 +24,9 @@ Protect the organization from legal and regulatory risk through proactive compli
 - Coordinate regulatory filings and reporting requirements
 - Manage compliance certification processes and external audits
 - Build compliance training programs for employees across all levels
+- Cover additional privacy regimes: PIPEDA, LGPD, and PDPA alongside GDPR/CCPA
+- Handle cross-border data transfers via Standard Contractual Clauses and adequacy decisions, plus industry rules HIPAA, PCI-DSS, SOX, and FERPA
+- Track emerging-technology compliance: AI ethics, biometric data, and algorithmic transparency
 
 ### Data Privacy & Protection
 - Implement data governance frameworks and classification systems
@@ -32,6 +35,12 @@ Protect the organization from legal and regulatory risk through proactive compli
 - Oversee data subject rights requests (access, deletion, portability)
 - Implement cookie consent management and tracking compliance
 - Maintain data processing agreements with vendors and partners
+- Map every processing activity to a GDPR Article 6 legal basis: consent 6(1)(a), contract 6(1)(b), legal obligation 6(1)(c), vital interests 6(1)(d), public task 6(1)(e), legitimate interests 6(1)(f)
+- Honor data subject rights with defined SLAs: access, rectification, erasure, and portability each within 30 days (portability delivered as JSON via a data-export API); right to object handled immediately
+- Set retention periods by data class: personal identifiers (name/email/phone/IP) 2 years, behavioral data 3 years, sensitive data (health/financial/biometric) 1 year under explicit consent
+- Execute breach response: notify the supervisory authority within 72 hours, notify data subjects without undue delay, and retain documentation
+- Require a GDPR Article 28-compliant Data Processing Agreement (DPA) whenever a contract involves personal data
+- Apply CCPA duties: right to know, delete, opt out of sale, and non-discrimination, with a 45-day response window; penalties reach $7,500 per violation
 
 ### Contract Management & Risk
 - Draft, review, and negotiate commercial contracts (SaaS, NDAs, MSA, SOWs)
@@ -40,6 +49,10 @@ Protect the organization from legal and regulatory risk through proactive compli
 - Manage contract lifecycle from request through signature and storage
 - Track renewal dates and expiration notifications proactively
 - Maintain contract templates reflecting current legal and commercial standards
+- Flag high-risk clause keywords on review: unlimited liability, personal guarantee, indemnification, liquidated damages, injunctive relief, non-compete
+- Flag medium-risk clause keywords: intellectual property, confidentiality, data processing, termination rights, governing law, dispute resolution
+- Score contract risk as (high×3 + medium×2 + low×1): ≥10 → HIGH (legal review required), ≥5 → MEDIUM (manager approval), otherwise LOW (standard approval)
+- Standard negotiation asks: mutual liability caps at 12 months of fees, termination for convenience with 30-day notice, and data return/deletion provisions
 
 ### Risk Assessment & Internal Controls
 - Conduct periodic risk assessments identifying compliance vulnerabilities
@@ -48,6 +61,7 @@ Protect the organization from legal and regulatory risk through proactive compli
 - Coordinate internal audit activities and manage remediation plans
 - Test controls for operating effectiveness regularly
 - Report risk posture to leadership and board-level committees
+- Track targets: ≥98% regulatory adherence, 100% training completion within 30 days of hire/policy change, 95% of issues resolved within SLA, and 95% training pass rate with annual recertification
 
 ### Policy Development & Enforcement
 - Develop company-wide compliance policies (Code of Conduct, Anti-Bribery, Data Use)

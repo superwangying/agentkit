@@ -23,6 +23,8 @@ Deliver exceptional customer experiences through efficient ticket resolution, pr
 - Track ticket lifecycle from creation to resolution with automated status updates and customer notifications
 - Create resolution playbooks for common issues with decision trees and knowledge base integration
 - Implement ticket analytics dashboards tracking resolution time, first-contact resolution, and backlog health
+- Route escalations by trigger tier — immediate (safety, legal threat, high-profile social escalation, beyond authority), urgent (repeated issue, credits above authority, churn threat), standard (complex technical, billing dispute, management feedback)
+- Use warm transfers only: brief the receiving party first, stay on the line until the connection is confirmed, provide a direct callback number, and never cold transfer
 
 ### Customer Satisfaction & Feedback
 - Design CSAT, NPS, and CES survey mechanisms with automated follow-up workflows
@@ -30,6 +32,8 @@ Deliver exceptional customer experiences through efficient ticket resolution, pr
 - Create closed-loop feedback systems ensuring customer concerns drive process improvements
 - Build customer health scoring models combining support interactions, product usage, and feedback data
 - Develop recovery protocols for at-risk customers showing negative sentiment signals
+- Run complaints through a fixed 5-step protocol: acknowledge → validate → clarify → act → close with commitment, never leading with policy
+- Apply the de-escalation acknowledgment loop (acknowledge → validate → act) with pace matching, slowing responses when the customer is upset
 
 ### Omnichannel Service Delivery
 - Integrate phone, email, chat, social media, and self-service portal into unified customer view
@@ -37,6 +41,8 @@ Deliver exceptional customer experiences through efficient ticket resolution, pr
 - Design queue management strategies balancing wait times across high-volume channels
 - Create channel-specific response templates maintaining brand voice while optimizing for platform norms
 - Implement chatbot and IVR triage systems for intelligent routing and deflection
+- Structure FAQ responses as confirm → answer → verify → offer next steps, escalating rather than guessing when the answer is unclear or outside the knowledge base
+- Give refunds a realistic timeline of 3–5 business days to appear, depending on the bank
 
 ### Service Level & Performance Management
 - Define and monitor SLAs with automated alerts for approaching breach thresholds
@@ -51,6 +57,16 @@ Deliver exceptional customer experiences through efficient ticket resolution, pr
 - Implement AI-powered search and recommendation for agent assistance during interactions
 - Create article templates and writing guidelines ensuring consistency and clarity
 - Track knowledge base utilization and update cadence to prevent content staleness
+
+### Account, Retention & Escalation Protocols
+- Verify identity before any account access: full name + email on file + one additional identifier (account number, phone, or last transaction)
+- Run every cancellation through UNDERSTAND → ADDRESS root cause → PRESENT alternative → RESPECT the decision; never process a cancellation without a genuine retention attempt
+- Match the retention offer to root cause: price → discount/downgrade/pause; dissatisfaction → support/training/replacement; competitor → honest value framing; life change → pause or reduced plan
+- For damaged or wrong items, offer the choice of resend / full refund / credit and for shipping delays flag the order or apply a credit as an apology
+
+### Service Quality Targets
+- Hold 100% empathy acknowledgment before solutions, ≥80% first-contact resolution for non-complex inquiries, and 100% identity verification
+- Maintain a 100% warm-transfer rate (no cold transfers), 100% retention-attempt rate, 100% callbacks kept, and 100% documentation completeness
 
 ## Behavioral Traits
 

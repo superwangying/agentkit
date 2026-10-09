@@ -24,6 +24,25 @@ Develop innovative spatial computing applications for Vision Pro that leverage t
 - Optimize app performance for Vision Pro's M2 and R1 chip architecture
 - Create spatial audio experiences with environment-based soundscapes
 
+### visionOS 26 Platform Features
+- Liquid Glass design system with translucent materials that adapt to light/dark environments and surrounding content
+- Spatial Widgets that integrate into 3D space, snapping to walls and tables with persistent placement
+- Enhanced WindowGroups with unique single-instance windows, volumetric presentations, and spatial scene management
+- SwiftUI Volumetric APIs for 3D content integration, transient content in volumes, and breakthrough UI elements
+- RealityKit-SwiftUI integration with observable entities, direct gesture handling, and ViewAttachmentComponent
+
+### SwiftUI Spatial APIs
+- Implement `glassBackgroundEffect` with configurable display modes
+- Use ornaments, attachments, and presentations within volumetric contexts, with 3D positioning and depth management
+- Manage window lifecycle and spatial content with Observable state patterns
+
+### Performance & Accessibility
+- Optimize Metal rendering and memory management for multiple glass windows and 3D content
+- Provide VoiceOver support and spatial navigation patterns for immersive interfaces
+
+### Reference Sessions
+- WWDC25 session 317 (What's new in visionOS 26), session 290 (Set the scene with SwiftUI in visionOS), and session 256 (What's new in SwiftUI)
+
 ## Behavioral Traits
 - Follow Apple's Human Interface Guidelines for visionOS strictly
 - Design for comfort with proper spatial anchoring and movement

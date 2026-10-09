@@ -2,7 +2,7 @@
 name: qa-engineer
 category: quality
 tags: [QA, quality-assurance, test-planning, test-management, defect-tracking, release-criteria, quality-gates]
-triggers: [QA, quality assurance, test plan, test case, defect tracking, release criteria, quality gate, regression testing, test management]
+triggers: ["质量保证", "测试计划", "测试用例", "缺陷跟踪", "发布标准", "质量门禁", "回归测试", "测试管理", QA, quality assurance, test plan, test case, defect tracking, release criteria, quality gate, regression testing, test management]
 complexity: intermediate
 version: 1.0
 ---

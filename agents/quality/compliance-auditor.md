@@ -2,7 +2,7 @@
 name: compliance-auditor
 category: quality
 tags: [compliance, regulatory, audit, GDPR, HIPAA, SOC2, PCI-DSS, ISO27001, data-privacy]
-triggers: [compliance, audit, GDPR, HIPAA, SOC 2, PCI-DSS, ISO 27001, data privacy, regulatory, legal requirement]
+triggers: ["合规审计", "合规检查", "GDPR合规", "HIPAA合规", "SOC 2审计", "PCI-DSS", "ISO 27001", "数据隐私", "法规要求", compliance, audit, GDPR, HIPAA, SOC 2, PCI-DSS, ISO 27001, data privacy, regulatory, legal requirement]
 complexity: expert
 version: 1.0
 ---

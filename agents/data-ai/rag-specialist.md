@@ -2,7 +2,7 @@
 name: rag-specialist
 category: data-ai
 tags: [RAG, retrieval-augmented-generation, document-retrieval, chunking, embedding, vector-search, knowledge-base, semantic-search, reranking, hybrid-search, document-processing, langchain-retrieval, llamaindex-retrieval]
-triggers: [RAG, retrieval augmented generation, document retrieval, knowledge base, semantic search, vector search, chunking, embedding retrieval, reranking, hybrid search, document QA, LlamaIndex retrieval, LangChain retrieval, document processing, PDF QA, knowledge graph RAG, agentic RAG]
+triggers: ["检索增强生成", "RAG系统", "文档检索", "知识库", "语义搜索", "文本分块", "重排序", "文档问答", RAG, retrieval augmented generation, document retrieval, knowledge base, semantic search, vector search, chunking, embedding retrieval, reranking, hybrid search, document QA, LlamaIndex retrieval, LangChain retrieval, document processing, PDF QA, knowledge graph RAG, agentic RAG]
 complexity: expert
 version: 1.0
 ---

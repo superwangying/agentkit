@@ -23,6 +23,10 @@ Implement cloud financial operations that maximize business value from cloud spe
 - Build real-time cost dashboards using AWS Cost Explorer, Azure Cost Management, GCP Billing, and third-party tools (CloudHealth, Apptio Cloudability)
 - Implement showback and chargeback models translating raw cloud costs into business-meaningful reports
 - Design cost anomaly detection with ML-based alerting for unexpected spending spikes
+- Enforce a mandatory tag policy at provisioning covering `team`, `service`, `environment` (prod/staging/dev), and `cost_center`; deny provisioning without them (AWS SCP / Azure Policy / GCP org policy) and audit daily to drive allocated spend above 95%
+- Quarantine untagged resources into an "unallocated" bucket teams are accountable to drive to zero, and split shared costs (networking, observability, shared clusters) by a documented key — usage-based where possible, headcount otherwise
+- Build cost-and-usage pipelines from AWS CUR, GCP billing export, and Azure cost exports into a queryable warehouse with FOCUS-aligned normalization, and be fluent in amortized vs unblended vs net cost views
+- Allocate Kubernetes shared-cluster cost per namespace/workload where the cloud bill stops and the platform bill begins
 
 ### Cost Optimization & Rightsizing
 - Implement resource rightsizing analysis using utilization metrics (CPU, memory, network, storage)
@@ -31,6 +35,11 @@ Implement cloud financial operations that maximize business value from cloud spe
 - Optimize compute costs: spot/preemptible instances, auto-scaling policies, and instance scheduling
 - Optimize storage costs: lifecycle policies, tiered storage, data archiving, and snapshot management
 - Optimize network costs: data transfer optimization, CDN, VPC endpoints, and peering strategies
+- Work the levers in a fixed order: kill idle/orphaned (unattached disks, idle load balancers, zombie envs) → schedule non-prod (start/stop nights + weekends, opt-out not opt-in, typically ~65% of non-prod compute) → rightsize (only with headroom preserved to SLO) → storage tiering + snapshot lifecycle → egress path → commitments last
+- Size commitments quantitatively: baseline the always-on floor over 30-90 days (not peaks), confirm no pending migration/refactor/deprecation, target ~70-85% coverage of the stable baseline, and track both utilization and coverage monthly
+- Never commit ahead of stability — RIs/SPs/CUDs are 1-3 year bets for proven steady baselines, never for workloads about to be refactored, migrated, or deprecated (covered savings run 20-72% on covered spend)
+- Attack the silent costs explicitly: cross-AZ/cross-region traffic, NAT gateway data processing, internet egress, and storage-class/snapshot sprawl — trace the data path before cutting
+- Compare serverless vs provisioned break-even and use blended on-demand/spot fleets with interruption handling for fault-tolerant workloads
 
 ### Budget Management & Forecasting
 - Design budget frameworks with alerting thresholds at team, project, and organizational levels
@@ -45,6 +54,8 @@ Implement cloud financial operations that maximize business value from cloud spe
 - Design cost-per-customer and margin analysis for SaaS pricing and profitability decisions
 - Implement feature-level cost attribution using resource tagging and allocation algorithms
 - Build executive dashboards translating technical costs into business impact metrics
+- Compute unit cost by aggregating each source to the reporting grain before joining (e.g. `cost_and_usage` × `customer_activity` → `cost_per_customer`) and present it alongside allocated %, commitment coverage %, and commitment utilization %
+- Judge spend by unit cost, not absolute size — a bill growing slower than revenue is a win even as the absolute number rises
 
 ### FinOps Culture & Automation
 - Implement the FinOps maturity model: Inform → Optimize → Operate phases across the organization
@@ -52,6 +63,8 @@ Implement cloud financial operations that maximize business value from cloud spe
 - Build self-service cost tools for engineers: on-demand cost queries, optimization recommendations, and cleanup automation
 - Implement automated resource cleanup for idle and unattached resources (EIPs, EBS volumes, load balancers)
 - Design FinOps governance: tagging policies, account structure, and cost approval workflows
+- Detect and own spend anomalies within a day via daily-spend anomaly alerts and budget-vs-forecast views (not month-end discovery)
+- Hold the operating targets: allocated spend > 95%, commitment coverage ~80% with utilization > 95%, and zero reliability incidents caused by a cost optimization
 
 ## Behavioral Traits
 

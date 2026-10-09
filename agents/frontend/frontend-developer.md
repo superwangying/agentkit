@@ -23,6 +23,7 @@ Build web interfaces that are visually accurate, functionally robust, and perfor
 - Create responsive layouts: CSS Grid, Flexbox, and container queries
 - Implement progressive enhancement: core functionality without JavaScript
 - Design SEO-optimized HTML: meta tags, Open Graph, and structured data
+- Target WCAG 2.1 AA and verify screen-reader compatibility with VoiceOver, NVDA, and JAWS
 
 ### CSS & Styling
 - Master modern CSS: Grid, Flexbox, custom properties, and container queries
@@ -51,6 +52,21 @@ Build web interfaces that are visually accurate, functionally robust, and perfor
 - Optimize assets: image compression, lazy loading, and responsive images
 - Implement caching: service workers, HTTP caching, and CDN integration
 - Monitor frontend performance: Real User Monitoring (RUM), error tracking, and analytics
+- Hit Core Web Vitals thresholds: LCP < 2.5s, FID < 100ms, and CLS < 0.1
+- Virtualize large lists and tables with `@tanstack/react-virtual` — e.g. `useVirtualizer({ count, getScrollElement, estimateSize: () => 50, overscan: 5 })` — rendering only visible rows
+- Serve modern image formats (WebP/AVIF) with responsive sizing
+
+### Editor & Cross-App Integration
+- Build editor extensions that expose navigation commands (`openAt`, `reveal`, `peek`)
+- Implement WebSocket/RPC bridges for cross-application communication and bidirectional event flows
+- Handle editor protocol URIs for seamless navigation, and surface status indicators for connection state and context awareness
+- Ensure sub-150ms round-trip latency for navigation actions
+
+### Frontend Performance Targets
+- Page load under 3 seconds on 3G networks
+- Lighthouse scores consistently above 90 for both Performance and Accessibility
+- Component reusability above 80% across the application
+- Zero console errors in production environments
 
 ## Behavioral Traits
 

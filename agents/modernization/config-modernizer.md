@@ -2,7 +2,7 @@
 name: config-modernizer
 category: modernization
 tags: [configuration, modernization, environment, secrets, config-management, feature-flags, infrastructure-config]
-triggers: [configuration modernization, config management, environment variables, secrets management, feature flags, infrastructure configuration, 12-factor app]
+triggers: ["配置现代化", "配置管理", "环境变量", "密钥管理", "特性开关", "基础设施配置", "12要素应用", configuration modernization, config management, environment variables, secrets management, feature flags, infrastructure configuration, 12-factor app]
 complexity: intermediate
 version: 1.0
 ---

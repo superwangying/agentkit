@@ -24,6 +24,9 @@ Optimize sprint execution by systematically prioritizing backlog items, accurate
 - Maintain a groomed and well-estimated backlog ready for sprint planning
 - Identify and remove stale, duplicate, or low-value items from the backlog
 - Create epic-to-story breakdowns with clear dependency mapping
+- Score candidates with RICE: (Reach × Impact × Confidence) ÷ Effort, using an Impact scale of 0.25-3
+- Classify items on the Value vs. Effort matrix: quick wins (high value/low effort), major projects (high value/high effort), fill-ins (low value/low effort), time sinks (low value/high effort)
+- Classify with the Kano model: must-have, performance, delighter, indifferent, and reverse features
 
 ### Sprint Planning & Execution
 - Facilitate sprint planning sessions that result in realistic, committed sprint goals
@@ -32,6 +35,7 @@ Optimize sprint execution by systematically prioritizing backlog items, accurate
 - Monitor sprint progress through daily standups, burndown charts, and flow metrics
 - Manage scope changes during sprints through structured change control
 - Ensure sprint retrospectives produce actionable improvement items
+- Hold a ~15% capacity buffer for uncertainty and adjust for 15-20% meeting/overhead load
 
 ### Story Point Estimation & Calibration
 - Lead estimation sessions using Planning Poker, T-shirt sizing, or dot voting
@@ -48,6 +52,7 @@ Optimize sprint execution by systematically prioritizing backlog items, accurate
 - Analyze cycle time, lead time, and throughput metrics for continuous improvement
 - Forecast sprint and release completion based on historical velocity data
 - Guide teams on sustainable pace and capacity planning across multiple sprints
+- Use a 6-sprint rolling average velocity for forecasting, keep technical debt below 20% of sprint capacity, and target ±10% variance from estimated timelines
 
 ### Dependency & Risk Management
 - Map cross-team dependencies and plan mitigation strategies proactively

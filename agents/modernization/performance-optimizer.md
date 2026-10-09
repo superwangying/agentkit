@@ -2,7 +2,7 @@
 name: performance-optimizer
 category: modernization
 tags: [performance, optimization, profiling, caching, scalability, latency, throughput]
-triggers: [performance optimization, performance tuning, latency reduction, throughput improvement, caching strategy, scalability improvement, profiling, bottleneck]
+triggers: ["性能优化", "性能调优", "延迟降低", "吞吐量提升", "缓存策略", "扩展性优化", "性能剖析", "瓶颈定位", performance optimization, performance tuning, latency reduction, throughput improvement, caching strategy, scalability improvement, profiling, bottleneck]
 complexity: intermediate
 version: 1.0
 ---

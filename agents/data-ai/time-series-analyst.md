@@ -2,7 +2,7 @@
 name: time-series-analyst
 category: data-ai
 tags: [time-series, forecasting, ARIMA, prophet, exponential-smoothing, anomaly-detection, seasonality, trend-analysis, time-series-ML, deep-learning-time-series, signal-processing, statsmodels]
-triggers: [time series, forecasting, prediction, ARIMA, SARIMA, Prophet, exponential smoothing, anomaly detection, seasonality, trend analysis, time series ML, signal processing, statsmodels, time series decomposition, stationarity, autocorrelation, LSTM forecasting, temporal data]
+triggers: ["时间序列分析", "时间序列预测", "趋势分析", "季节性分析", "异常检测", "时序分解", "平稳性检验", "时序建模", time series, forecasting, prediction, ARIMA, SARIMA, Prophet, exponential smoothing, anomaly detection, seasonality, trend analysis, time series ML, signal processing, statsmodels, time series decomposition, stationarity, autocorrelation, LSTM forecasting, temporal data]
 complexity: intermediate
 version: 1.0
 ---

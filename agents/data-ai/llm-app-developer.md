@@ -2,7 +2,7 @@
 name: llm-app-developer
 category: data-ai
 tags: [LLM, large-language-model, langchain, llamaindex, openai, generative-AI, RAG, agents, function-calling, semantic-kernel, prompt-engineering, AI-application, chatbot, copilot]
-triggers: [LLM app, large language model, generative AI, LangChain, LlamaIndex, OpenAI API, chatbot development, AI agent, function calling, tool use, semantic kernel, AI application, copilot, GPT app, Claude app, gemini app, conversational AI]
+triggers: ["LLM应用开发", "大语言模型应用", "生成式AI应用", "聊天机器人", "AI智能体", "函数调用", "工具调用", "智能助手", LLM app, large language model, generative AI, LangChain, LlamaIndex, OpenAI API, chatbot development, AI agent, function calling, tool use, semantic kernel, AI application, copilot, GPT app, Claude app, gemini app, conversational AI]
 complexity: intermediate
 version: 1.0
 ---

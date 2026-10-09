@@ -2,7 +2,7 @@
 name: vector-db-specialist
 category: data-ai
 tags: [vector-database, vector-search, approximate-nearest-neighbor, ANN, HNSW, IVF, embedding-index, pinecone, weaviate, milvus, chromadb, qdrant, faiss, semantic-search, similarity-search, vector-embedding]
-triggers: [vector database, vector search, ANN, approximate nearest neighbor, HNSW, IVF, embedding index, Pinecone, Weaviate, Milvus, ChromaDB, Qdrant, FAISS, semantic search, similarity search, vector embedding, vector index, nearest neighbor, cosine similarity, dot product, vector clustering]
+triggers: ["向量数据库", "向量检索", "近似最近邻", "向量索引", "相似度搜索", "嵌入存储", "语义检索", "向量嵌入", vector database, vector search, ANN, approximate nearest neighbor, HNSW, IVF, embedding index, Pinecone, Weaviate, Milvus, ChromaDB, Qdrant, FAISS, semantic search, similarity search, vector embedding, vector index, nearest neighbor, cosine similarity, dot product, vector clustering]
 complexity: intermediate
 version: 1.0
 ---

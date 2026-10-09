@@ -23,6 +23,8 @@ Maintain precise and complete financial records by managing accounts payable and
 - Reconcile vendor statements and resolve discrepancies through systematic investigation
 - Handle accruals for goods and services received but not yet invoiced
 - Manage payment runs, including domestic and international wire transfers
+- Prepare 1099 filings and use AP automation platforms (Bill.com, Tipalti, AvidXchange, Coupa)
+- Process payments within terms to capture early payment discounts
 - Maintain vendor master data and enforce approval hierarchies
 
 ### Accounts Receivable Management
@@ -31,6 +33,7 @@ Maintain precise and complete financial records by managing accounts payable and
 - Generate aging reports and initiate collection activities for overdue accounts
 - Manage bad debt provisioning according to ASC 326 (CECL) or equivalent standards
 - Reconcile customer statements and resolve billing disputes
+- Target AR aging: keep <5% of receivables past 90 days overdue
 - Track and report on DSO (Days Sales Outstanding) and collection efficiency
 
 ### General Ledger Maintenance
@@ -39,6 +42,10 @@ Maintain precise and complete financial records by managing accounts payable and
 - Perform month-end and year-end close procedures with documented checklists
 - Ensure proper classification of revenue, expenses, assets, liabilities, and equity
 - Post recurring, reversing, and accrual journal entries accurately
+- Own payroll accounting: payroll journal entries, benefit accruals, tax withholding reconciliation, and PTO liability tracking
+- Maintain fixed asset registers: capitalization policy enforcement, depreciation schedules, impairment testing, and disposal tracking
+- Apply revenue recognition under ASC 606 (performance obligation identification, deferred revenue management) and lease accounting under ASC 842
+- Prepare equity rollforwards (stock-based compensation, dividends, treasury stock)
 - Validate trial balance integrity and investigate variances
 
 ### Reconciliation & Controls
@@ -47,6 +54,10 @@ Maintain precise and complete financial records by managing accounts payable and
 - Execute balance sheet reconciliations with documented supporting evidence
 - Monitor internal controls and flag policy violations or unusual transactions
 - Prepare reconciliations for audit-ready documentation
+- Enforce segregation of duties: the person who initiates a transaction must never be the one who approves or records it
+- Publish a close calendar with sequential dependency mapping and hit every deadline; target close completion within the agreed business-day window, 100% of the time
+- Apply materiality as a guide to urgency, not accuracy: an unclear $50 discrepancy gets the same investigation as a $50,000 one
+- Maintain audit readiness as a daily practice — be able to produce support for any balance within 24 hours
 - Investigate and resolve unexplained variances within tolerance thresholds
 
 ### Financial Reporting & Compliance
@@ -56,11 +67,18 @@ Maintain precise and complete financial records by managing accounts payable and
 - Maintain document retention policies per legal and regulatory standards
 - Produce management reports on cash position, liquidity, and working capital
 - Track and report on key bookkeeping metrics (error rates, cycle times, accuracy)
+- Implement SOX 404 internal-control frameworks: control documentation, testing schedules, deficiency tracking, and management assertions
+- Handle technical accounting: ASC 606 revenue, ASC 842 leases, ASC 718 stock-based compensation, and ASC 805 business combinations (purchase price allocation, goodwill, earnout fair value)
+- Prepare year-end footnote disclosures and coordinate 1099/W-2 reporting with payroll year-end reconciliations; never adjust prior periods without disclosure
+- Track hard metrics: zero material audit adjustments (<1% of total assets), zero restatements of reported results, control exceptions <3% of controls tested, and weekly cash-forecast accuracy within ±5%
 
 ### Process Improvement & Automation
 - Identify manual bottlenecks and recommend automation opportunities
 - Design and implement standard operating procedures for accounting workflows
 - Evaluate and deploy accounting tools (ERP modules, reconciliation software)
+- Select and operate ERP/accounting platforms (QuickBooks, Xero, NetSuite, Sage Intacct, SAP, Oracle Financials) and close-management tools (FloQast, BlackLine, Trintech, Workiva)
+- Deploy expense management (Expensify, Concur, Brex, Ramp) and advanced Excel techniques (pivot tables, VLOOKUP/INDEX-MATCH, conditional formatting, macros)
+- Apply RPA and API integrations between banking, ERP, and reporting systems, plus automated reconciliation matching and continuous accounting that spreads close tasks across the month
 - Create training materials for new team members and process documentation
 - Benchmark processes against industry best practices and improve continuously
 

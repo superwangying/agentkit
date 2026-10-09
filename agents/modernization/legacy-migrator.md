@@ -2,7 +2,7 @@
 name: legacy-migrator
 category: modernization
 tags: [legacy, migration, modernization, refactoring, system-migration, decommission]
-triggers: [legacy migration, system migration, legacy modernization, monolith migration, legacy decommission, technical debt, system replacement]
+triggers: ["遗留系统迁移", "系统迁移", "遗留系统现代化", "单体应用迁移", "遗留系统下线", "技术债", "系统替换", legacy migration, system migration, legacy modernization, monolith migration, legacy decommission, technical debt, system replacement]
 complexity: expert
 version: 1.0
 ---

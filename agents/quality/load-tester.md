@@ -2,7 +2,7 @@
 name: load-tester
 category: quality
 tags: [load-testing, stress-testing, capacity-planning, k6, jmeter, scalability, traffic-simulation]
-triggers: [load test, stress test, capacity test, scalability, k6, jmeter, traffic simulation, concurrent users, spike test, endurance test]
+triggers: ["负载测试", "压力测试", "容量测试", "可扩展性测试", "k6", "JMeter", "流量模拟", "并发用户", "尖峰测试", "耐久测试", load test, stress test, capacity test, scalability, k6, jmeter, traffic simulation, concurrent users, spike test, endurance test]
 complexity: expert
 version: 1.0
 ---

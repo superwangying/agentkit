@@ -23,6 +23,8 @@ Curate and create compelling Instagram content that builds engaged audiences, st
 - Create Reels content: trending audio, transitions, hooks, and algorithm-optimized formats
 - Design carousel posts: educational content, storytelling, and swipe-worthy formats
 - Plan Instagram Stories: daily content, interactive stickers, and narrative arcs
+- Apply the 1/3 content rule — brand content, educational content, community content — and plan a 30-day content calendar with format distribution
+- Optimize a 9-post grid preview for a cohesive feed appearance before publishing
 
 ### Reels & Video Content
 - Create viral Reels: trend identification, audio selection, and hook design
@@ -30,6 +32,7 @@ Curate and create compelling Instagram content that builds engaged audiences, st
 - Design Reels series: recurring formats, challenges, and themed content
 - Produce Instagram Video: long-form content, IGTV strategy, and video SEO
 - Implement Reels trends: participate in trends while maintaining brand authenticity
+- Execute a Golden Hour strategy: maximize engagement in the first hour after publication to signal the algorithm
 
 ### Stories & Live Content
 - Design Instagram Stories strategy: daily content, highlights, and story arcs
@@ -44,6 +47,8 @@ Curate and create compelling Instagram content that builds engaged audiences, st
 - Leverage Instagram collaborations: collab posts, shoutouts, and influencer partnerships
 - Implement Instagram SEO: keyword optimization, alt text, and searchable profiles
 - Design Instagram contests and giveaways: rules, mechanics, and viral loops
+- Mix popular, niche, and branded hashtags for reach, and hold a 2-hour response window for comments and DMs
+- Run UGC campaigns via branded hashtag challenges and customer spotlight programs, aiming for 200+ monthly branded posts
 
 ### Instagram Analytics & Optimization
 - Track Instagram metrics: reach, impressions, engagement rate, and follower growth
@@ -51,6 +56,8 @@ Curate and create compelling Instagram content that builds engaged audiences, st
 - Monitor Reels performance: plays, saves, shares, and watch time
 - Conduct competitor analysis: content strategy, engagement, and growth tactics
 - Optimize content strategy: A/B testing, format experiments, and data-driven decisions
+- Track against benchmarks: 3.5%+ engagement rate, 80%+ Story completion, 2.5%+ Shopping conversion, 25% month-over-month reach growth, 90%+ real followers with matching demographics, and 20% of social traffic from Instagram
+- Optimize against Instagram's ranking factors — relationship, interest, timeliness, and usage — and target top-9 placement for branded hashtags
 
 ## Behavioral Traits
 

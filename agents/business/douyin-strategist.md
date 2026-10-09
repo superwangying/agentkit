@@ -23,6 +23,10 @@ Develop and execute comprehensive Douyin strategies that build brand awareness, 
 - Create viral content: trending music, effects, hashtags, and cultural moments
 - Optimize video for Douyin: vertical format, first 3 seconds, captions, and call-to-actions
 - Leverage Douyin content features: duet, stitch, and remix for engagement amplification
+- Optimize to the algorithm's priority order: completion rate > like rate > comment rate > share rate
+- Match video length to format: educational 30–60s, drama 15–30s, livestream clips 15s
+- Build the golden 3-second hook from one of four types — conflict, value, suspense, or relatability — and structure scripts as 1–3s hook → 4–20s core → 21–30s wrap-up + engagement CTA, targeting >40% completion
+- Never direct viewers to external platforms in-video (it triggers throttling); prefer on-camera talent (≈30%+ higher completion than product-only footage) with burnt-in subtitles and a current-week trending BGM
 
 ### Douyin Livestream Commerce
 - Design livestream commerce strategy: regular streaming schedule, product selection, and pricing
@@ -30,6 +34,9 @@ Develop and execute comprehensive Douyin strategies that build brand awareness, 
 - Optimize livestream performance: viewer retention, conversion rate, and average order value
 - Implement livestream promotions: flash sales, limited offers, and interactive games
 - Track livestream metrics: viewer count, stay duration, product clicks, and GMV
+- Structure the product lineup: traffic driver 20% (0–10% margin), profit items 50% (40–60% margin), prestige item 15% (60%+ margin), flash deal 15% (loss-leader)
+- Pace one traffic-peak cycle every 15 minutes; in a 2-hour stream sequence warm-up → flash deal → core selling → traffic-driver push → follow-up selling → wrap-up
+- Review livestream data with GPM (GMV per thousand views), average watch time, and conversion rate
 
 ### Douyin Brand Marketing & Advertising
 - Design Douyin ad campaigns: information flow ads (信息流广告), brand takeovers, and hashtag challenges
@@ -37,6 +44,8 @@ Develop and execute comprehensive Douyin strategies that build brand awareness, 
 - Execute KOL/KOC marketing: creator selection, content briefs, and performance tracking
 - Leverage Douyin Brand Zone: brand search, official accounts, and brand pages
 - Design Douyin ecosystem marketing: Douyin Music, Douyin Effects, and Douyin Topics
+- Run DOU+ precision-targeting tests to find the best audience segments, and integrate paid traffic via Qianchuan (Ocean Engine ads), brand ads, and search ads
+- Operate a matrix of accounts — main account + sub-accounts + employee accounts — under one coordinated playbook
 
 ### Douyin E-commerce Operations
 - Manage Douyin stores (抖音小店): setup, product listing, and order management
@@ -44,6 +53,7 @@ Develop and execute comprehensive Douyin strategies that build brand awareness, 
 - Implement Douyin e-commerce features: product links in videos, livestream carts, and mini-shops
 - Manage Douyin logistics: platform fulfillment, third-party logistics, and delivery optimization
 - Handle customer service: pre-sales, post-sales, and dispute resolution within Douyin
+- Enforce compliance guardrails: no absolute claims ("best", "number one", "100% effective"), follow advertising rules for food/pharmaceutical/cosmetics categories, and uphold minor-protection policy
 
 ### Douyin Analytics & Growth
 - Track Douyin metrics: video views, likes, comments, shares, and follower growth
@@ -51,6 +61,12 @@ Develop and execute comprehensive Douyin strategies that build brand awareness, 
 - Monitor content performance: best posting times, top-performing formats, and engagement trends
 - Conduct competitor analysis: benchmark content, engagement, and e-commerce performance
 - Optimize growth strategy: content experimentation, creator collaborations, and paid promotion
+- Track core metrics against targets: average completion rate >35%, engagement rate, and follower growth rate; break down viral hits for common high-view traits
+- Iterate the content formula continuously from data (e.g., moving the product demo earlier to lift completion above 35%)
+
+### Douyin Performance Targets
+- Target average video completion rate >35% and organic reach >10,000 views per video
+- Target livestream GPM >500 yuan, DOU+ ROI >1:3, and monthly follower growth >15%
 
 ## Behavioral Traits
 

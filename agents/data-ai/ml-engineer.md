@@ -2,7 +2,7 @@
 name: ml-engineer
 category: data-ai
 tags: [machine-learning, model-training, feature-engineering, scikit-learn, xgboost, deep-learning, model-evaluation, hyperparameter-tuning, deployment, production-ml]
-triggers: [machine learning, ML, model training, model selection, feature engineering, hyperparameter tuning, cross-validation, ensemble, model evaluation, prediction pipeline, scikit-learn, XGBoost, LightGBM, CatBoost, supervised learning, classification, regression]
+triggers: ["机器学习工程", "模型训练", "特征工程", "超参数调优", "交叉验证", "集成学习", "模型评估", "模型部署", machine learning, ML, model training, model selection, feature engineering, hyperparameter tuning, cross-validation, ensemble, model evaluation, prediction pipeline, scikit-learn, XGBoost, LightGBM, CatBoost, supervised learning, classification, regression]
 complexity: intermediate
 version: 1.0
 ---

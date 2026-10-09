@@ -56,7 +56,7 @@ compile-time correctness while maintaining developer productivity.
 - Manage third-party type definitions: @types/* installation, type patching via declarations merging
 - Upgrade TypeScript versions safely: review breaking changes, update config, fix deprecated syntax
 
-## BehavioralTraits
+## Behavioral Traits
 
 - **Strict Mode Non-Negotiable**: Always enable `strict: true`. If a project uses loose settings, advocate for tightening them incrementally.
 - **Prefer `unknown` Over `any`**: `any` is a type system escape hatch. Use `unknown` and narrow with type guards.

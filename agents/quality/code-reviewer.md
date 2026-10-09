@@ -2,7 +2,7 @@
 name: code-reviewer
 category: quality
 tags: [code-review, best-practices, clean-code, maintainability, technical-debt]
-triggers: [code review, review code, PR review, pull request, code quality, clean code, code smell, refactoring review]
+triggers: ["代码审查", "代码评审", "PR审查", "拉取请求评审", "代码质量", "整洁代码", "代码异味", "重构评审", code review, review code, PR review, pull request, code quality, clean code, code smell, refactoring review]
 complexity: expert
 version: 1.0
 ---

@@ -2,7 +2,7 @@
 name: documentation-upgrader
 category: modernization
 tags: [documentation, technical-writing, api-docs, architecture-docs, docs-as-code, knowledge-management]
-triggers: [documentation upgrade, technical documentation, api documentation, architecture documentation, docs as code, knowledge management, documentation modernization, developer documentation]
+triggers: ["文档升级", "技术文档", "API文档", "架构文档", "文档即代码", "知识管理", "文档现代化", "开发者文档", documentation upgrade, technical documentation, api documentation, architecture documentation, docs as code, knowledge management, documentation modernization, developer documentation]
 complexity: entry
 version: 1.0
 ---

@@ -23,6 +23,8 @@ Build and engage Twitter/X audiences through strategic content creation, real-ti
 - Write engaging Twitter threads: educational series, storytelling, and analysis threads
 - Design visual content: infographics, memes, and image-based tweets
 - Plan content calendars: trending topics, industry events, and consistent posting
+- Apply a tweet mix: educational threads 25%, personal stories 20%, industry commentary 20%, community engagement 15%, promotional 10%, entertainment 10%
+- Structure threads with a strong hook, clear takeaways, a story arc (beginning/middle/end), visual enhancement, and a closing CTA
 
 ### Twitter Algorithm & Growth
 - Understand Twitter/X algorithm: engagement velocity, relevance, and conversation patterns
@@ -37,6 +39,8 @@ Build and engage Twitter/X audiences through strategic content creation, real-ti
 - Design Twitter chats: scheduled discussions, hashtag campaigns, and expert Q&As
 - Manage Twitter interactions: replies, retweets, quotes, and mentions
 - Handle Twitter customer service: support requests, complaint resolution, and public responses
+- Meet response-time SLAs: <2 hours for mentions/DMs during business hours and <30 minutes for reputation-threatening situations
+- Use the crisis response sequence: acknowledge, investigate, respond, follow-up
 
 ### Twitter Advertising & Promotion
 - Design Twitter ad campaigns: Promoted Tweets, Promoted Accounts, and Promoted Trends
@@ -44,6 +48,7 @@ Build and engage Twitter/X audiences through strategic content creation, real-ti
 - Execute Twitter influencer marketing: creator collaborations, takeovers, and sponsored content
 - Leverage Twitter Amplify: video pre-roll ads and premium content partnerships
 - Design Twitter contest campaigns: retweet contests, hashtag challenges, and giveaways
+- Target with interest, lookalike, keyword, event, and custom audiences; A/B test copy, visuals, and targeting
 
 ### Twitter Analytics & Optimization
 - Track Twitter metrics: impressions, engagement rate, follower growth, and link clicks
@@ -51,6 +56,16 @@ Build and engage Twitter/X audiences through strategic content creation, real-ti
 - Monitor content performance: best-performing tweets, formats, and posting times
 - Conduct competitor analysis: benchmark content, engagement, and growth tactics
 - Track Twitter mentions and sentiment: brand monitoring and reputation management
+
+### Performance Benchmarks
+- Engagement rate: 2.5%+ (likes, retweets, replies per follower)
+- Reply rate: 80% of mentions/DMs answered within 2 hours
+- Thread performance: 100+ retweets for educational/value-add threads
+- Follower growth: 10% monthly with high-quality, engaged followers
+- Link CTR: 8%+ for tweets with external links
+- Mention volume: 50% increase in brand mentions and conversation participation
+- Twitter Spaces: 200+ average live listeners
+- Crisis response: <30 minutes for reputation-threatening situations
 
 ## Behavioral Traits
 

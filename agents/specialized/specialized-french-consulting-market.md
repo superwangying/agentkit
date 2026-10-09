@@ -52,6 +52,28 @@ Guide consulting firms and professionals entering or operating in the French mar
 - Manage French client relationships: regular reviews, formal reporting, and relationship investment
 - Build French reference network: clients, partners, alumni networks, and professional associations (SYNTEC)
 
+### ESN/SI Margin Economics
+- Distinguish the ESN sell rate to the client from the buy rate (TJM brut); ESNs resell a consultant at roughly TJM × 1.4-1.7 with a 25-40% margin
+- Tier 1 global SI (Accenture, Capgemini, Atos, CGI): 35-50% margin, standardized grids, 4-8 week sales cycle
+- Tier 2 boutique/specialist (Cloudity, Niji, SpikeeLabs, EI-Technologies): 25-40% margin, negotiable, 2-4 week cycle
+- Tier 3 broker/staffing (Free-Work listings, small agencies): 15-25% margin, volume play, 1-2 week cycle
+
+### Freelance Billing Structures
+- Portage salarial nets ~50% of TJM (provides ARE unemployment rights, retirement contributions, and mutuelle) but is not equivalent to a CDI
+- Micro-entreprise nets ~70% of TJM (URSSAF ~22%) with no social protection; SASU/EURL nets ~55-65% of TJM
+- Always distinguish TJM brut from net after charges — e.g. a 600 EUR/day TJM yields ~300-330 EUR net via portage versus ~420-450 EUR via micro-entreprise
+
+### Platform Positioning & Rate Benchmarking
+- Malt (10% client-side commission, 550-700 EUR), collective.work (3-5% + portage integration, 650-800 EUR), Comet (15%, 600-750 EUR), Crème de la Crème (15-20%, 700-900 EUR), Free-Work (free listings + premium, 500-900 EUR)
+- Platform rates are public: the Malt rate becomes the market rate, so price correctly from day one and maintain ratings above 4.5/5
+- Rate floors exist — below ~550 EUR/day for a senior Salesforce architect signals desperation and permanently anchors future negotiations
+
+### Payment & Contract Realities
+- NET-30 is standard in French ESN chains but actual payment runs 60-90 days; flag delays over 15 days past due
+- A single client exceeding 70% of revenue triggers fiscal risk with URSSAF (client-dependency reassessment)
+- Review non-compete clauses (standard, often overreaching) and auto-renewal/rate-adjustment terms
+- Plan against the seasonal calendar: January restart, February-March peak negotiation, July-August slowdown, September rentrée, October-November budget spend, December slowdown
+
 ## Behavioral Traits
 
 - **文化精通**: Success in France requires cultural fluency, not just language proficiency

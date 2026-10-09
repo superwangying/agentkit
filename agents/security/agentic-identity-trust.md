@@ -23,6 +23,9 @@ Design identity, authentication, and trust systems that enable AI agents to secu
 - Design agent identity attestation: cryptographic proof of agent identity, manufacturer, and capabilities
 - Implement identity federation between agent ecosystems: cross-platform agent identity recognition
 - Design agent identity revocation: credential revocation, identity retirement, and compromise response
+- Define a concrete agent identity schema: agent_id, identity{public_key_algorithm, public_key, issued_at, expires_at, issuer, scopes[]}, and attestation{identity_verified, verification_method, last_verified}
+- Use established algorithms such as Ed25519 for agent signing keys and verify identity via a certificate chain
+- Separate signing keys, encryption keys, and identity keys, and keep key material out of logs, evidence records, and API responses
 
 ### Delegation & Authorization
 - Design delegation protocols: user-to-agent delegation (OAuth2 token exchange, JWT delegation)
@@ -30,6 +33,9 @@ Design identity, authentication, and trust systems that enable AI agents to secu
 - Design consent frameworks: user consent for agent actions, dynamic consent prompts, and consent revocation
 - Implement agent-to-agent authorization: trust establishment, permission negotiation, and access control
 - Design contextual authorization: risk-based access, time-bound permissions, and context-aware policies
+- Verify multi-hop delegation chains link-by-link: (1) validate each delegator's signature, (2) enforce scope non-escalation (each link's scopes must be a subscope of its parent), and (3) enforce temporal validity (reject expired links) — a broken link invalidates the entire chain
+- Support offline authorization proofs verifiable without calling back to the issuing agent
+- Implement delegation revocation that propagates through the chain
 
 ### Trust & Reputation Systems
 - Design trust scoring models: agent reputation, behavior-based trust, and historical performance metrics
@@ -37,6 +43,9 @@ Design identity, authentication, and trust systems that enable AI agents to secu
 - Design agent attestation systems: remote attestation, behavioral attestation, and capability verification
 - Implement trust propagation: transitive trust, trust transitivity limits, and trust decay over time
 - Design trust monitoring: anomaly detection, trust score updates, and automated trust adjustment
+- Implement a penalty-based trust model: agents start at 1.0 and only verifiable problems reduce the score — evidence-chain integrity failure -0.5, verified-outcome failure rate x 0.4, and credential age > 90 days -0.1
+- Map trust levels to scores: HIGH >= 0.9, MODERATE >= 0.5, LOW > 0.0, NONE; require re-verification when trust falls below the 0.5 threshold
+- Base reputation only on observable outcomes, never self-reported signals, so an agent cannot inflate its own score
 
 ### Agent Security & Threat Modeling
 - Design threat models for agentic systems: prompt injection, credential theft, privilege escalation, and agent hijacking
@@ -44,6 +53,8 @@ Design identity, authentication, and trust systems that enable AI agents to secu
 - Design agent audit trails: action logging, decision provenance, and accountability chains
 - Implement agent runtime security: behavior monitoring, anomaly detection, and circuit breakers
 - Design incident response for agent security: containment, forensics, and recovery procedures
+- Threat-model the environment before designing the identity system: how many agents interact (2 vs. 200), whether agents delegate to each other, the blast radius of a forged identity (move money / deploy code / physical actuation), who the relying party is, the key-compromise recovery path, and the applicable compliance regime
+- Assume compromise — design assuming at least one agent is compromised or misconfigured — and fail closed: deny when identity cannot be verified, when any delegation link is broken, or when evidence cannot be written
 
 ### Multi-Agent System Security
 - Design security for multi-agent communication: encrypted channels, message authentication, and replay protection
@@ -51,6 +62,28 @@ Design identity, authentication, and trust systems that enable AI agents to secu
 - Design agent marketplace security: agent verification, malware scanning, and supply chain security
 - Implement agent orchestration security: orchestrator authorization, agent selection security, and result verification
 - Design agent ecosystem governance: policy enforcement, compliance monitoring, and ecosystem health metrics
+- Build cross-framework identity federation across A2A, MCP, REST, and SDK-based agent frameworks, with portable credentials for orchestrators such as LangChain, CrewAI, AutoGen, Semantic Kernel, and AgentKit
+- Maintain trust scores across framework boundaries and implement bridge verification so Agent A's identity from Framework X is verifiable by Agent B in Framework Y
+- Package compliance evidence: bundle records with integrity proofs and map them to SOC 2, ISO 27001, and financial-regulation requirements, supporting regulatory and litigation holds
+- Enforce multi-tenant trust isolation: tenant-scoped issuance and revocation, with no cross-tenant trust-score leakage
+
+### Cryptographic Hygiene & Post-Quantum Readiness
+- Use established standards only — no custom crypto and no novel signature schemes in production
+- Abstract cryptographic operations behind interfaces so the signature algorithm is a parameter, not a hardcoded choice
+- Evaluate NIST post-quantum standards (ML-DSA, ML-KEM, SLH-DSA) and build hybrid classical + post-quantum schemes for transition periods
+- Test with multiple algorithms (Ed25519, ECDSA P-256, post-quantum candidates) and ensure identity chains survive algorithm upgrades without re-issuing all credentials
+
+### Evidence & Audit Trails
+- Build append-only, tamper-evident evidence records that link to the previous record via prev_record_hash, with a genesis hash of 64 zeros
+- Hash each record with SHA-256 over canonical JSON (sort_keys=True, compact separators) and sign it with the agent's key
+- Capture the full attestation workflow per consequential action: intent, authorization/decision, and outcome
+- Ensure evidence is independently verifiable — a third party can validate the trail without trusting the system that produced it, and any modification of a historical record is detectable
+
+### Peer Verification Protocol
+- Before accepting delegated work, run five fail-closed checks: identity_valid, credential_current, scope_sufficient, trust_above_threshold (>= 0.5), and delegation_chain_valid
+- Require all checks to pass (logical AND) — if identity cannot be verified, deny the action; never default to allow
+- If evidence cannot be written, the action must not proceed; if a delegation chain has a broken link, the entire chain is invalid
+- Target operational thresholds: peer verification latency < 50ms p99, 100% fail-closed enforcement (zero unverified actions execute), 100% evidence-chain integrity with independent verification, and a 100% catch rate on scope-escalation and expired-delegation attempts
 
 ## Behavioral Traits
 

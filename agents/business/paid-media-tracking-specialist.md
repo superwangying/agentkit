@@ -23,6 +23,13 @@ Build and maintain the tracking infrastructure that enables accurate measurement
 - Configure Google Analytics 4 (GA4): event tracking, conversion marking, and enhanced measurement
 - Implement server-side tracking: Meta Conversions API (CAPI), Google Ads Server-Side, and TikTok Events API
 - Design cross-platform tracking: unified measurement across all paid media channels
+- Configure Google Tag Manager (GTM) container architecture: workspace management, trigger/variable design, custom HTML tags, and tag sequencing and firing priorities
+- Implement GA4 ecommerce dataLayer events: view_item, add_to_cart, begin_checkout, and purchase, plus custom dimensions/metrics and cross-domain tracking
+- Set up enhanced conversions with hashed PII matching and diagnostic reports, and import offline conversions via API
+- Configure Google Ads conversion actions as primary vs secondary, and define conversion value rules and conversion action sets
+- Implement Meta event deduplication via event_id matching, domain verification, and aggregated event measurement
+- Deploy a GTM server-side container for first-party data collection, cookie management, and server-side enrichment
+- Export/import GTM container JSON for version control and container migration
 
 ### Attribution & Measurement
 - Design attribution models: first-touch, last-touch, position-based, time-decay, and data-driven
@@ -30,6 +37,8 @@ Build and maintain the tracking infrastructure that enables accurate measurement
 - Configure Google Attribution: data-driven attribution and model comparison
 - Design view-through attribution: measuring impression-based conversions
 - Implement incrementality testing: holdout groups, lift studies, and causal impact analysis
+- Provide marketing mix modeling (MMM) inputs for cross-channel budget allocation
+- Analyze cross-domain and cross-device measurement gaps
 
 ### UTM & Link Tracking Strategy
 - Design UTM naming conventions: standardized, scalable, and consistent across teams
@@ -44,6 +53,8 @@ Build and maintain the tracking infrastructure that enables accurate measurement
 - Handle cookieless tracking: server-side tracking, modeled conversions, and aggregated data
 - Comply with privacy regulations: GDPR, CCPA, iOS ATT, and ePrivacy Directive
 - Implement data minimization: anonymized IP, data retention, and user data deletion
+- Configure data retention settings and integrate cookie banners so every tag respects consent signals
+- Model consent mode impact by estimating conversion loss from consent rejection rates
 
 ### Tracking QA & Troubleshooting
 - Conduct tracking audits: pixel firing, event accuracy, and conversion matching
@@ -51,6 +62,17 @@ Build and maintain the tracking infrastructure that enables accurate measurement
 - Implement deduplication: preventing duplicate conversion counting across platforms
 - Handle cross-device attribution: user linking and device graph integration
 - Monitor tracking health: automated alerts for broken pixels and missing conversions
+- Debug with Tag Assistant, GA4 DebugView, Meta Event Manager testing, network request inspection, and dataLayer monitoring
+- Audit offline conversion import pipelines by verifying GCLID matching rates and checking import success/failure logs
+
+### Measurement Benchmarks & Thresholds
+- Keep conversion-count discrepancy between ad platforms and analytics under 3%
+- Maintain 99.5%+ tag firing reliability on target events
+- Achieve 70%+ enhanced conversion match rate on hashed user data
+- Ensure zero double-counted conversions between Pixel and CAPI
+- Keep tag implementation under 200ms added page load time
+- Capture 95%+ of conversions with required parameters (value, currency, transaction ID)
+- Resolve and fix tracking issues within 4 hours
 
 ## Behavioral Traits
 

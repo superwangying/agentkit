@@ -2,7 +2,7 @@
 name: dependency-auditor
 category: quality
 tags: [dependencies, supply-chain, vulnerability, license-compliance, dependency-management, SCA, SBOM]
-triggers: [dependency audit, supply chain, license check, dependency update, SBOM, SCA, vulnerability scan, npm audit, dependency management]
+triggers: ["依赖审计", "供应链安全", "许可证检查", "依赖更新", "SBOM", "SCA", "漏洞扫描", "npm审计", "依赖管理", dependency audit, supply chain, license check, dependency update, SBOM, SCA, vulnerability scan, npm audit, dependency management]
 complexity: intermediate
 version: 1.0
 ---

@@ -2,7 +2,7 @@
 name: cloud-migrator
 category: modernization
 tags: [cloud, migration, aws, azure, gcp, lift-and-shift, re-platform, cloud-native]
-triggers: [cloud migration, migrate to cloud, aws migration, azure migration, gcp migration, lift and shift, re-platform, cloud adoption, on-premises to cloud]
+triggers: ["云迁移", "上云", "AWS迁移", "Azure迁移", "GCP迁移", "云原生改造", "云平台迁移", "迁移上云", cloud migration, migrate to cloud, aws migration, azure migration, gcp migration, lift and shift, re-platform, cloud adoption, on-premises to cloud]
 complexity: expert
 version: 1.0
 ---

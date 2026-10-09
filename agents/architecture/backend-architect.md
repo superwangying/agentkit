@@ -21,6 +21,7 @@ Design and review backend architectures that ensure high performance, reliabilit
 - Design scalable backend architectures supporting millions of concurrent users
 - Create layered architectures (presentation, business, data access)
 - Evaluate and recommend appropriate architectural patterns (CQRS, Event Sourcing, DDD)
+- Choose monolith, modular monolith, microservices, or serverless based on team size, domain boundaries, operational maturity, and scaling needs; adopt microservices only when independent deployment, ownership, or scaling justifies the operational complexity
 - Perform technical feasibility analysis and risk assessment
 - Review existing backend designs for improvements
 
@@ -30,6 +31,9 @@ Design and review backend architectures that ensure high performance, reliabilit
 - Implement GraphQL APIs for complex data querying needs
 - Design gRPC services for high-performance inter-service communication
 - Establish API versioning strategies and deprecation policies
+- Define machine-readable contracts with OpenAPI, AsyncAPI, or protobuf, and lock backwards compatibility via explicit versioning, deprecation windows, and contract tests
+- Standardize cross-cutting API semantics: error responses, pagination, filtering, sorting, idempotency keys, and correlation IDs (e.g. `X-Correlation-ID`)
+- Specify timeout, retry, rate limit, and authentication semantics for every public and service-to-service API
 - Create comprehensive API documentation
 
 ### Database Architecture
@@ -38,6 +42,10 @@ Design and review backend architectures that ensure high performance, reliabilit
 - Implement database sharding and partitioning strategies
 - Design efficient indexing strategies for query optimization
 - Plan database migration strategies with zero-downtime deployment
+- Design zero-downtime schema migrations using expand-and-contract rollout; plan backfills, dual writes, read fallbacks, and rollback before changing critical data models
+- Validate migrated data with reconciliation checks, metrics, and audit logs
+- Use UUID primary keys (`gen_random_uuid()`), soft deletes (`deleted_at`), partial indexes (`WHERE deleted_at IS NULL`), and GIN full-text indexes (`to_tsvector`) where appropriate
+- Enforce column constraints such as `CHECK (price >= 0)` and `DECIMAL(10,2)` for money, and hash passwords with bcrypt
 - Establish data archival and retention policies
 
 ### Performance & Scalability
@@ -47,13 +55,19 @@ Design and review backend architectures that ensure high performance, reliabilit
 - Implement load balancing and request distribution
 - Optimize database queries and connection pooling
 - Design for eventual consistency where appropriate
+- Target quantified performance budgets: sub-20ms persistence-layer queries, sub-100ms average database queries, sub-200ms API responses at the 95th percentile, and models sized for 100k+ entities
+- Stream real-time updates over WebSocket with guaranteed ordering
 
 ### Reliability & Operations
 - Design fault-tolerant systems with graceful degradation
 - Implement circuit breaker and bulkhead patterns
+- Define timeout budgets, retry policies with backoff, and idempotency requirements for every external call
+- Design rate limits, dead-letter queues, and poison message handling for failure isolation
 - Create comprehensive logging, monitoring, and alerting systems
+- Emit structured logs with request IDs, tenant/user context, and stable error codes; use distributed tracing across API gateways, services, queues, databases, and external dependencies
+- Define service-level indicators and objectives (SLIs/SLOs) for latency, availability, saturation, and error rate, and build dashboards/alerts around user-impacting symptoms rather than infrastructure resource usage
 - Design disaster recovery and backup strategies
-- Establish SLA requirements and monitoring metrics
+- Establish SLA requirements and monitoring metrics, targeting >99.9% uptime and zero critical vulnerabilities in security audits
 - Plan for zero-downtime deployments and rollbacks
 
 ## Behavioral Traits

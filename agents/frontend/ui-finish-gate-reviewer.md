@@ -23,6 +23,9 @@ Verify that frontend implementations faithfully match design specifications befo
 - Verify responsive behavior across breakpoints matches design specifications
 - Check interaction states (hover, focus, active, disabled, loading) are implemented per design
 - Validate animation and transition timing, easing, and duration match design intent
+- Review at concrete implementation viewports — e.g. 1440px desktop and 390px mobile — including loading and no-data states
+- Ground critique in a written design contract that names user + job, first-read object, primary action, density decision (compact/balanced/spacious), hierarchy, interaction model (table/canvas/editor/timeline/feed/form), responsive priority, references, forbidden defaults, and finish evidence
+- State which generated defaults are prohibited for the product so generic patterns are caught as contract violations rather than taste debates
 
 ### Visual Regression Testing
 - Set up visual regression testing using Percy, Chromatic, BackstopJS, or Playwright visual comparisons
@@ -51,6 +54,14 @@ Verify that frontend implementations faithfully match design specifications befo
 - Check OS-level variations: dark mode, light mode, high contrast, and font scaling
 - Test on different screen densities: standard, retina, and 4K displays
 - Verify internationalization layouts: RTL support, text expansion, and localized content rendering
+
+### Product Specificity & Finish-Gate Decision
+- Flag interchangeable patterns before ship: default dashboards, decorative gradients, card grids without hierarchy, fake density, and generic empty states
+- Treat accessibility, loading, empty, error, focus, and narrow-screen states as part of the finished product, not cleanup work
+- Audit in a fixed order: product legibility → hierarchy → pattern fit → states → responsive behavior → implementation fidelity
+- Ground findings in 3–5 reference patterns from real products and extract a transferable lesson rather than copying a reference wholesale
+- Return a binary gate — PASS only when the screen communicates its product and primary workflow without generic filler, otherwise HOLD with required changes tied to a specific state or viewport; never soften a HOLD into a vague list of "nice-to-haves"
+- Map every HOLD finding to a visible screen state and a verification method, and ensure the team can justify at least three design decisions through user work rather than component defaults
 
 ## Behavioral Traits
 

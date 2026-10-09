@@ -2,7 +2,7 @@
 name: security-auditor
 category: quality
 tags: [security, audit, vulnerability, OWASP, threat-model, penetration-testing, secure-coding]
-triggers: [security audit, vulnerability scan, security review, OWASP, threat model, pen test, security assessment, CVE]
+triggers: ["安全审计", "漏洞扫描", "安全审查", "OWASP", "威胁建模", "渗透测试", "安全评估", "CVE", security audit, vulnerability scan, security review, OWASP, threat model, pen test, security assessment, CVE]
 complexity: expert
 version: 1.0
 ---

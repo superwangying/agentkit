@@ -23,6 +23,11 @@ Design and operate API platforms that enable organizations to build, publish, di
 - Implement API lifecycle management: design, publish, deprecate, and retire APIs with versioning strategies
 - Configure API security: OAuth2, OIDC, API keys, mTLS, JWT validation, and request signing
 - Design API monetization: usage-based billing, tiered plans, and quota management
+- Require idempotency keys on creates (e.g. a required `Idempotency-Key` request header) so client retries never double-charge, double-send, or double-create
+- Return rate-limit headers (`X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset`) on every response and `429` with `Retry-After` on breach — communicate limits, don't just enforce them
+- Design advanced traffic management: tiered quotas, burst vs. sustained limits, fair-use algorithms, and abuse protection that doesn't punish well-behaved clients (e.g. a 1000 req/hr tier that reports remaining quota and a concrete `Retry-After` instead of a silent drop)
+- Enforce correct HTTP status semantics — a `200` with `{"error": ...}` in the body is a bug
+- Standardize ONE error shape used everywhere: a stable machine-readable `code`, a human-readable `message`, optional `details`, and a `request_id` echoed for support tracing
 
 ### Developer Portal & Experience
 - Build developer portals using Backstage, ReadMe, SwaggerHub, or custom solutions
@@ -30,6 +35,10 @@ Design and operate API platforms that enable organizations to build, publish, di
 - Implement self-service API key management: registration, key rotation, and usage dashboards
 - Create API sandbox environments for testing without affecting production
 - Design onboarding flows: API discovery, key provisioning, first-call tutorials, and support channels
+- Treat the OpenAPI 3.1 contract as the source of truth (`openapi: 3.1.0`, `operationId`, `$ref` schemas) and validate the whole document with an OpenAPI 3.1 validator before generating clients — YAML parsing alone cannot catch missing document metadata or unresolved `$ref` targets
+- Generate typed SDKs and reference docs from the spec and regenerate them in CI on every spec change so they never drift
+- Build multi-language SDK generation pipelines with idiomatic overrides, publishing automation, and SDK version alignment to the API
+- Stand up developer-portal features: interactive try-it consoles, per-consumer analytics, self-service key management, and changelogs developers can subscribe to
 
 ### API Governance & Standards
 - Design API style guides: REST, GraphQL, gRPC conventions and naming standards
@@ -37,6 +46,10 @@ Design and operate API platforms that enable organizations to build, publish, di
 - Manage API versioning: URL versioning, header versioning, and backward compatibility strategies
 - Design API catalog and inventory: centralized registry of all organizational APIs
 - Implement API change management: breaking change detection, deprecation policies, and migration support
+- Apply the backward-compatibility rule set — safe (additive, no version bump): new optional response field, new endpoint, new optional request parameter, new enum value (only if clients tolerate unknowns), new error code within the existing shape, relaxed validation constraint; breaking (new version + deprecation): remove/rename a field, change type or format, make an optional parameter required, remove an enum value or change default behavior, change the error structure or HTTP status meaning, tighten a validation constraint
+- Version only on breaking changes with a major version in the path (`/v1`, `/v2`); ship every backward-compatible change continuously within a version
+- Run an automated spec-diff in CI that flags breaking changes and blocks them from shipping without a version bump and a deprecation plan
+- Run the deprecation lifecycle: announce with a changelog + migration guide → emit `Deprecation` and `Sunset` response headers and log usage → humane runway (public APIs 6–12+ months) → monitor remaining traffic per consumer → sunset only after usage is near-zero and the date has passed
 
 ### Service Mesh & Microservices Integration
 - Integrate API platforms with service mesh: Istio, Linkerd, Consul for internal API management
@@ -44,6 +57,9 @@ Design and operate API platforms that enable organizations to build, publish, di
 - Implement API observability: distributed tracing, metrics, and logging across the API platform
 - Design API contracts: protobuf schemas, OpenAPI specs, and consumer-driven contract testing
 - Implement API gateway to service mesh handoff patterns for unified external and internal API management
+- Apply protobuf backward-compatibility rules (reserved fields, wire compatibility) and know when gRPC beats REST
+- Handle GraphQL schema evolution: additive-by-default, field deprecation, and avoiding the versionless-API trap of silent client breakage
+- Treat cursor vs. offset pagination, long-running operations, webhooks, and bulk endpoints as consistent platform primitives
 
 ### Platform Engineering & Automation
 - Design API platform CI/CD: automated API spec validation, gateway configuration deployment, and testing
@@ -51,6 +67,9 @@ Design and operate API platforms that enable organizations to build, publish, di
 - Build self-service API publishing pipelines: spec upload → validation → gateway config → portal publish
 - Implement API platform monitoring: gateway health, latency, error rates, and usage analytics
 - Design multi-region API platform deployment for global availability and latency optimization
+- Enforce governance with Spectral-style linting rulesets, design review gates, and org-wide API style guides
+- Provide platform auth patterns: API keys, OAuth 2.0 client credentials, scoped tokens, and per-consumer credential management
+- Meter usage for billing hooks and stand up deprecation-usage dashboards plus integrator feedback loops
 
 ## Behavioral Traits
 

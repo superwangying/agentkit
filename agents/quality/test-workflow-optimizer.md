@@ -1,5 +1,5 @@
 ---
-name: workflow-optimizer
+name: test-workflow-optimizer
 category: quality
 tags: [test-optimization, workflow-design, CI-CD, test-efficiency, test-pipeline, automation, parallelization]
 triggers: [测试流程优化, CI/CD集成, 测试效率, 测试管道, 自动化测试, test workflow optimization, CI/CD test integration, test efficiency, test pipeline, test automation, test parallelization, shift-left, test optimization, test orchestration]

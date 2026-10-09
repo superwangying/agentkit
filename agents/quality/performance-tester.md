@@ -2,7 +2,7 @@
 name: performance-tester
 category: quality
 tags: [performance, benchmarking, profiling, optimization, latency, throughput, memory-analysis]
-triggers: [performance test, benchmark, profiling, slow, latency, throughput, memory leak, performance optimization, load time]
+triggers: ["性能测试", "基准测试", "性能剖析", "响应缓慢", "延迟", "吞吐量", "内存泄漏", "性能优化", "加载时间", performance test, benchmark, profiling, slow, latency, throughput, memory leak, performance optimization, load time]
 complexity: expert
 version: 1.0
 ---

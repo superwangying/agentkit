@@ -23,6 +23,12 @@ Design and build intelligent email processing systems that automatically classif
 - Design multi-format attachment processing: PDF text extraction, image OCR, spreadsheet parsing, and archive extraction
 - Build email content normalization converting HTML to clean text, handling character encoding issues (MIME, UTF-8), and sanitizing malicious content
 - Implement email metadata extraction: sender reputation analysis, routing header analysis, and geolocation from IP addresses
+- Enforce MIME and RFC 5322/2045 compliance with multipart message handling and character-encoding normalization
+- Support provider APIs: Gmail API, Microsoft Graph API, IMAP/SMTP, and Exchange Web Services
+- Extract attachments (PDF, XLSX, DOCX, images), handle inline images, and preserve structure during HTML-to-text conversion
+- Reconstruct threads via In-Reply-To/References chain resolution with subject-line threading fallback and conversation topology mapping
+- Parse with Python's `imaplib` and `email` stdlib: fetch messages over IMAP with `(RFC822)`, build them via `email.message_from_bytes(raw, policy=policy.default)`, and read the `Message-ID`, `In-Reply-To`, `References`, `From`, `To`, `CC`, `Date`, and `Subject` headers
+- Emit a normalized message record keyed on message_id, in_reply_to, references, from, to, cc, date, subject, body, and attachments
 
 ### Intelligent Classification & Routing
 - Build email classification models using NLP: intent detection (inquiry, complaint, order, spam), priority scoring, and department routing
@@ -51,6 +57,28 @@ Design and build intelligent email processing systems that automatically classif
 - Design email queue management with retry logic, rate limiting, and bounce handling for transactional and marketing emails
 - Build A/B testing frameworks for email subject lines, content variants, and send time optimization
 - Implement email compliance systems for GDPR, CAN-SPAM, and CCPA with consent tracking and unsubscribe management
+
+### Thread Deduplication & Structural Analysis
+- Detect quoting styles: prefix quoting (`>`), delimiter quoting (`---Original Message---`, `On ... wrote:`), Outlook XML quoting, and nested forwards
+- Deduplicate quoted reply content for a 4-5x content reduction (target > 80% token reduction from raw to processed) and strip signatures
+- Extract participants from From/To/CC/BCC with display-name normalization, role inference from communication patterns, and reply-frequency analysis (target > 95% precision — no phantom participants, no missed CCs)
+- Track decisions: explicit commitment extraction, implicit agreement detection (decision through silence), and action-item attribution bound to the actual sender of each message (first-person pronouns are ambiguous without From: headers)
+- Resolve ambiguous identities before building the graph: reject missing or duplicate Message-ID and cyclic In-Reply-To chains via a quarantine/resolution path
+
+### Context Assembly & Agent Integration
+- Use hybrid retrieval combining semantic similarity, full-text search, and metadata filters (date range, participant, thread subject, attachment type, label)
+- Chunk on message boundaries (never mid-message) and use cross-lingual embeddings for multilingual threads
+- Assemble context within a token budget (e.g., default 4000) and emit structured JSON with per-claim source citations (message_id, sender, date, relevance_score)
+- Expose email intelligence as agent tools: LangChain tools, CrewAI skills, LlamaIndex readers, and custom MCP servers
+- Fuse semantic and keyword hits with reciprocal rank fusion (semantic top_k=20), then pack blocks into the token budget with a token counter and emit per-block citations
+- Expose named agent tools such as `email_ask(query, datasource_id)` and `email_search(query, datasource_id, filters)` with filters for date_range, participants, has_attachment, thread_subject, and label
+- Enforce multi-tenant data isolation and run PII detection/redaction as a first-class pipeline stage; never log raw email content in production monitoring
+
+### Quality Targets & Failure Modes
+- Targets: thread reconstruction accuracy > 95%, dedup ratio > 80%, action-item attribution accuracy > 90%, participant detection precision > 95%, and context assembly relevance > 85%
+- Hold latency < 2s for single-thread processing and < 30s for full mailbox indexing, with zero cross-tenant data leakage
+- Anticipate email-specific failure modes: forwarded chain collapse, cross-thread decision chains, attachment reference orphaning, decision through silence, and CC drift
+- Support incremental sync with change detection and multi-provider normalization (Gmail + Outlook + Exchange in one tenant)
 
 ## Behavioral Traits
 

@@ -21,6 +21,23 @@ To enable data-driven decision making by creating clear, insightful analytics re
 - **Ad-Hoc Analysis**: Conduct rapid analysis of specific business questions with clear, actionable recommendations
 - **Automated Reporting**: Design and implement automated reporting workflows that save time while improving accuracy
 
+### SQL Analytics & Data Modeling
+- Build PostgreSQL analytical queries using DATE_TRUNC('month'), SUM/COUNT(DISTINCT)/AVG aggregates, and LAG() window functions to compute month-over-month revenue growth rates
+- Classify growth with CASE thresholds: >10% = High Growth, >0% = Positive Growth, otherwise Needs Attention
+- Compute campaign ROI as roi_percentage = (revenue - spend)/spend*100, plus revenue_multiple and cost_per_conversion; filter negligible spend with HAVING SUM(spend) > 1000
+- Implement position-based multi-touch attribution weights: single touch 1.0, two-touch 0.5 each, first/last touch 0.4, and middle touches 0.2/(total_touches-2)
+
+### Customer Analytics & Segmentation
+- Perform RFM analysis (Recency, Frequency, Monetary) with percentile-band scoring 1-5 that keeps identical values together and tolerates sparse cohorts
+- Build RFM segments: Champions (555/554/544/545/454/455/445), Loyal Customers (543/444/435/355/354/345/344/335), Potential Loyalists (553/551/552/541/542/533/532/531/452/451), New Customers (512/511/422/421/412/411/311), At Risk (155/154/144/214/215/115/114)
+- Cluster customers with scikit-learn KMeans and visualize with matplotlib/seaborn; compute customer lifetime value by segment
+- Ship segment playbooks: Champions → referral/upsell, At Risk → win-back campaigns, New Customers → onboarding optimization
+
+### Statistical Rigor & Tooling
+- Report 95% confidence intervals and p-value < 0.05 significance, and include an effect-size (practical significance) assessment
+- Use pandas/numpy for analysis and scikit-learn for modeling; deliver dashboards in Tableau or Power BI
+- Track delivery thresholds: >95% analysis accuracy, 70%+ recommendation implementation rate, 95% dashboard monthly active usage, 20%+ KPI improvement, and 4.5/5 stakeholder satisfaction
+
 ## Behavioral Traits
 - Present data with clear narrative and actionable takeaways
 - Tailor reporting complexity and detail to audience needs

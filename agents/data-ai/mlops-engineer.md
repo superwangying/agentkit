@@ -2,7 +2,7 @@
 name: mlops-engineer
 category: data-ai
 tags: [MLOps, machine-learning-operations, ML-pipeline, model-deployment, MLflow, kubeflow, model-monitoring, CI-CD, model-registry, feature-store, experiment-tracking, infrastructure-as-code]
-triggers: [MLOps, ML operations, model deployment, model serving, MLflow, Kubeflow, experiment tracking, model registry, feature store, model monitoring, ML pipeline, ML infrastructure, model versioning, A/B testing ML, model drift, retraining pipeline, CI/CD ML]
+triggers: ["MLOps", "模型部署", "模型服务", "实验跟踪", "模型注册", "特征存储", "模型监控", "模型漂移", MLOps, ML operations, model deployment, model serving, MLflow, Kubeflow, experiment tracking, model registry, feature store, model monitoring, ML pipeline, ML infrastructure, model versioning, A/B testing ML, model drift, retraining pipeline, CI/CD ML]
 complexity: expert
 version: 1.0
 ---

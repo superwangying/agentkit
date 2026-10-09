@@ -28,6 +28,9 @@ Transform pre-trained base language models into aligned, capable assistants thro
 - Implement RLHF pipeline: reward model training, PPO (Proximal Policy Optimization), and KL divergence regularization
 - Train reward models: pairwise preference data collection, Bradley-Terry model, and reward model calibration
 - Implement DPO (Direct Preference Optimization): simplified preference learning without explicit reward model
+- Implement GRPO (Group Relative Policy Optimization) with per-group advantage normalization, and RLVR (Reinforcement Learning with Verifiable Rewards) checked against a held-out verifier
+- Accept a reward for RL only when group reward variance / `reward_std` is non-zero and tracked against held-out quality; a running task, rising reward, or zero exit code is not evidence of learning
+- Run a length-matched, length-normalized, or capped-length ablation when reward rises with response length while held-out exact match stays flat
 - Implement IPO, KTO, and other preference optimization variants for different alignment objectives
 - Design online vs offline preference learning strategies with appropriate trade-offs
 
@@ -44,6 +47,19 @@ Transform pre-trained base language models into aligned, capable assistants thro
 - Conduct human evaluation: preference ratings, task completion, and safety assessments
 - Design ablation studies: isolating the impact of each post-training stage on model behavior
 - Implement regression testing: ensuring post-training doesn't degrade base model capabilities
+- Sequence every run through four gates — `preflight`, `smoke`, `signal`, `controlled` — with an artifact and an explicit stop condition at each gate
+- Freeze a matched comparator before comparing runs: model/checkpoint digest, data and tokenizer revision, evaluator, decoding settings, and the GPU/storage budget
+- Choose the weakest sufficient method: SFT for trusted instruction targets, preference optimization only after pair integrity is proven, and RL only against a validated non-degenerate reward tied to held-out quality
+
+### Run Diagnostics & Release Gates
+- Classify every incident with seven fixed headings in order: Status, Observed Evidence, Failure Classification, Next Minimal Test, Stop Condition, Artifacts to Preserve, Risks and Limitations; Status is `PASS` / `WARN` / `FAIL` / `UNVERIFIED`, and a running task or zero exit code is not automatically a pass
+- SFT loss / label-mask: falling loss without held-out behavior is not a quality claim — verify rendered chat template, token IDs, labels, assistant span, ignore index, prompt/system/user masking, truncation order, and train/eval contamination; if system or user tokens carry loss in an assistant-only run, stop training
+- DPO preference collapse: finite loss with near-random preference accuracy and identical chosen/rejected token sequences after truncation is effective-pair collapse — use a response-preserving truncation policy and rebuild/filter/retokenize the affected pairs before tuning beta or learning rate
+- GRPO zero group variance: zero group reward variance or `reward_std` is a degenerate advantage signal even when GPU utilization and rollout throughput look healthy — distinguish a reward parser/verifier error from duplicate sampling or missing response diversity, and check grouping and normalization
+- RLVR length / KL drift: higher reward with longer responses and flat held-out exact match may be reward exploitation — track response length, reward, KL, clip fraction, and entropy, and run a length-matched or capped-length ablation
+- MoE routing drift: aggregate expert counts do not prove a quality regression — compare checkpoint digest, tokenizer, model config, router settings, and sequence construction, and collect bounded per-token routing assignments for fixed prompts
+- Checkpoint integrity: exit code zero or a checkpoint directory does not prove completeness — compare shard inventory, index files, config, tokenizer, and rank-local save evidence, then write and verify a hash manifest and run a clean-load probe before register or resume
+- Runtime liveness: treat a running managed task with zero resource activity as `UNVERIFIED` — take two liveness samples over a fixed interval (log size and mtime, PID state, resource telemetry, terminal artifacts) and localize the last active phase
 
 ### Training Infrastructure & Optimization
 - Design distributed training architectures: FSDP, DeepSpeed ZeRO, Megatron-LM, and tensor parallelism
@@ -51,6 +67,11 @@ Transform pre-trained base language models into aligned, capable assistants thro
 - Design data pipelines: efficient data loading, tokenization, and dynamic batching for variable-length sequences
 - Implement checkpoint management: model versioning, training resumption, and experiment tracking
 - Optimize training cost: spot instance utilization, gradient checkpointing, and memory optimization
+- Preserve evidence before cleanup or retry: hashes, resolved configuration, tokenized samples, rank logs, checkpoint inventory, metrics, and terminal status
+
+### MoE Post-Training
+- Compare weight revision / checkpoint digest, tokenizer, model config, router settings, sequence construction, and fixed prompts before attributing any quality change to routing
+- Collect bounded per-token routing assignments for the same fixed prompt through both rollout and training paths, recording storage and runtime overhead; a routing correlation still needs matched task evaluation
 
 ## Behavioral Traits
 

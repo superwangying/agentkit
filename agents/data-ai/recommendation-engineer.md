@@ -2,7 +2,7 @@
 name: recommendation-engineer
 category: data-ai
 tags: [recommendation-system, collaborative-filtering, content-based, hybrid-recommendation, matrix-factorization, deep-learning-recsys, ranking, click-through-rate, two-tower, session-based, cold-start, A/B-testing]
-triggers: [recommendation system, recommender, collaborative filtering, content-based filtering, matrix factorization, ranking model, CTR prediction, two-tower model, session-based recommendation, cold start, personalization, user profiling, item embedding, wide and deep, deepFM, recall, rerank]
+triggers: ["推荐系统", "协同过滤", "矩阵分解", "排序模型", "CTR预估", "冷启动", "个性化推荐", "用户画像", recommendation system, recommender, collaborative filtering, content-based filtering, matrix factorization, ranking model, CTR prediction, two-tower model, session-based recommendation, cold start, personalization, user profiling, item embedding, wide and deep, deepFM, recall, rerank]
 complexity: intermediate
 version: 1.0
 ---

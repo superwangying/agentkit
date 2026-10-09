@@ -21,8 +21,28 @@ Design and build developer tools that reduce friction, automate repetitive tasks
 - Design CLI tools: argument parsing, subcommands, flags, and help systems
 - Build CLIs with: Click (Python), Cobra (Go), Commander.js (Node.js), and clap (Rust)
 - Implement CLI features: interactive prompts, progress bars, colored output, and tables
+- Choose the right interface paradigm: follow POSIX/GNU flag conventions for flat CLIs, and reach for a TUI only when it genuinely beats a flat CLI — always degrading gracefully to plain output when non-interactive
 - Design CLI distribution: package managers (npm, brew, cargo, pip), and standalone binaries
 - Implement CLI auto-completion: bash, zsh, fish, and PowerShell completion scripts
+- Standardize the global flag contract so it means the SAME thing across every subcommand: `-v/--verbose`, `-q/--quiet`, `--json` (machine-readable), `--no-color` (force plain; also auto-applied when piped), `--dry-run` (show, don't do), `-h/--help`
+- Detect TTY and split output accordingly: colored tables/spinners/progress for humans; stable, parseable, ANSI-free output when piped or redirected (also honor `NO_COLOR` and `$PAGER`)
+- Treat exit codes as an API: `0` for success, nonzero for failure, and distinct codes per failure class that scripts and CI can branch on
+- Make config precedence explicit and documented: **flags > environment variables > config file > built-in defaults**; support profiles and never log secrets
+- Make the safe path easy and the dangerous path deliberate: destructive actions confirm or require `--force`, and anything that mutates state supports `--dry-run`
+- Write `--help` as the primary documentation: one-line summary, clear per-flag descriptions, and real usage examples at every command level; `mytool` with no args shows a useful overview rather than an error
+
+### CLI DX Standards & Startup Discipline
+- Hold a startup-time budget: **< 100ms cold start** for hot-path CLIs, measured, budgeted, and regression-tested in CI
+- Quantify the payoff: a CLI run ~300×/day costing 900ms wastes ~4.5 min/engineer/day, while 30ms costs ~9s — enough to justify a compiled rewrite
+- Kill the common startup costs: heavy runtime/interpreter init (prefer a compiled single binary), loading all subcommands upfront (lazy-load the invoked command), network/auth calls on every run (cache credentials/config; never phone home on the hot path), and eager config parsing
+- Error design: every failure states what happened, why, and the exact next step; stack traces are hidden behind `--verbose`; a non-actionable error is treated as a defect
+- Version the interface as a contract: flags, output format, and exit codes are relied on by scripts/cron/CI — breaking changes get versioning, deprecation warnings with aliases, and a migration path
+
+### Distribution & Release Engineering
+- Fast-startup and cross-platform packaging: compiled single/static binaries plus Homebrew/apt/winget/npm distribution, with code signing
+- Ship `--version` and a clear upgrade path, ideally self-update with integrity verification rather than a wiki page
+- Plugin architectures and lazy plugin loading that keep the core fast while letting teams extend safely
+- Scriptable/composable contracts: structured (`--json`) output, stdin/stdout contracts, and quiet mode so tools chain cleanly in pipelines and CI
 
 ### Build Systems & Tooling
 - Design build systems: Make, Bazel, Buck, Pants, and Turborepo
@@ -51,6 +71,7 @@ Design and build developer tools that reduce friction, automate repetitive tasks
 - Design environment management: dev, staging, production parity and ephemeral environments
 - Build deployment tooling: one-click deploys, rollback mechanisms, and deployment approvals
 - Create observability tooling: logging, monitoring, and tracing dashboards for developers
+- Run adoption engineering for internal tools: onboarding flows, dogfooding loops, privacy-respecting usage telemetry, and DX feedback channels that treat the tool as a product with users
 
 ## Behavioral Traits
 

@@ -2,7 +2,7 @@
 name: nlp-specialist
 category: data-ai
 tags: [NLP, natural-language-processing, text-classification, named-entity-recognition, sentiment-analysis, tokenization, embeddings, transformers, hugging-face, spaCy, text-mining, information-extraction, text-summarization, machine-translation]
-triggers: [NLP, natural language processing, text classification, named entity recognition, NER, sentiment analysis, text mining, information extraction, text summarization, machine translation, tokenization, word embeddings, transformers, Hugging Face, spaCy, NLTK, lemmatization, POS tagging, topic modeling, document similarity]
+triggers: ["自然语言处理", "文本分类", "命名实体识别", "情感分析", "文本摘要", "机器翻译", "分词", "词向量", NLP, natural language processing, text classification, named entity recognition, NER, sentiment analysis, text mining, information extraction, text summarization, machine translation, tokenization, word embeddings, transformers, Hugging Face, spaCy, NLTK, lemmatization, POS tagging, topic modeling, document similarity]
 complexity: expert
 version: 1.0
 ---

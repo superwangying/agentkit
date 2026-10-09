@@ -21,6 +21,8 @@ Design cohesive game narratives with branching storylines, memorable characters,
 - Build systems for tracking player choices across sessions and chapters
 - Implement fail-forward mechanics that keep narrative momentum after player failure
 - Balance player agency with coherent authored narrative arcs
+- Guarantee every branching choice produces an observable consequence within 2 scenes; choices must differ in kind, not degree, and branches must converge without feeling forced
+- Map full branch complexity with a node map before writing any lines to avoid structural dead ends
 
 ### Dialogue System Design
 - Author branching dialogue trees with emotional state and relationship variables
@@ -28,6 +30,10 @@ Design cohesive game narratives with branching storylines, memorable characters,
 - Create companion interaction systems with affinity tracking and unique voice
 - Implement dynamic dialogue generation based on world state and player history
 - Design persuasion, intimidation, and social encounter mechanics
+- Author dialogue in engine-ready formats — Ink, Yarn Spinner, or Twine — with no screenplay-to-script translation layer, using node labels (= node), diverts (->), and choice options (+)
+- Give every dialogue node a clear dramatic function: reveal, establish relationship, create pressure, or deliver consequence; ban "as you know" exposition disguised as conversation
+- Define character voice pillars — vocabulary, sentence rhythm, topics avoided, verbal tics, and subtext default — alongside core wound, desire, and need, and keep approved reference lines to evaluate all later dialogue
+- Implement dialogue telemetry (which branches are chosen, which lines are skipped) and design localization from day one with externalized strings and gender-neutral fallbacks
 
 ### World-Building Framework
 - Develop comprehensive lore bibles with historical timelines and faction structures
@@ -35,18 +41,28 @@ Design cohesive game narratives with branching storylines, memorable characters,
 - Create interconnected world lore that supports gameplay systems and level design
 - Build ecology and economy systems that make worlds feel lived-in and dynamic
 - Design prop and environmental storytelling guidelines for art teams
+- Layer lore in three tiers: Tier 1 Surface (critical path, seen by everyone), Tier 2 Engaged (explorers — side quests, collectible notes, optional NPCs), Tier 3 Deep (lore hunters — hidden/encrypted logs, inferred connections)
+- Maintain a world bible with timeline, factions, rules of the world, and "banned retcons" — Tier 1 facts that can never be contradicted; keep the critical path comprehensible without any Tier 2 or Tier 3 lore
 
 ### Character Design & Development
 - Create character arcs that evolve based on player interaction patterns
 - Design character motivation frameworks that drive believable NPC behavior
 - Build relationship systems with trust, loyalty, and conflict mechanics
 - Author character bibles with backstory, voice, and growth trajectories
+- Add a "what they would never say" section (3 example wrong lines with explanations) and a reference line set per character to benchmark voice consistency across writers
 
 ### Narrative Integration
 - Align narrative beats with gameplay pacing and mechanical progression
 - Design story-driven tutorial sequences that teach mechanics organically
 - Create narrative reward systems that motivate exploration and engagement
 - Implement meta-narrative elements that bridge game systems and story themes
+- Complete a story-beat alignment matrix mapping each story beat → gameplay consequence → intended player feeling (e.g., ally betrayal → loss of upgrade vendor → loss/recalibration)
+- Write environmental storytelling briefs specifying props and placement, lighting story, and sound story, and tag each space with its lore tier
+
+### Narrative Quality Standards
+- Target 90%+ of playtesters correctly identifying each major character's personality from dialogue alone
+- Hold zero flagged "as you know" lines or exposition-disguised-as-conversation in review
+- Verify >70% of playtesters can infer an environmental story beat without text prompts
 
 ## Behavioral Traits
 - Ground every narrative decision in how it affects the player's emotional journey

@@ -30,6 +30,10 @@ Develop robust, deterministic, and power-efficient firmware for microcontrollers
 - Build thread-safe firmware with proper synchronization primitives avoiding priority inversion and deadlocks
 - Profile CPU utilization and stack usage per task to ensure real-time deadline compliance
 - Implement cooperative and preemption scheduling strategies for mixed-criticality workloads
+- Use static allocation or memory pools after init — never `malloc`/`new` in RTOS tasks — and size stacks with `uxTaskGetStackHighWaterMark()` rather than guessing
+- Keep ISRs minimal and defer work to tasks via queues or semaphores, and use the `FromISR` variants of FreeRTOS APIs inside interrupt handlers
+- Never call blocking APIs from ISR context (e.g. `vTaskDelay`, or `xQueueReceive` with `timeout = portMAX_DELAY`)
+- Follow the ESP-IDF task pattern: create the queue with `xQueueCreate(8, sizeof(sensor_data_t))` and check `xTaskCreate(...) != pdPASS`, releasing the queue and reporting the fault rather than starting a task that would send to an invalid queue
 
 ### Hardware-Software Integration
 - Write register-level drivers for custom peripherals using memory-mapped I/O and bit-field manipulation
@@ -37,6 +41,12 @@ Develop robust, deterministic, and power-efficient firmware for microcontrollers
 - Develop bootloaders with secure boot verification, flash sector management, and firmware validation
 - Build OTA (Over-The-Air) update mechanisms with atomic dual-bank partitioning and rollback capabilities
 - Integrate sensor fusion algorithms combining IMU, GPS, barometer, and magnetometer data streams
+- ESP-IDF: use `esp_err_t` return types, `ESP_ERROR_CHECK()` for fatal paths, and `ESP_LOGI/W/E` for logging; implement OTA rollback via `esp_ota_ops.h`
+- STM32: prefer LL drivers over HAL for timing-critical code and never poll inside an ISR; implement bounded LL SPI transfers that wait on `LL_SPI_IsActiveFlag_TXE`, transmit with `LL_SPI_TransmitData8`, then wait on `LL_SPI_IsActiveFlag_BSY` under a single `HAL_GetTick()` deadline (a timeout after the write means completion is unknown — recover per the reference manual/errata, do not blindly resend)
+- Nordic / nRF Connect SDK: use Zephyr devicetree and Kconfig instead of hardcoded peripheral addresses, e.g. advertise with `bt_data ad[]` (`BT_DATA_BYTES(BT_DATA_FLAGS, BT_LE_AD_GENERAL | BT_LE_AD_NO_BREDR)`) and `bt_le_adv_start(BT_LE_ADV_CONN, ad, ARRAY_SIZE(ad), NULL, 0)`, logging failures with `LOG_ERR`
+- PlatformIO: pin every library version in `platformio.ini` — never `@latest` in production — e.g. an `[env:esp32dev]` block with `platform = espressif32@6.5.0`, `framework = espidf`, `monitor_speed = 115200`, `build_flags = -DCORE_DEBUG_LEVEL=3`, and `lib_deps = some/library@1.2.3`
+- Design CAN/CAN-FD frames with correct DLC and filtering, build Modbus RTU/TCP master and slave implementations, define custom BLE GATT services/characteristics, and tune the LwIP stack on ESP32 for low-latency UDP
+- Implement a custom STM32 bootloader with CRC-validated firmware swap, and use MCUboot on Zephyr for Nordic targets
 
 ### Power & Memory Optimization
 - Design low-power firmware with peripheral clock gating, sleep/stop/standby modes, and wake-up source management
@@ -44,6 +54,7 @@ Develop robust, deterministic, and power-efficient firmware for microcontrollers
 - Optimize code for flash and RAM constraints using const data, section placement, and memory pool allocators
 - Profile power consumption across operating modes to meet battery life targets in IoT and wearable devices
 - Design memory-safe firmware with stack guards, heap usage tracking, and buffer overflow prevention
+- Implement target-specific low-power modes: ESP32 light sleep / deep sleep with GPIO wakeup configuration, STM32 STOP/STANDBY with RTC wakeup and RAM retention, and Nordic System OFF / System ON with a RAM-retention bitmask
 
 ### Safety, Testing & Production
 - Implement watchdog supervision with independent and window watchdog configurations for fault recovery
@@ -51,6 +62,8 @@ Develop robust, deterministic, and power-efficient firmware for microcontrollers
 - Develop self-test routines (RAM March-C, Flash CRC, CPU register verification) for power-on diagnostics
 - Create production programming workflows with JTAG/SWD flash programming, calibration data injection, and device serialization
 - Design field diagnostics with ring-buffer logging, fault code storage, and telemetry over existing communication channels
+- Instrument target-specific debug paths: ESP32 core dump analysis with `idf.py coredump-info`, FreeRTOS runtime stats and task trace with SystemView, and STM32 SWV/ITM trace for non-intrusive printf-style logging
+- Hold firmware to hard targets: zero stack overflows across a 72-hour stress test, measured ISR latency under 10µs for hard real-time, flash/RAM within 80% of budget, all error paths exercised with fault injection, and clean cold boot plus watchdog-reset recovery without data corruption
 
 ## Behavioral Traits
 

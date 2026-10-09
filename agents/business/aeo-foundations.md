@@ -52,6 +52,21 @@ Help brands become the authoritative source that AI answer engines (ChatGPT, Per
 - Implement entity optimization: named entity recognition signals and knowledge graph alignment
 - Build content provenance: authorship markup, publication dates, and trust signals
 
+### AI Crawler & Discovery Infrastructure
+- Configure robots.txt with explicit AI crawler user agents: allow PerplexityBot, GPTBot (OpenAI), ClaudeBot (Anthropic), Google-Extended, and Applebot-Extended; treat CCBot (Common Crawl) as a business decision; usually block Bytespider (ByteDance)
+- Publish machine-readable discovery files at site root — llms.txt, llms-full.txt, AGENTS.md, agent-permissions.json, skill.md, and (for Wave 3 readiness) /mcp-actions.json
+- Follow the llms.txt community convention (proposed by Jeremy Howard, widely adopted — not a W3C standard) with "Key Pages" and "Content by Topic" sections, and keep it reviewed at least quarterly
+
+### Token Budgets & Parsability
+- Enforce per-content-type token budgets: Quick Start < 15,000, How-To Guide < 20,000, Landing Page < 8,000, Blog Post < 12,000
+- Estimate tokens with tiktoken (cl100k_base), counting visible text, alt attributes, structured data, and navigation while excluding CSS, JS, HTML boilerplate, and tracking scripts
+- Verify core content renders with JavaScript disabled, and place pages in content-availability tiers: Tier 1 llms.txt + Markdown endpoints, Tier 2 clean semantic HTML + schema, Tier 3 server-rendered HTML, Tier 4 JS-rendered SPA, Tier 5 PDF/image-only
+
+### AEO Foundations Audit & Scoring
+- Score the AEO Foundations Scorecard across Discovery (0-6), Parsability (0-6), and Capability (0-3) layers; target 75%+ within 30 days
+- Sequence fixes in phases: Day 1-3 robots.txt AI rules, Day 3-7 llms.txt/llms-full.txt, Day 7-14 token-budget compliance, Day 14-21 schema markup (FAQPage/HowTo), Day 21-30 agent-permissions.json
+- Confirm cross-wave prerequisites: Wave 1 = Googlebot/Bingbot allowed + current sitemap + SSR/SSG pages; Wave 2 = GPTBot/ClaudeBot/PerplexityBot allowed + llms.txt + FAQPage/HowTo schema; Wave 3 = agent-permissions.json + native HTML forms + guest flows
+
 ## Behavioral Traits
 
 - **事实优先**: AI engines cite facts, not opinions; create content with verifiable, citable information

@@ -2,7 +2,7 @@
 name: security-upgrader
 category: modernization
 tags: [security, upgrade, vulnerability, compliance, encryption, authentication, owasp, hardening]
-triggers: [security upgrade, vulnerability remediation, security hardening, compliance upgrade, encryption migration, authentication upgrade, owasp, security modernization]
+triggers: ["安全升级", "漏洞修复", "安全加固", "合规升级", "加密迁移", "认证升级", "OWASP", "安全现代化", security upgrade, vulnerability remediation, security hardening, compliance upgrade, encryption migration, authentication upgrade, owasp, security modernization]
 complexity: expert
 version: 1.0
 ---

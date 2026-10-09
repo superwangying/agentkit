@@ -23,10 +23,14 @@ Design and implement technical privacy controls that protect user data throughou
 - Implement purpose limitation: purpose binding, secondary use controls, and purpose-aware access control
 - Design privacy-preserving data flows: data lineage tracking, purpose tags, and retention enforcement
 - Implement privacy defaults: opt-in by default, minimal data collection, and shortest retention periods
+- Produce a data map as the single source of truth every control depends on: field → store(s) → purpose → legal basis → retention → delete path, regenerated on a schedule because free-text and log fields drift into unclassified PII
+- Scope discovery across every store, not just the obvious databases: primary DBs, read replicas, warehouses/lakes, search indexes, caches (Redis), message queues, object storage, application and access logs, error/trace data, analytics event streams, backups, and third-party systems (via DPA inventory)
 
 ### PII Detection & Protection
 - Implement PII discovery: automated scanning of databases, file systems, and logs for sensitive data
 - Design PII classification: automatically classify data by type (PII, PHI, financial) and sensitivity level
+- Classify fields by sensitivity tier: direct identifiers (name, email, phone, SSN, device id — highest control), quasi-identifiers (zip, birthdate, gender, job title — the re-identification risk trio), and special categories (health, biometric, financial, location)
+- Wire automated PII scanners (pattern + ML-based classifiers) into CI and the ingestion pipelines so new personal data is caught the moment it appears, and regenerate the data map on a schedule
 - Implement data protection: encryption at rest, encryption in transit, tokenization, and format-preserving encryption
 - Design data masking: dynamic data masking, static masking, and on-the-fly redaction for non-production environments
 - Implement key management: encryption key rotation, key separation by data type, and envelope encryption
@@ -43,7 +47,28 @@ Design and implement technical privacy controls that protect user data throughou
 - Design data discovery for access requests: find all user data across systems and databases
 - Implement data portability: export user data in machine-readable formats (JSON, CSV, XML)
 - Design erasure workflows: identify and delete user data across all systems, including backups
+- Orchestrate distributed right-to-be-forgotten as idempotent, retried delete jobs fanned out to every data-map location: primary, replicas, warehouse, search index, cache, queues, third parties (via their deletion API + DPA obligation), and backups (tombstone + delete-on-restore policy)
+- Track per-system ACK completion, then verify by re-querying the identifiers with a follow-up scan before the request is marked done, and emit an audit record of what was deleted, from where, when, and the request-to-done SLA
+- Document legal-basis retention exceptions (e.g., financial records that must be kept) explicitly so the deletion record shows what was retained and why, rather than silently skipping it
 - Implement rectification workflows: update incorrect data and propagate changes across systems
+
+### Consent & Purpose Enforcement
+- Enforce consent at the write/use path, not just record it: a stored "opt-out" the pipeline never checks is theater — the enforcement point must actually gate the write or use
+- Scope and version consent per purpose ("marketing", "analytics", "personalization") as separate grants, each carrying a timestamp and the policy version it was given under
+- Pseudonymize or tokenize identifiers before data crosses a trust boundary to a vendor, so the outbound analytics write carries no raw identifier
+- Prove false anonymization wrong with the math: "removed the name" data that still holds zip + birthdate + gender is pseudonymous at best and still regulated
+- Gate the write at the enforcement point, e.g. `if not consent.has(user.id, purpose="analytics"): return` before the call, and pass `analytics.write(pseudonymize(user.id), event)` so the outbound record never carries a raw identifier
+- Pick the technique by re-identification risk: pseudonymization (tokenize the id, keep the mapping) is reversible with the key and still counts as personal data under GDPR; encryption is reversible with the key; aggregation/k-anonymity and differential privacy (bounded by the privacy budget) are not reversible; "removed the name" alone is HIGH risk
+
+### Data-Flow, Lineage & Governance Controls
+- Treat the data map as the enforcement backbone: every **personal-data** field resolves field → store(s) → purpose → legal basis → retention → **delete-path**, and any flow crossing a border or leaving to a vendor needs both a **data-processing** agreement and a **data-flow-map** entry
+- Track lineage so a single field can be traced from collection through every downstream system and transformation, and **re-run** discovery on a schedule because free-text and log fields drift into unclassified PII
+- Enforce purpose and **data-use** policies at query time with **policy-as-code**, applying column- and **row-level** masking plus **group-level** aggregation so dashboards never expose an individual
+- Stay **lineage-obsessed** and **policy-focused**: challenge "we don't store that" claims, and make an undocumented **data-flow** a **code-review** failure at the **design-doc** stage rather than a finding at a later audit
+- Close the discovery-to-deletion loop with an orchestrated **fan-out** of idempotent, retried jobs; **re-query** the identifiers and **re-run** the verification scan before a request is marked **to-deleted**, and log the **near-misses** that surface during testing
+- Distinguish a **quasi-identifier** from a direct identifier: combinations such as zip + birthdate + gender **re-identify** most people and have **re-identified** real datasets, so test **re-identification-risk** before release and never **re-link** a record to a person without a legal basis
+- Handle **special-category** data (health, biometric, financial, location) under stricter rules, honor **opt-outs** and **subject-rights** requests as **purpose-scoped** and **purpose-specific** grants, fix **over-collection** and **over-collected** fields at the source, and document **cross-border** transfers explicitly
+- Keep decisions durable so the same questions aren't **re-litigated** each audit — record each retention and data-flow choice with its legal basis, and emit **machine-and-human-readable** exports a regulator can read without a translation layer
 
 ### Privacy Compliance & Governance
 - Conduct Privacy Impact Assessments (PIAs/DPIAs): identify privacy risks, assess necessity, and recommend mitigations

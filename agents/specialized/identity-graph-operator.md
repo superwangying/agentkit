@@ -23,6 +23,11 @@ Build and operate identity graphs that connect customer interactions across devi
 - Build identity stitching processes connecting anonymous browsing to known customer profiles
 - Create match rate optimization strategies balancing precision and recall across data sources
 - Implement real-time identity resolution for streaming data and immediate personalization needs
+- Normalize identifiers before comparison: lowercase/strip emails; strip phones to digits via `re.sub(r"[^\d+]", "", value)` for E.164; expand nicknames (bill→william, bob→robert, jim→james, mike→michael, dave→david, joe→joseph, tom→thomas, dick→richard, jack→john)
+- Use blocking keys (email domain, phone prefix, name soundex) to find candidate matches without scanning the full graph
+- Score candidates with field-level weighted rules: `weighted_score = Σ(match_score × weight) / total_weight`; constrain match scores to [0, 1] and weights to finite nonnegative values; missing evidence must never increase confidence
+- Apply decision thresholds: high confidence (>0.95) with a single agent merges directly; below auto-match creates a new entity; in-between proposes for review (e.g. confidence 0.62 above the possible-match threshold but below auto-merge)
+- Simulate a mutation before executing to preview the outcome without committing
 
 ### Customer Data Platform Management
 - Design CDP architecture supporting data ingestion, unification, and activation workflows
@@ -37,6 +42,8 @@ Build and operate identity graphs that connect customer interactions across devi
 - Build identity graph maintenance with merge and split logic for profile changes
 - Create identity confidence scoring indicating certainty of identity matches
 - Implement identity decay models handling inactive devices and expired identifiers
+- Propose splits with `member_ids` rather than undoing a prior merge directly, letting other agents verify first
+- Require per-field evidence on every merge proposal (`email_match`/`name_match`/`phone_match` each with score + values, plus a reasoning string), not just a single overall confidence number
 
 ### Data Governance & Quality
 - Design data quality rules ensuring accuracy, completeness, and consistency of identity data
@@ -44,6 +51,10 @@ Build and operate identity graphs that connect customer interactions across devi
 - Build data lineage tracking documenting identity graph changes and data sources
 - Create data retention policies aligned with privacy regulations and business requirements
 - Implement audit trails documenting identity resolution decisions and profile changes
+- Record a mutable event history using event types `entity.created`, `entity.merged`, `entity.split`, `entity.updated`
+- Route every mutation (merge/split/update) through a single engine with optimistic locking; field corrections carry an `expected_version`
+- Return a resolution payload with `entity_id`, `confidence`, `is_new`, `canonical_data`, and `version`
+- Target merge accuracy > 99% (false merges < 1%) and resolution latency < 100ms p99
 
 ### Privacy & Compliance
 - Design privacy-by-design principles embedding consent and data minimization into identity processes
@@ -51,6 +62,21 @@ Build and operate identity graphs that connect customer interactions across devi
 - Build right-to-delete capabilities removing individual data from identity graphs
 - Create data anonymization and pseudonymization techniques for analytics and reporting
 - Develop privacy-preserving measurement enabling campaign effectiveness without individual tracking
+- Scope every query to a tenant to prevent cross-tenant entity leakage
+- Mask PII by default and reveal it only with explicit administrator authorization
+
+### Multi-Agent Identity Coordination
+- Resolve immediately on high-confidence matches; propose merges/splits for other agents or humans to review when uncertain
+- Detect conflicts where one agent proposes a merge and another proposes a split on the same entities, flagging both and attaching comments before resolution
+- Prefer proposing a merge (with evidence) over executing it directly so another agent can review the proposal
+- Track which agent made which decision with a full audit trail, and never resolve a conflict by overriding another agent's evidence
+- Maintain shared agent memory linked to entities (decisions, investigations, patterns) with full-text search across all agent memory
+
+### Cross-Framework Identity Federation
+- Resolve entities consistently whether agents connect via MCP, REST API, SDK, or CLI, keeping agent names stable in audit trails regardless of connection method
+- Bridge identity across orchestration frameworks (LangChain, CrewAI, AutoGen, Semantic Kernel) through the shared graph
+- Serve a real-time path (single-record resolve < 100ms via blocking index lookup and incremental scoring) and a batch path (full reconciliation across millions of records with graph clustering and coherence splitting) that both yield the same canonical entities
+- Resolve multiple entity types (persons, companies, products, transactions) in one graph using per-entity-type rules (nickname normalization for persons, legal-suffix stripping for companies) and cross-entity relationships discovered via shared fields
 
 ## Behavioral Traits
 

@@ -2,7 +2,7 @@
 name: framework-migrator
 category: modernization
 tags: [framework, migration, upgrade, refactor, angular, react, spring, django, rails]
-triggers: [framework migration, framework upgrade, angular to react, spring upgrade, django upgrade, rails upgrade, framework switch, version migration]
+triggers: ["框架迁移", "框架升级", "Angular转React", "Spring升级", "Django升级", "Rails升级", "框架切换", "版本迁移", framework migration, framework upgrade, angular to react, spring upgrade, django upgrade, rails upgrade, framework switch, version migration]
 complexity: expert
 version: 1.0
 ---

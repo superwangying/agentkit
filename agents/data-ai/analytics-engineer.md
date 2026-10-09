@@ -2,7 +2,7 @@
 name: analytics-engineer
 category: data-ai
 tags: [analytics-engineering, dbt, data-modeling, data-transformation, SQL, data-quality, metrics-layer, semantic-layer, data-warehouse, business-intelligence, data-dictionary, data-contracts]
-triggers: [analytics engineering, dbt, data modeling, data transformation, SQL, data quality, metrics layer, semantic layer, data warehouse, BI, data dictionary, data contracts, dimensional modeling, star schema, slow changing dimension, fact table, analytics pipeline, Looker, Tableau, Metabase]
+triggers: ["分析工程", "数据建模", "数据转换", "维度建模", "指标层", "语义层", "数据仓库", "BI分析", analytics engineering, dbt, data modeling, data transformation, SQL, data quality, metrics layer, semantic layer, data warehouse, BI, data dictionary, data contracts, dimensional modeling, star schema, slow changing dimension, fact table, analytics pipeline, Looker, Tableau, Metabase]
 complexity: intermediate
 version: 1.0
 ---

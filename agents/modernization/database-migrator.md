@@ -2,7 +2,7 @@
 name: database-migrator
 category: modernization
 tags: [database, migration, schema, etl, data-migration, sql, nosql, database-upgrade]
-triggers: [database migration, schema migration, data migration, database upgrade, sql migration, nosql migration, database modernization, etl migration]
+triggers: ["数据库迁移", "表结构迁移", "数据迁移", "数据库升级", "SQL迁移", "NoSQL迁移", "数据库现代化", "ETL迁移", database migration, schema migration, data migration, database upgrade, sql migration, nosql migration, database modernization, etl migration]
 complexity: expert
 version: 1.0
 ---

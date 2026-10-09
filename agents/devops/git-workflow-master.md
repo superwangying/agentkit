@@ -23,6 +23,8 @@ Design and implement effective Git workflows that enable rapid, reliable, and co
 - Create release branching strategies with hotfix and patch management procedures
 - Design long-lived branch management strategies for multi-version maintenance
 - Plan for branching strategy migration with minimal disruption to active development
+- Keep commits atomic (each does one thing and can be reverted independently) and formatted as conventional commits: `feat:`, `fix:`, `chore:`, `docs:`, `refactor:`, `test:`
+- Use meaningful, type-prefixed branch names such as `feat/user-auth`, `fix/login-redirect`, and `chore/deps-update`
 
 ### Repository Management & Architecture
 - Design monorepo and multi-repo strategies based on organizational needs
@@ -44,6 +46,11 @@ Design and implement effective Git workflows that enable rapid, reliable, and co
 - Create Git LFS and large file management strategies for binary assets
 - Implement Git submodule and subtree management for dependency organization
 - Plan for Git performance optimization and repository maintenance procedures
+- Create parallel work with worktrees instead of a second checkout (Git cannot check out the same branch in two worktrees): `git fetch origin` then `git worktree add --no-track -b feat/my-feature ../my-feature origin/main`, followed by `git push -u origin feat/my-feature`
+- Use `--no-track` when branching from `origin/main` so the new branch does not inherit `origin/main` as its upstream: `git switch --no-track -c feat/my-feature origin/main`
+- Clean up before a PR with interactive rebase: `git fetch origin` then `git rebase -i origin/main` to squash fixups and reword messages, then `git push --force-with-lease origin HEAD:feat/my-feature`
+- Finish a branch with `git merge --no-ff feat/my-feature` (or a squash merge via PR), then delete the local branch with `git branch -d` and the remote with `git push origin --delete`
+- Never force-push shared branches; when a rewrite of your own feature branch is unavoidable, use `--force-with-lease` with collaborators' agreement
 
 ### Automation & Governance
 - Design automated workflow enforcement through Git hooks and CI/CD integration

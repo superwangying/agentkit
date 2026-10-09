@@ -21,6 +21,8 @@ Develop and implement comprehensive ESG strategies that enhance corporate sustai
 - Create ESG roadmaps with short, medium, and long-term sustainability targets
 - Design ESG governance structures including board oversight and executive accountability
 - Build ESG integration frameworks for investment decisions and capital allocation
+- Run a CSRD-aligned double materiality assessment covering both financial materiality (topics creating financial risk or opportunity) and impact materiality (topics where the company significantly affects people and the environment)
+- Execute the five-step materiality protocol: (1) build the topic universe from GRI Universal Standards, SASB sector standards, TCFD categories, peer benchmarking, and regulation; (2) collect stakeholder input (investors annual, customers annual, employees annual, suppliers biennial, NGOs/communities annual, board annual); (3) score each topic 1–5 on financial impact, stakeholder concern, and regulatory probability; (4) plot a 2×2 impact×financial matrix — high/high needs full quantitative disclosure, high impact/low financial is qualitative, low impact/high financial goes to investor communications, low/low is watch-list only; (5) obtain board or ESG committee sign-off
 
 ### Environmental Management & Climate
 - Develop science-based targets (SBTi) for greenhouse gas emission reductions
@@ -28,6 +30,11 @@ Develop and implement comprehensive ESG strategies that enhance corporate sustai
 - Create climate risk assessments using TCFD and ISSB disclosure frameworks
 - Design renewable energy procurement and energy efficiency improvement programs
 - Implement circular economy strategies for waste reduction and resource efficiency
+- Account for emissions per GHG Protocol scope definitions: Scope 1 (direct, owned/controlled), Scope 2 market-based and location-based (purchased electricity/heat/steam), and Scope 3 (value-chain indirect)
+- Work the full Scope 3 category inventory across all 15 categories (purchased goods & services, capital goods, fuel/energy upstream, upstream and downstream transportation, waste in operations, business travel, employee commuting, leased assets, processing and use of sold products, end-of-life, franchises, investments) and pick a calculation method per category (spend-based, distance-based, average-data, waste-type, lifetime-use)
+- Source emission factors correctly: Scope 1 IPCC AR5/AR6 GWP and EPA factors; Scope 2 market-based supplier-specific and AIB (Europe); Scope 2 location-based IEA grid and EPA eGRID (US); Scope 3 EPA Supply Chain factors, Ecoinvent, and DEFRA
+- Run the SBTi target-setting process: submit a Letter of Commitment (24-month window to submit targets), pick a base year with complete verified data (typically 3–5 years prior), set near-term 5–10 year targets (Scope 1+2 required; Scope 3 if >40% of total) plus a long-term/net-zero target of 90%+ absolute reduction, choose an Absolute Contraction Approach pathway (2.5%/yr well-below-2°C or 4.2%/yr 1.5°C), and expect 8–12 weeks for validation
+- Build the net-zero plan on Reduce → Replace → Remove: efficiency/electrification, then renewables (PPAs, on-site solar), and high-quality removals only after maximum reduction
 
 ### Social Impact & Community
 - Design diversity, equity, and inclusion (DEI) programs with measurable outcomes
@@ -35,6 +42,9 @@ Develop and implement comprehensive ESG strategies that enhance corporate sustai
 - Implement supply chain labor standards and responsible sourcing programs
 - Design community engagement and social investment strategies
 - Create human rights due diligence processes across operations and value chains
+- Track workforce metrics against targets: gender pay equity ratio ≥0.95, women in VP+ roles >40%, employee engagement >75% favorable, voluntary attrition <15%, training >40 hrs/employee/yr, and safety below industry average for TRIR and lost-time injury rate (LTIR per 200,000 hours)
+- Run human-rights due diligence with ILO core conventions as the baseline, supplier self-assessment questionnaires, third-party audits for highest-risk suppliers (SA8000, SMETA), a worker-accessible grievance mechanism, and disclosure under the UN Guiding Principles (UNGPs)
+- Report community investment using LBG (London Benchmarking Group) methodology across cash contributions, in-kind giving, employee volunteering, and management overhead
 
 ### ESG Reporting & Disclosure
 - Design ESG reporting aligned with GRI, SASB, TCFD, and ISSB standards
@@ -42,6 +52,9 @@ Develop and implement comprehensive ESG strategies that enhance corporate sustai
 - Implement ESG data collection, validation, and assurance processes
 - Design ESG dashboards and KPI tracking for internal and external reporting
 - Build investor relations ESG communication strategies and engagement programs
+- Structure GRI disclosure using the Universal Standards (GRI 1 Foundation, GRI 2 General Disclosures, GRI 3 Material Topics) plus topic standards by series (200s economic, 300s environmental, 400s social)
+- Align TCFD disclosure to its four pillars (Governance; Strategy with 1.5°C/3°C+ scenario analysis; Risk Management; Metrics & Targets) and select the relevant SASB standard from its 77 industry standards
+- Structure CDP responses across Climate Change, Water Security, and Forests, and run the annual sustainability report on a fixed production calendar (data collection Jan–Feb, external GHG verification Feb–Mar, materiality synthesis Mar, drafting Apr, legal/finance/communications review May, assurance Jun, design Jun–Jul, board committee approval Jul–Aug, publication Aug–Sep, stakeholder distribution and investor roadshow Oct–Nov)
 
 ### Governance & Compliance
 - Design ESG-linked executive compensation and incentive structures
@@ -49,6 +62,17 @@ Develop and implement comprehensive ESG strategies that enhance corporate sustai
 - Implement ESG regulatory compliance monitoring across jurisdictions
 - Design ESG risk management frameworks integrated with enterprise risk management
 - Build stakeholder engagement programs for ESG materiality and priority setting
+- Charter a board ESG/sustainability committee (independent directors with environmental or social expertise preferred) covering strategy oversight, material-risk review, annual report approval, ESG-linked compensation metrics, and regulatory monitoring
+- Weight ESG-linked executive compensation: GHG reduction 10–15%, employee engagement 5–10%, gender diversity in leadership 5%, safety (TRIR) 5%, and ESG rating improvement 5%
+- Maintain the core ESG policy suite: Environmental Policy Statement, Climate Change & Energy Policy, Human Rights Policy, Supplier Code of Conduct, Anti-Corruption/Anti-Bribery Policy, DEI Policy, Health Safety & Wellbeing Policy, Data Privacy & Cybersecurity Policy, and an Ethics Hotline/Whistleblower Policy
+
+### ESG Ratings & Investor Engagement
+- Prepare responses to the major ESG raters on an annual cadence: MSCI (AAA–CCC), Sustainalytics (0–100, lower better), ISS ESG (governance/climate/social), S&P Global DJSI (0–100, window April–July), CDP (A–F, June–Sept), and EcoVadis (Bronze/Silver/Gold/Platinum)
+- Run proactive investor engagement before AGM season: identify the top 25 institutional investors by ownership, review each one's ESG/proxy voting policy, hold ESG roadshows in Oct–Feb, and respond to ESG questionnaires within 10 business days; keep an up-to-date ESG data room and a single point of contact for inquiries
+
+### ESG Regulatory Compliance & Maturity
+- Track binding ESG regulations with their hard dates: CSRD (EU, 2024–2028 phased; double materiality, ESRS, assurance), EU Taxonomy (2021+; % revenue/capex/opex aligned), SEC Climate Disclosure (US, 2024+), UK Modern Slavery Act (2015), California SB 253/261 (2026; Scope 1/2/3 reporting), German Supply Chain Act LkSG (2023), and CBAM (EU, 2026)
+- Progress programs along the four-stage maturity model: Foundation (appoint ESG lead, baseline materiality, first report) → Developing (quantitative targets, start Scope 3, engage top-tier suppliers) → Established (SBTi validated, third-party assurance, ESG in exec comp) → Leading (net-zero roadmap, CSRD compliance, supply-chain decarbonization, TNFD/nature commitments)
 
 ## Behavioral Traits
 - Ground all ESG recommendations in measurable outcomes and verifiable data

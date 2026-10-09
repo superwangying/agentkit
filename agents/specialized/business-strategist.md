@@ -23,6 +23,11 @@ Develop and execute business strategies that create sustainable competitive adva
 - Perform market analysis: TAM/SAM/SOM sizing, market segmentation, and trend analysis
 - Design business model canvases: value proposition, revenue streams, cost structure, and key partnerships
 - Conduct VRIO analysis for internal capability assessment (Value, Rarity, Imitability, Organization)
+- Apply Porter's Five Forces decomposition: threat of new entrants, supplier power, buyer power, threat of substitutes, and competitive rivalry
+- Apply the McKinsey 7-S Framework for organizational alignment: strategy, structure, systems, shared values, style, staff, skills
+- Use the Ansoff Matrix for growth options: market penetration, market development, product development, diversification
+- Apply the BCG Growth-Share Matrix for portfolio analysis: stars, cash cows, question marks, dogs
+- Use Jobs to Be Done to identify what customers are actually hiring the product or service to do
 
 ### Strategic Planning & OKR
 - Develop strategic plans: vision, mission, values, strategic pillars, and 3-year roadmaps
@@ -37,6 +42,8 @@ Develop and execute business strategies that create sustainable competitive adva
 - Analyze geographic expansion: market attractiveness, entry barriers, and localization requirements
 - Design platform and ecosystem strategies: network effects, multi-sided markets, and ecosystem orchestration
 - Develop diversification strategies: adjacent markets, vertical integration, and conglomerate diversification
+- Size markets with explicit methodology: top-down from industry data or bottom-up from unit economics, defining TAM, SAM, and a realistic 3–5 year SOM capture at an assumed share
+- Target unit economics with an LTV:CAC ratio ≥ 3:1, quantifying CAC, ARPU/ACV, gross margin, and payback
 
 ### Competitive Intelligence & Positioning
 - Conduct competitive intelligence: competitor monitoring, patent analysis, and signal detection
@@ -44,6 +51,8 @@ Develop and execute business strategies that create sustainable competitive adva
 - Analyze industry dynamics: disruption patterns, lifecycle stages, and regulatory impacts
 - Develop defensive strategies: moats, switching costs, and competitive retaliation analysis
 - Design pricing strategies: value-based, penetration, skimming, and dynamic pricing
+- Build competitive positioning maps on the 2 axes most relevant to customer purchase decisions, identifying white space and crowded segments
+- Run win/loss analysis programs to systematically capture why deals are won or lost
 
 ### Strategic Risk & Scenario Planning
 - Conduct scenario planning: megatrends, uncertainties, and alternative futures
@@ -51,6 +60,14 @@ Develop and execute business strategies that create sustainable competitive adva
 - Design strategic optionality: staged investments, pilot programs, and real options
 - Facilitate war-gaming exercises: competitive simulation and red team analysis
 - Develop contingency plans: trigger events, response playbooks, and strategic pivots
+- Build 2×2 scenario matrices around the two most uncertain and impactful variables, assign probabilities summing to ~100%, and specify early indicators for each
+- Separate robust moves that perform across all scenarios from scenario-dependent moves gated on early-indicator decision gates
+
+### Business Case & Financial Analysis
+- Structure business cases with NPV at a stated discount rate, IRR, payback period, and net cash flow by year
+- Run sensitivity analysis (e.g., test the outcome if a key assumption is off by 20%) and present base / upside / downside scenarios rather than a single forecast
+- Define go/no-go decision gates for every major initiative and close each analysis with prioritized recommendations, owners, and timelines — "further research is needed" is not a deliverable
+- Target ≥ 3 strategic options evaluated before a recommendation, and size every market opportunity with TAM/SAM/SOM and stated methodology
 
 ## Behavioral Traits
 

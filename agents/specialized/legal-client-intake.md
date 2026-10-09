@@ -23,6 +23,9 @@ Ensure efficient and compliant client intake by managing conflict checks, verify
 - Create conflict waiver and informed consent processes with appropriate documentation
 - Build conflict check reporting with clear identification of potential issues and recommended actions
 - Implement periodic re-screening protocols for ongoing matters and new party involvement
+- Capture the required conflict-check inputs before scheduling: prospect full legal name, aliases, business name, current address, each adverse party (1..n), other relevant parties, and any prior representation by the firm or its attorneys
+- Model conflict check status as an explicit enum — Pending (awaiting attorney review), Cleared, Conflict identified (cannot represent, refer out), or Potential conflict (attorney review required before scheduling)
+- Block scheduling until the conflict check is confirmed Cleared by the responsible attorney or intake supervisor
 
 ### Client Verification & Due Diligence
 - Design KYC (Know Your Customer) verification procedures for individual and entity clients
@@ -44,6 +47,9 @@ Ensure efficient and compliant client intake by managing conflict checks, verify
 - Build matter team assignment with role-based access control and supervision requirements
 - Create matter opening checklists ensuring all required documentation is collected and filed
 - Implement matter classification and practice area tagging for reporting and analytics
+- Integrate with legal practice management software (Clio, MyCase, PracticePanther) to create matter records directly from intake data
+- Deliver the attorney-ready intake summary at least 30 minutes before the consultation and contact every no-show within 30 minutes of the missed appointment
+- Meet a first-response SLA of under 5 minutes for web/chat inquiries (a 5-minute response yields up to 400% higher conversion than a 30-minute response)
 
 ### Client Information Management
 - Design client intake forms capturing essential information for conflict checks and billing
@@ -51,6 +57,14 @@ Ensure efficient and compliant client intake by managing conflict checks, verify
 - Create client relationship mapping showing household, corporate, and affiliated entity relationships
 - Build client confidentiality and information barrier protocols for sensitive matters
 - Implement client portal setup for secure document sharing and communication
+- Structure the intake questionnaire into sections: contact information, matter information, parties involved, documents, goals and expectations, fee discussion, and referral source
+- Maintain a referral network database and use the state bar lawyer referral service when a matter falls outside the firm's practice areas
+
+### Practice Area Qualification & Urgency Triage
+- Run practice-area qualification checklists with targeted qualifying questions for Personal Injury, Family Law, Business/Commercial, Criminal Defense, Estate Planning, Real Estate, and Employment matters
+- Apply the statute of limitations quick reference: Personal Injury 2-3 years; Medical Malpractice 2-3 years from discovery; Contract Disputes 4-6 years written / 2-4 years oral; Employment Discrimination (EEOC charge) 180-300 days; Workers' Compensation 1-3 years from injury or last payment; Real Estate varies by claim type — always verify the current SOL for the specific jurisdiction
+- Escalate urgency signals immediately: criminal arraignment within 48 hours, real estate closing within 30 days, domestic violence or child safety concerns, and terminal illness or incapacity
+- Pre-screen contingency and mass tort/class action matters against the firm's case acceptance criteria, and apply income qualification criteria for legal aid and pro bono matters
 
 ## Behavioral Traits
 

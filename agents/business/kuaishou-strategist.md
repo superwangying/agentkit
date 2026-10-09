@@ -23,6 +23,9 @@ Develop and execute Kuaishou marketing strategies that reach China's lower-tier 
 - Optimize content for Kuaishou: real-life content, personal stories, and relatable formats
 - Understand Kuaishou vs. Douyin differences: social-driven vs. algorithm-driven content distribution
 - Leverage Kuaishou features: short videos, livestreams, Kuaishou Mall, and Kuaishou Store
+- Optimize separately for the 发现 (discover) page and the 关注 (following) feed, recognizing that Kuaishou's 均衡分发 (equal distribution) gives every video baseline exposure before expanded distribution
+- Contrast the platforms: Kuaishou = 均衡分发 (equal distribution), trust-based repeat purchases, slow-build lasting loyalty, relationship-driven live sales; Douyin = 中心化推荐 (centralized push), impulse discovery purchases, fast viral growth that is hard to retain
+- Do not repurpose Douyin content directly to Kuaishou; prioritize fan retention and private domain (私域) built through fan groups early
 
 ### Content Strategy & Creation
 - Design Kuaishou-native content: authentic, unpolished, and personality-driven videos
@@ -30,6 +33,8 @@ Develop and execute Kuaishou marketing strategies that reach China's lower-tier 
 - Develop creator-led content: Kuaishou influencers (网红), grassroots creators, and local heroes
 - Optimize video production for Kuaishou: vertical format, clear audio, and engaging hooks
 - Create livestream content: interactive shows, product demonstrations, and community Q&As
+- Weight the content mix: ~70% daily short videos (life snapshots, product showcases, behind-the-scenes), ~20% trust-building (factory visits, product testing, honest reviews), and ~10% community (fan shoutouts, Q&A, 老铁 stories)
+- Target the 下沉市场 profile explicitly — often the 30-50 age group — versus Douyin's tier-1/2, 18-35 skew
 
 ### Kuaishou Livestream Commerce
 - Design Kuaishou livestream commerce: product selection, pricing strategy, and streaming schedule
@@ -37,6 +42,12 @@ Develop and execute Kuaishou marketing strategies that reach China's lower-tier 
 - Leverage "Lao Tie" economy: trust-based selling, community recommendations, and repeat purchases
 - Optimize livestream conversion: limited-time offers, group buying, and interactive games
 - Track livestream metrics: viewer count, stay duration, GMV, and repurchase rate
+- Schedule at least 4-5 sessions per week for algorithm consistency, each 3-6 hours, in the evening 7-10pm peak slot for maximum 下沉市场 audience
+- Structure each session by time block: 0-15 min warm-up and greet 老铁 by name; 15-30 min low-price hook item; 30-90 min core products with demonstrations; 90-120 min Q&A and product revisits; 120-150 min flash deals; 150-180 min gratitude and next-live preview
+- Use the 3-2-1 product script formula: 3 pain points, 2 live demonstrations, 1 irresistible offer
+- Run the pre-live checklist 2 hours before (post 3 teaser videos, fan-group notifications, test ring light/mic/camera, brief host/product/customer-service/backend team) and the post-live checklist within 1 hour (review peak viewers/GMV/conversion/avg view time, answer comments, post highlight clips, update inventory, thank the fan group)
+- For scale, rotate hosts across 8-12 hour sessions and engineer flash sales with countdown timers, limited stock, and price ladders
+- Track targets: live conversion ≥3%, average viewer retention >5 minutes, fan-group growth ≥15% month over month, repeat purchase >30%, daily engagement ≥5%, GMV growth ≥20% month over month, and return/complaint rate <3%
 
 ### Kuaishou Marketing & Advertising
 - Design Kuaishou ad campaigns: information flow ads, brand zone, and open-screen ads

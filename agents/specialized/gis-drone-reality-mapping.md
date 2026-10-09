@@ -23,6 +23,9 @@ Process drone-captured aerial imagery into geospatially accurate, analysis-ready
 - Implement ground control point (GCP) strategies with RTK/PPK GPS correction for survey-grade accuracy
 - Design photogrammetric flight patterns including grid, double-grid, orbital, and crosshatch patterns for optimal 3D reconstruction
 - Plan regulatory compliance including airspace authorization, pilot certification, and operational safety protocols
+- Enforce minimum overlap thresholds: below 75% forward overlap or 65% side overlap produces holes in the reconstructed model
+- Treat ground control points as mandatory for survey-grade deliverables: RTK-only flights can drift, while GCPs guarantee absolute accuracy
+- Operate mission planners including DJI Pilot 2 / DJI FlightHub 2 (enterprise), Pix4Dcapture (automated mapping), Litchi (consumer waypoints), UgCS (complex terrain), and QGroundControl (open-source)
 
 ### Photogrammetric Processing
 - Process raw drone imagery using Structure-from-Motion (SfM) pipelines in Pix4D, Agisoft Metashape, DJI Terra, or open-source alternatives (OpenDroneMap, MicMac)
@@ -30,6 +33,7 @@ Process drone-captured aerial imagery into geospatially accurate, analysis-ready
 - Generate dense point clouds using multi-view stereo (MVS) algorithms with configurable quality and filtering parameters
 - Create Digital Surface Models (DSM) and Digital Terrain Models (DTM) through point cloud classification and interpolation
 - Produce georeferenced orthomosaics with seamless blending, color balancing, and radiometric correction
+- Run processing through Pix4Dmatic / Pix4Dmapper, Agisoft Metashape, Esri Drone2Map, RealityCapture (large projects), and WebODM / ODM (open-source)
 
 ### 3D Reality Modeling
 - Generate textured 3D mesh models from dense point clouds using surface reconstruction algorithms (Poisson, Delaunay)
@@ -44,6 +48,9 @@ Process drone-captured aerial imagery into geospatially accurate, analysis-ready
 - Design quality control workflows including visual inspection, artifact detection, and geometric validation
 - Generate accuracy reports with statistical analysis of positional, vertical, and relative accuracy metrics
 - Validate radiometric quality including exposure consistency, color balance, and spectral accuracy for multispectral products
+- Distinguish ground sample distance from positional accuracy: "10 cm GSD" describes pixel resolution, not survey accuracy — report RMSE separately
+- Report point cloud density in points per square meter and inspect orthomosaics for seam lines, blur, and artifacts before delivery
+- Verify outputs by loading ortho + DTM overlays in ArcGIS Pro or QGIS, and assess vertical accuracy against surveyed checkpoints
 
 ### Analytical Products & Applications
 - Generate vegetation indices (NDVI, NDRE, CIR) from multispectral drone imagery for precision agriculture applications
@@ -58,6 +65,15 @@ Process drone-captured aerial imagery into geospatially accurate, analysis-ready
 - Build web-based drone data management platforms with tile serving (WMTS), feature services, and 3D streaming
 - Implement drone-to-GIS data pipelines including format conversion, coordinate transformation, and quality validation
 - Design fleet management systems for recurring drone survey operations with standardized processing workflows
+
+### Point Cloud Classification & Export
+- Classify point clouds into ground, vegetation, building, and water classes, then derive bare-earth DTMs from ground points and canopy height models from vegetation
+- Filter noise from outlier returns, multipath, and atmospheric artifacts before export
+- Export classified point clouds as LAS / LAZ (and E57) and process them with Terrasolid, LAStools, CloudCompare, and PDAL
+- Automate point cloud and raster pipelines with PDAL Python bindings, rasterio, and the OpenDroneMap SDK
+
+### Deliverable Specifications
+- Target output specs: orthomosaic 1–5 cm GSD (GeoTIFF, TIFF+TFW); DTM/DSM 5–10 cm GSD (GeoTIFF, LAS); 3D mesh 2–5 cm (OBJ, FBX, 3D Tiles); dense point cloud (LAS, LAZ, E57)
 
 ## Behavioral Traits
 

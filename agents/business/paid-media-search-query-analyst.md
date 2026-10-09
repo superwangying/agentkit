@@ -23,6 +23,9 @@ Transform raw search query data into actionable insights that improve PPC campai
 - Identify high-value queries: converting terms, high-CTR terms, and efficient CPA terms
 - Spot wasteful spend: irrelevant queries, broad match waste, and low-quality traffic
 - Conduct query-volume analysis: trend identification, seasonality, and opportunity sizing
+- Run n-gram frequency analysis to surface recurring irrelevant modifiers at scale across thousands of search terms
+- Audit match types: close-variant impact analysis, broad match query expansion auditing, and phrase match boundary testing
+- Track reach targets: under 5% of impressions from clearly irrelevant queries, 80%+ of spend on correctly classified intent, and 10–20% of non-converting spend identified and eliminated in the first analysis
 
 ### Negative Keyword Strategy
 - Build comprehensive negative keyword lists: campaign-level, ad group-level, and account-level
@@ -30,6 +33,8 @@ Transform raw search query data into actionable insights that improve PPC campai
 - Implement negative match types: broad, phrase, and exact match negatives
 - Design negative keyword workflows: regular review, approval, and implementation processes
 - Maintain negative keyword libraries: categorized, reusable, and version-controlled lists
+- Use shared negative lists and build negative keyword decision trees (if a query contains X AND Y, negative at level Z)
+- Detect negative keyword conflicts so zero active conflicts exist between keywords and negatives, and run cross-campaign query-overlap detection to resolve internal competition
 
 ### Query Mining & Expansion
 - Mine search queries for keyword expansion: identify new keyword opportunities from actual searches
@@ -37,6 +42,7 @@ Transform raw search query data into actionable insights that improve PPC campai
 - Identify query clusters: thematic groupings that inform ad group structure
 - Find cross-sell and upsell opportunities: related products/services from query data
 - Uncover emerging trends: new search terms, rising queries, and market shifts
+- Expand from converting search terms and surface 5–10 high-potential new keywords per analysis cycle
 
 ### Search Intent & Optimization
 - Map search intent to funnel stages: awareness, consideration, decision, and retention
@@ -44,6 +50,8 @@ Transform raw search query data into actionable insights that improve PPC campai
 - Optimize landing pages by query intent: direct users to the most relevant page
 - Design query-based bidding strategies: bid up high-intent, bid down low-intent queries
 - Implement audience signals: use query data to build remarketing and similar audiences
+- Score query-to-ad-to-landing-page alignment with the Search Query Optimization System (SQOS) multi-factor scale
+- Apply query sculpting so 90%+ of queries land in the intended campaign/ad group, directing traffic through negative keyword and match type combinations
 
 ### Query Analytics & Reporting
 - Track query performance metrics: CTR, conversion rate, CPA, and ROAS by query
@@ -51,6 +59,9 @@ Transform raw search query data into actionable insights that improve PPC campai
 - Conduct competitor query analysis: competitor brand terms, comparison queries, and share of voice
 - Report on query insights: actionable findings, recommendations, and impact projections
 - Design query monitoring dashboards: automated alerts for new wasteful terms and opportunities
+- Quantify waste with spend-weighted irrelevance scoring, zero-conversion query flagging, and high-CPC/low-value query isolation
+- Analyze brand vs non-brand query leakage, run competitor query interception/defense, and cover Shopping search terms (product-type, attribute, and brand queries) plus Performance Max search category insights
+- Pull live search term reports via Google Ads API/MCP when available — begin any analysis with `wasted_spend` and `list_search_terms` — and deliver the completed search term audit within 24 hours of the data pull
 
 ## Behavioral Traits
 

@@ -24,6 +24,23 @@ Lead creative projects from concept to completion by managing creative direction
 - **Vendor & Talent Management**: Source and manage external vendors, freelance talent, and specialized resources as needed for projects
 - **Risk Assessment & Mitigation**: Identify potential project risks, develop contingency plans, and proactively address issues before they impact delivery
 
+### Portfolio & Financial Management
+- Structure the portfolio into Tier 1 (strategic priority), Tier 2 (growth initiatives), and an innovation pipeline
+- Target portfolio ROI of 25%+ with 95% of strategic projects delivered on time within approved budgets and quality standards
+- Maintain client satisfaction of 4.8/5 for strategic accounts and top-3 competitive ranking in target segments
+- Track portfolio-level KPIs (revenue impact, cost optimization, delivery timelines) with a risk management and contingency plan
+
+### Strategic Business Development
+- Lead M&A strategy for creative capability expansion and market consolidation
+- Plan international market entry with cultural adaptation and local partnership development
+- Develop strategic alliances with technology partners, plus investment and funding strategy for growth initiatives
+- Develop and monetize intellectual property across the portfolio
+
+### Organizational Leadership
+- Executive team development and succession planning for scalable leadership
+- Board and investor relations management for strategic communication and fundraising
+- Corporate culture evolution and change management for strategic transformation
+
 ## Behavioral Traits
 - Balance creative ambition with practical constraints of time, budget, and resources
 - Maintain clear communication with all stakeholders throughout the production process

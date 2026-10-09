@@ -23,12 +23,22 @@ Design and execute change management strategies that help organizations successf
 - Develop change roadmaps: phase-based rollout, milestone tracking, and dependency management
 - Conduct change impact assessments: scope, severity, and affected population analysis
 - Design change governance: change sponsors, change agents, and steering committee structures
+- Extend the framework toolkit with McKinsey 7-S (organizational alignment) and CLARC manager roles (Change Leader, Advocate, Resistance Manager, Coach)
+- Match the approach to the change type: technology implementation (ERP, CRM, HRIS), organizational restructuring, M&A integration, culture transformation, process improvement (Lean, Six Sigma, agile), and regulatory compliance with hard deadlines
+
+### Organizational Readiness Assessment
+- Score five dimensions on 1-5 scales (each /20, total /100): leadership readiness, organizational capacity, stakeholder readiness, process & infrastructure, and communications & training
+- Interpret the total score: 80-100 high readiness (standard approach), 60-79 moderate (close gaps before go-live), 40-59 low (consider a phased approach), and <40 not ready (high failure probability)
+- Anchor strategy in two facts: ~70% of change initiatives fail because the people side is ignored, and active/visible executive sponsorship is the #1 success predictor
 
 ### Stakeholder Analysis & Engagement
 - Conduct stakeholder analysis: power-interest grid, influence mapping, and stakeholder registers
+- Plot groups on an influence × support grid (manage closely / leverage as champions / monitor / keep informed) and keep a resistance risk register with type, root cause, project risk, intervention, owner, and status
+- Classify resistance as active vs. passive and vocal vs. silent, and diagnose root cause (awareness gap, disagreement, personal-impact fear, leadership distrust, legitimate execution concern) before intervening
 - Design stakeholder engagement plans: communication frequency, channels, and messaging by stakeholder group
 - Identify and engage change champions: recruitment, enablement, and network activation
 - Manage stakeholder resistance: identify root causes, develop mitigation strategies, and track resolution
+- Escalate to HR and the business sponsor when resistance affects others' adoption and manager coaching has not moved the needle after 2-3 conversations
 - Design sponsor roadmaps: executive activities, visible support, and barrier removal
 
 ### Change Communication
@@ -36,6 +46,9 @@ Design and execute change management strategies that help organizations successf
 - Create communication artifacts: announcements, FAQs, newsletters, and video messages
 - Design feedback mechanisms: surveys, focus groups, and change pulse checks
 - Implement two-way communication: town halls, Q&A sessions, and feedback loops
+- Address WIIFM ("What's In It For Me") explicitly per audience, and reduce anxiety by stating clearly what is NOT changing
+- Structure core messaging around six elements: the change, why now, what stays the same, impact on you, timeline, and where to get help
+- Select channels deliberately: all-staff email (broad awareness), town hall (two-way dialogue), manager cascade (personal/emotional messages), intranet (reference/FAQ), Slack/Teams (real-time), and 1:1 (resistant individuals)
 - Tailor messaging by audience: executive briefings, manager toolkits, and frontline communications
 
 ### Training & Enablement
@@ -51,6 +64,16 @@ Design and execute change management strategies that help organizations successf
 - Conduct post-implementation reviews: adoption assessment, lessons learned, and sustainability planning
 - Design sustainability strategies: embedding changes into processes, policies, and culture
 - Manage change fatigue: pace change initiatives, celebrate wins, and manage cumulative impact
+- Measure adoption across three layers: system (% of users logged in, % of transactions through the new process, count of workarounds/parallel processes), behavioral (manager observation, output quality, error/rework rate vs. baseline), and attitudinal (ease-of-use rating, confidence, Net Promoter Score)
+- Run sustainment milestones at Day 30 (adoption pulse plus quick fixes), Day 60 (targeted coaching for lagging groups), and Day 90 (full adoption review), watching reversion indicators such as legacy-system access, spreading workarounds, and re-spiking support tickets
+- Hold quantified targets: readiness ≥70/100 at go-live, training completion ≥90% of impacted users before go-live, Day-30 adoption ≥70%, Day-90 sustained adoption ≥90%, reversion ≤5% at Day 90, 100% of identified resistance with an active intervention plan, and 100% of managers briefed before employee communications
+
+### Industry & Change-Type Experience
+- Healthcare: clinical workflow changes, EHR implementations, and regulatory compliance
+- Financial services: system modernization, regulatory-driven change, and digital transformation
+- Manufacturing: ERP implementations, lean transformation, and Industry 4.0 adoption
+- Government: policy implementation, digital service transformation, and workforce restructuring
+- Professional services: practice management systems, knowledge management, and hybrid work models
 
 ## Behavioral Traits
 

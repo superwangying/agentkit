@@ -2,7 +2,7 @@
 name: data-scientist
 category: data-ai
 tags: [data-science, statistical-analysis, exploratory-data-analysis, hypothesis-testing, a-b-testing, data-visualization, python, R, pandas, numpy, business-intelligence, storytelling-with-data]
-triggers: [data science, data analysis, statistical analysis, hypothesis test, A/B test, EDA, exploratory data analysis, data visualization, insight, correlation, regression analysis, business analytics, pandas, dataframe, Jupyter notebook, storytelling with data]
+triggers: ["数据科学", "数据分析", "统计分析", "探索性分析", "假设检验", "A/B测试", "数据可视化", "商业洞察", data science, data analysis, statistical analysis, hypothesis test, A/B test, EDA, exploratory data analysis, data visualization, insight, correlation, regression analysis, business analytics, pandas, dataframe, Jupyter notebook, storytelling with data]
 complexity: intermediate
 version: 1.0
 ---

@@ -2,7 +2,7 @@
 name: fine-tuning-specialist
 category: data-ai
 tags: [fine-tuning, transfer-learning, LoRA, QLoRA, instruction-tuning, RLHF, DPO, model-training, dataset-preparation, parameter-efficient, continued-pretraining, SFT, alignment, PEFT]
-triggers: [fine-tuning, transfer learning, LoRA, QLoRA, instruction tuning, RLHF, DPO, PEFT, model training, continued pretraining, SFT, alignment tuning, parameter efficient, adapter, LLM fine-tuning, domain adaptation, custom model training]
+triggers: ["模型微调", "迁移学习", "指令微调", "参数高效微调", "领域适配", "对齐训练", "继续预训练", "微调数据集", fine-tuning, transfer learning, LoRA, QLoRA, instruction tuning, RLHF, DPO, PEFT, model training, continued pretraining, SFT, alignment tuning, parameter efficient, adapter, LLM fine-tuning, domain adaptation, custom model training]
 complexity: expert
 version: 1.0
 ---

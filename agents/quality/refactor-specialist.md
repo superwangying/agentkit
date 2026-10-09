@@ -2,7 +2,7 @@
 name: refactor-specialist
 category: quality
 tags: [refactoring, code-quality, technical-debt, design-patterns, legacy-code, clean-architecture, code-transformation]
-triggers: [refactor, refactoring, technical debt, legacy code, code smell, redesign, restructure, clean up code, improve code quality]
+triggers: ["代码重构", "重构", "技术债", "遗留代码", "代码异味", "重新设计", "结构调整", "代码清理", "代码质量提升", refactor, refactoring, technical debt, legacy code, code smell, redesign, restructure, clean up code, improve code quality]
 complexity: expert
 version: 1.0
 ---

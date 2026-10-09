@@ -1,7 +1,7 @@
 {
   "name": "agentkit",
-  "version": "2.0.0",
-  "description": "435 Professional Agents - Portable, Platform-Agnostic AI Agent Library",
+  "version": "3.0.0",
+  "description": "463 Professional Agents - Portable, Platform-Agnostic AI Agent Library (synced with agency-agents)",
   "type": "module",
   "main": "./src/cli.js",
   "bin": {
@@ -9,23 +9,36 @@
   },
   "files": [
     "agents/",
+    "strategy/",
+    "examples/",
     "src/",
     "registry.json",
+    "agents-data.json",
+    "agents-data.js",
+    "divisions.json",
+    "tools.json",
     "README.md",
+    "CHANGELOG.md",
+    "UPSTREAM_MAPPING.md",
+    "SECURITY.md",
     "LICENSE",
     "CLAUDE.md",
     ".cursorrules",
     "CONTRIBUTING.md",
+    "CONTRIBUTING_zh-CN.md",
     "QUICK_START.md",
     "IDE_ADAPTERS.md",
     "AGENT_TEMPLATE.md"
   ],
   "scripts": {
     "start": "node src/cli.js",
+    "verify": "node src/verify.js",
     "find": "node src/cli.js find",
     "get": "node src/cli.js get",
     "list": "node src/cli.js list",
-    "search": "node src/cli.js search"
+    "categories": "node src/cli.js categories",
+    "search": "node src/cli.js search",
+    "stats": "node src/cli.js stats"
   },
   "keywords": [
     "ai",
@@ -33,11 +46,14 @@
     "prompts",
     "chatgpt",
     "claude",
+    "cursor",
+    "copilot",
     "professional",
     "assistant",
     "developer-tools",
     "agent-library",
-    "coding-assistant"
+    "coding-assistant",
+    "markdown-agents"
   ],
   "author": "AgentKit Contributors",
   "license": "MIT",

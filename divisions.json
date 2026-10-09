@@ -1,0 +1,272 @@
+{
+ "_note": "AgentKit v3.0.0 分类元数据（SSOT）。15 个 category 是 AgentKit 的组织维度；upstream_divisions 记录该分类下 agent 主要来自上游哪些 division。末段 upstream_divisions_raw 保留上游 18 部门的原始 label/icon/color，供追溯。",
+ "version": "3.0.0",
+ "upstream": "msitarzewski/agency-agents@f99f6aa910 (2026-10-07)",
+ "categories": {
+  "architecture": {
+   "label_zh": "架构",
+   "label_en": "Architecture",
+   "icon": "🏗️",
+   "icon_lucide": "Blocks",
+   "color": "#3B82F6",
+   "count": 14,
+   "upstream_divisions": [
+    "engineering"
+   ]
+  },
+  "languages": {
+   "label_zh": "编程语言",
+   "label_en": "Languages",
+   "icon": "💻",
+   "icon_lucide": "Code2",
+   "color": "#8B5CF6",
+   "count": 24,
+   "upstream_divisions": []
+  },
+  "frameworks": {
+   "label_zh": "框架",
+   "label_en": "Frameworks",
+   "icon": "🧩",
+   "icon_lucide": "Puzzle",
+   "color": "#06B6D4",
+   "count": 20,
+   "upstream_divisions": []
+  },
+  "devops": {
+   "label_zh": "DevOps",
+   "label_en": "DevOps",
+   "icon": "⚙️",
+   "icon_lucide": "Settings",
+   "color": "#F59E0B",
+   "count": 21,
+   "upstream_divisions": [
+    "engineering",
+    "support"
+   ]
+  },
+  "quality": {
+   "label_zh": "质量保障",
+   "label_en": "Quality",
+   "icon": "✅",
+   "icon_lucide": "FlaskConical",
+   "color": "#10B981",
+   "count": 21,
+   "upstream_divisions": [
+    "testing",
+    "security"
+   ]
+  },
+  "data-ai": {
+   "label_zh": "数据与 AI",
+   "label_en": "Data & AI",
+   "icon": "🧠",
+   "icon_lucide": "BrainCircuit",
+   "color": "#6366F1",
+   "count": 28,
+   "upstream_divisions": [
+    "engineering",
+    "gis",
+    "research"
+   ]
+  },
+  "database": {
+   "label_zh": "数据库",
+   "label_en": "Database",
+   "icon": "🗄️",
+   "icon_lucide": "Database",
+   "color": "#0EA5E9",
+   "count": 12,
+   "upstream_divisions": [
+    "engineering"
+   ]
+  },
+  "frontend": {
+   "label_zh": "前端",
+   "label_en": "Frontend",
+   "icon": "🎨",
+   "icon_lucide": "Palette",
+   "color": "#EC4899",
+   "count": 25,
+   "upstream_divisions": [
+    "design",
+    "engineering"
+   ]
+  },
+  "security": {
+   "label_zh": "安全",
+   "label_en": "Security",
+   "icon": "🔒",
+   "icon_lucide": "ShieldCheck",
+   "color": "#EF4444",
+   "count": 22,
+   "upstream_divisions": [
+    "security"
+   ]
+  },
+  "blockchain": {
+   "label_zh": "区块链",
+   "label_en": "Blockchain",
+   "icon": "⛓️",
+   "icon_lucide": "Link",
+   "color": "#F97316",
+   "count": 8,
+   "upstream_divisions": []
+  },
+  "business": {
+   "label_zh": "业务与运营",
+   "label_en": "Business",
+   "icon": "💼",
+   "icon_lucide": "Briefcase",
+   "color": "#22C55E",
+   "count": 89,
+   "upstream_divisions": [
+    "marketing",
+    "sales",
+    "paid-media",
+    "product",
+    "project-management",
+    "support",
+    "finance",
+    "research"
+   ]
+  },
+  "integration": {
+   "label_zh": "集成与工具",
+   "label_en": "Integration",
+   "icon": "🔌",
+   "icon_lucide": "Plug",
+   "color": "#14B8A6",
+   "count": 20,
+   "upstream_divisions": [
+    "engineering"
+   ]
+  },
+  "game-development": {
+   "label_zh": "游戏开发",
+   "label_en": "Game Development",
+   "icon": "🎮",
+   "icon_lucide": "Gamepad2",
+   "color": "#A855F7",
+   "count": 15,
+   "upstream_divisions": [
+    "game-development"
+   ]
+  },
+  "specialized": {
+   "label_zh": "专项领域",
+   "label_en": "Specialized",
+   "icon": "🔬",
+   "icon_lucide": "Sparkles",
+   "color": "#64748B",
+   "count": 130,
+   "upstream_divisions": [
+    "specialized",
+    "academic",
+    "healthcare",
+    "gis",
+    "spatial-computing"
+   ]
+  },
+  "modernization": {
+   "label_zh": "现代化改造",
+   "label_en": "Modernization",
+   "icon": "🔄",
+   "icon_lucide": "RefreshCw",
+   "color": "#EAB308",
+   "count": 14,
+   "upstream_divisions": []
+  }
+ },
+ "upstream_divisions_raw": {
+  "academic": {
+   "label": "Academic",
+   "icon": "GraduationCap",
+   "color": "#8B5CF6"
+  },
+  "design": {
+   "label": "Design",
+   "icon": "PenTool",
+   "color": "#EC4899"
+  },
+  "engineering": {
+   "label": "Engineering",
+   "icon": "Code",
+   "color": "#3B82F6"
+  },
+  "finance": {
+   "label": "Finance",
+   "icon": "DollarSign",
+   "color": "#22C55E"
+  },
+  "game-development": {
+   "label": "Game Development",
+   "icon": "Gamepad2",
+   "color": "#A855F7"
+  },
+  "gis": {
+   "label": "GIS",
+   "icon": "Map",
+   "color": "#14B8A6"
+  },
+  "healthcare": {
+   "label": "Healthcare",
+   "icon": "Stethoscope",
+   "color": "#0D9488"
+  },
+  "marketing": {
+   "label": "Marketing",
+   "icon": "Megaphone",
+   "color": "#F97316"
+  },
+  "paid-media": {
+   "label": "Paid Media",
+   "icon": "Target",
+   "color": "#EAB308"
+  },
+  "product": {
+   "label": "Product",
+   "icon": "Box",
+   "color": "#D946EF"
+  },
+  "project-management": {
+   "label": "Project Management",
+   "icon": "ClipboardList",
+   "color": "#0EA5E9"
+  },
+  "research": {
+   "label": "Research",
+   "icon": "Search",
+   "color": "#7C3AED"
+  },
+  "sales": {
+   "label": "Sales",
+   "icon": "TrendingUp",
+   "color": "#10B981"
+  },
+  "security": {
+   "label": "Security",
+   "icon": "ShieldCheck",
+   "color": "#EF4444"
+  },
+  "spatial-computing": {
+   "label": "Spatial Computing",
+   "icon": "Boxes",
+   "color": "#06B6D4"
+  },
+  "specialized": {
+   "label": "Specialized",
+   "icon": "Sparkles",
+   "color": "#6366F1"
+  },
+  "support": {
+   "label": "Support",
+   "icon": "LifeBuoy",
+   "color": "#84CC16"
+  },
+  "testing": {
+   "label": "Testing",
+   "icon": "FlaskConical",
+   "color": "#F59E0B"
+  }
+ }
+}

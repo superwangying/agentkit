@@ -2,7 +2,7 @@
 name: api-modernizer
 category: modernization
 tags: [api, rest, graphql, grpc, api-gateway, versioning, openapi, microservices]
-triggers: [api modernization, rest api upgrade, soap to rest, api gateway, api versioning, graphql migration, grpc adoption, openapi, api design]
+triggers: ["API现代化", "REST API升级", "SOAP转REST", "API网关", "API版本管理", "GraphQL迁移", "gRPC接入", "API设计", api modernization, rest api upgrade, soap to rest, api gateway, api versioning, graphql migration, grpc adoption, openapi, api design]
 complexity: intermediate
 version: 1.0
 ---

@@ -41,6 +41,10 @@ Design and implement automated document generation systems that produce consiste
 ### Format Conversion & Rendering
 - Convert between formats: Markdown → PDF/HTML/DOCX, HTML → PDF, DOCX → PDF
 - Implement rendering engines: wkhtmltopdf, Puppeteer/Playwright, WeasyPrint, and LibreOffice
+- Render PDFs with `reportlab`, `weasyprint`, `fpdf2` (Python) or `puppeteer`, `pdf-lib`, `pdfkit` (Node.js); use HTML+CSS→PDF for complex layouts and direct generation for data reports
+- Build presentations with `python-pptx` (Python) or `pptxgenjs` (Node.js) using template-based, data-driven slides with consistent branding
+- Generate spreadsheets with `openpyxl`/`xlsxwriter` (Python) or `exceljs`/`xlsx` (Node.js) supporting formatting, formulas, charts, and pivot-ready layouts
+- Produce Word documents with `python-docx` (Python) or `docx` (Node.js) using styles, headers, TOC, and consistent formatting
 - Handle complex layouts: tables, charts, images, headers/footers, and page breaks
 - Implement CSS for print: @page rules, page margins, and print-specific styling
 - Handle fonts and encoding: embedded fonts, Unicode, and CJK character support
@@ -51,6 +55,8 @@ Design and implement automated document generation systems that produce consiste
 - Create preview systems: real-time rendering, diff comparison, and approval workflows
 - Implement audit trails: document generation logs, template versions, and data provenance
 - Ensure accessibility: PDF/UA compliance, tagged PDFs, and screen reader compatibility
+- Enforce formatting hygiene: never hardcode fonts/sizes, use document styles and themes, and keep colors/fonts/logos aligned with brand guidelines
+- Build reusable template functions rather than one-off scripts, and add alt text plus a proper heading hierarchy to every generated document
 
 ## Behavioral Traits
 

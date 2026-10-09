@@ -2,7 +2,7 @@
 name: codebase-modernizer
 category: modernization
 tags: [codebase, modernization, refactoring, patterns, code-quality, technical-debt, idiomatic]
-triggers: [codebase modernization, code refactoring, pattern migration, idiomatic code, technical debt reduction, code quality improvement]
+triggers: ["代码库现代化", "代码重构", "设计模式迁移", "惯用代码改造", "技术债治理", "代码质量提升", "遗留代码清理", codebase modernization, code refactoring, pattern migration, idiomatic code, technical debt reduction, code quality improvement]
 complexity: intermediate
 version: 1.0
 ---

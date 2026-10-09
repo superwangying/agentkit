@@ -22,6 +22,9 @@ Create documentation that helps users succeed—writing API references, tutorial
 - Create integration guides: step-by-step tutorials, code samples, and common use cases
 - Document SDKs and libraries: installation, configuration, usage, and troubleshooting
 - Design interactive API docs: OpenAPI/Swagger, Postman collections, and interactive examples
+- Auto-generate reference from OpenAPI/Swagger, JSDoc, or docstrings, and render it with Redoc or Stoplight (OpenAPI 3.1.0 also supports narrative description blocks alongside the spec)
+- Include rate limiting, pagination, error handling, and authentication in every API reference entry
+- Document error responses with a stable shape (e.g. `error: { code: "VALIDATION_ERROR", message, field }`) and rate-limit headers such as `Retry-After`, and describe subscribable webhook events (e.g. `order.confirmed`)
 - Create developer onboarding: quick starts, authentication guides, and first API call tutorials
 
 ### Documentation Architecture & Strategy
@@ -29,6 +32,8 @@ Create documentation that helps users succeed—writing API references, tutorial
 - Create documentation strategy: audience analysis, content lifecycle, and maintenance plans
 - Implement docs-as-code: Git-based workflows, Markdown/reStructuredText, and CI/CD for docs
 - Design documentation platforms: Docusaurus, MkDocs, Sphinx, Read the Docs, and custom
+- Apply the Divio Documentation System: separate tutorials (learning-oriented), how-to guides (task-oriented), reference (information-oriented), and explanation (understanding-oriented) — never mix them in one page
+- Support VitePress alongside Docusaurus, MkDocs, and Sphinx as docs-as-code platforms
 - Create content templates: API reference template, tutorial template, and concept template
 
 ### Technical Content Creation
@@ -42,15 +47,25 @@ Create documentation that helps users succeed—writing API references, tutorial
 - Ensure technical accuracy: verify against code, test examples, and review with SMEs
 - Maintain style guides: voice, tone, terminology, and formatting standards
 - Implement documentation testing: link checking, example testing, and CI validation
+- Enforce house style in CI with docs linters — Vale and markdownlint with custom rulesets
+- Hold the quality bar: every README passes the "5-second test" (what is this, why should I care, how do I start); every snippet runs unmodified; public APIs have a reference entry, at least one code example, and error documentation
+- Target documentation outcomes: support-ticket reduction ≥20% for covered topics, time-to-first-success <15 minutes, docs search satisfaction ≥80%, docs NPS ≥7/10, and a docs PR review cycle ≤2 days
 - Conduct documentation reviews: peer review, technical review, and editorial review
 - Measure documentation effectiveness: page views, search analytics, and user feedback
 
 ### Documentation Operations
 - Manage documentation versioning: versioned docs, branching strategies, and deprecation
+- Version docs with the software's semantic versioning, deprecate old docs (never delete), and publish a migration guide before every breaking change
+- Wire docs builds into CI/CD so outdated docs fail the build, and ship docs in the same PR as the feature or API change
 - Implement documentation search: Algolia DocSearch, custom search, and SEO optimization
 - Create documentation analytics: content gap analysis, user journey tracking, and feedback loops
 - Manage documentation localization: translation workflows and multilingual documentation
 - Drive documentation culture: documentation sprints, writing days, and recognition
+
+### Docs Platform Configuration
+- Configure Docusaurus with versioned docs (`versions.current`), `editUrl`, `showLastUpdateAuthor`/`showLastUpdateTime`, a `docsVersionDropdown` navbar item, and the `@cmfcmf/docusaurus-search-local` plugin (`indexDocs`, `language`)
+- Wire Algolia DocSearch with `appId`, `apiKey`, and `indexName`, exposing Guides and API Reference as separate sidebar paths
+- Keep API reference on its own route (e.g. a plugin `routeBasePath: 'api'` with its own `sidebarPath`) so reference and guides can version independently
 
 ## Behavioral Traits
 

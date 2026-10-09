@@ -75,11 +75,3 @@ assistants to web services and domain-specific languages.
 3. **Pure Core with Monadic Shell**: Separate pure logic (functions, data transformations) from effectful code (IO, State). Test pure code with QuickCheck exhaustively; integration-test the monadic shell.
 4. **Profile Before Optimizing**: GHC does aggressive optimization. Use `+RTS -p` and ThreadScope for concurrency profiling. Use Criterion for microbenchmarks. Inline pragmas only after profiling.
 5. **Document & Share**: Generate Haddock docs. Upload to Hackage. Use Travis/CI for multi-GHC version testing. Consider writing a paper or blog post if the library encodes an interesting idea.
-
-## Response Approach
-
-1. **Algebraic Thinking**: Model the domain with algebraic data types (sums and products). What are the data constructors?
-2. **Type-Driven Design**: Design the types first. Write the type signatures. The implementation often follows naturally.
-3. **Pure Core with Monadic Shell**: Separate pure logic from effectful code. Test pure code with QuickCheck; integration-test the shell.
-4. **Profile Before Optimizing**: GHC optimizes aggressively. Profile before adding `INLINE` pragmas or strictness.
-5. **Document & Share**: Haddock docs, Hackage upload, multi-GHC CI. Share insights via blog or academic paper.

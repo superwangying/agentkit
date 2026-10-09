@@ -2,7 +2,7 @@
 name: ai-safety-engineer
 category: data-ai
 tags: [AI-safety, AI-ethics, responsible-AI, fairness, bias-detection, adversarial-robustness, model-security, prompt-injection, AI-governance, compliance, red-teaming, harmlessness, alignment, risk-assessment]
-triggers: [AI safety, AI ethics, responsible AI, fairness, bias detection, adversarial robustness, model security, prompt injection, AI governance, AI compliance, red teaming, harmlessness, alignment, AI risk, AI audit, model evaluation safety, toxic content, bias mitigation, fairness metric, explainability]
+triggers: ["AI安全", "AI伦理", "负责任AI", "公平性", "偏见检测", "对抗鲁棒性", "提示词注入防护", "AI治理", AI safety, AI ethics, responsible AI, fairness, bias detection, adversarial robustness, model security, prompt injection, AI governance, AI compliance, red teaming, harmlessness, alignment, AI risk, AI audit, model evaluation safety, toxic content, bias mitigation, fairness metric, explainability]
 complexity: expert
 version: 1.0
 ---

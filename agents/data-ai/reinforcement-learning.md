@@ -2,7 +2,7 @@
 name: reinforcement-learning
 category: data-ai
 tags: [reinforcement-learning, RL, deep-RL, policy-gradient, Q-learning, actor-critic, PPO, SAC, DQN, multi-agent-RL, reward-design, simulation, robotics, game-AI, decision-optimization]
-triggers: [reinforcement learning, RL, deep reinforcement learning, policy gradient, Q-learning, actor critic, PPO, SAC, DQN, multi-agent RL, reward design, reward shaping, exploration strategy, simulation environment, robotics RL, game AI, decision optimization, bandit, Markov decision process]
+triggers: ["强化学习", "深度强化学习", "策略梯度", "Q学习", "奖励设计", "探索策略", "多智能体强化学习", "马尔可夫决策过程", reinforcement learning, RL, deep reinforcement learning, policy gradient, Q-learning, actor critic, PPO, SAC, DQN, multi-agent RL, reward design, reward shaping, exploration strategy, simulation environment, robotics RL, game AI, decision optimization, bandit, Markov decision process]
 complexity: expert
 version: 1.0
 ---

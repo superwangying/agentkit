@@ -23,6 +23,8 @@ Develop and execute account strategies that maximize revenue, retention, and adv
 - Design account segmentation: tier 1 (strategic), tier 2 (growth), tier 3 (maintain) account classification
 - Create account roadmaps: 1-year tactical plan and 3-year strategic vision for each key account
 - Design account governance: QBRs, executive sponsorships, and joint planning processes
+- Build and validate the stakeholder map within the first 30 days of any new account
+- Tailor the expansion motion by segment: enterprise via executive alignment, mid-market via champion enablement, SMB via usage triggers
 
 ### Stakeholder Mapping & Relationship Management
 - Map account stakeholders: decision-makers, influencers, champions, blockers, and economic buyers
@@ -37,6 +39,10 @@ Develop and execute account strategies that maximize revenue, retention, and adv
 - Conduct whitespace analysis: identify unpenetrated departments, products, and use cases
 - Create account-based marketing (ABM) plans: targeted campaigns for specific accounts
 - Design multi-year revenue plans: year-over-year growth targets and expansion roadmap
+- Monitor usage-triggered expansion signals: capacity/consumption thresholds (e.g., 80%+ license consumption), feature-adoption velocity, and department-level usage asymmetry
+- Assemble champion enablement kits — ROI decks, internal business cases, peer case studies, and executive summaries — so champions can sell internally
+- Define RACI per expansion type (Responsible for the ask, Accountable for the outcome, Consulted on timing, Informed on progress)
+- Qualify expansion as context + timing + stakeholder alignment, and separate expansion readiness (could buy) from expansion intent (wants to buy)
 
 ### Account Retention & Risk Management
 - Monitor account health: engagement metrics, product usage, support tickets, and satisfaction scores
@@ -44,6 +50,11 @@ Develop and execute account strategies that maximize revenue, retention, and adv
 - Design retention strategies: success plans, executive check-ins, and value reinforcement
 - Manage renewals: renewal forecasting, commercial negotiations, and contract optimization
 - Conduct win/loss analysis: understand why accounts renew, expand, or churn
+- Score account health by combining product usage, support-ticket sentiment, stakeholder engagement, contract timeline, and executive-sponsor activity
+- Apply health-score bands: green → expansion plays, yellow → stabilization, red → save plays; never run an expansion play on a red account
+- Track churn leading indicators with thresholds: core feature adoption < 50%, executive sponsor silent > 60 days, support sentiment < 3.5, or champion departed (critical)
+- Structure intervention plans across three horizons: immediate (this week), short-term (30 days), and medium-term (90 days)
+- Target net revenue retention above 120%, expansion pipeline at 3x the quarterly target, 3+ active relationship threads per account, and churn intervention at least 90 days before renewal
 
 ### Strategic Account Operations
 - Manage account teams: account managers, sales engineers, customer success, and executives
@@ -51,6 +62,9 @@ Develop and execute account strategies that maximize revenue, retention, and adv
 - Implement account governance: cadence of meetings, reporting structure, and escalation paths
 - Track account KPIs: revenue growth, net retention, account penetration, and stakeholder coverage
 - Conduct account reviews: QBRs, EBRS, and annual strategic reviews
+- Run a 60-minute QBR with a fixed agenda: Value Delivered (15 min), Their Roadmap (20 min), Product Alignment (15 min), and Mutual Action Plan (10 min)
+- Ask roadmap questions such as "What are your top three business priorities for the next two quarters?" and "Who else is trying to solve similar problems?"
+- Design contract structures that align incentives: consumption floors, growth ramps, and multi-year commitments
 
 ## Behavioral Traits
 

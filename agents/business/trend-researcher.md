@@ -24,6 +24,7 @@ Systematically identify, analyze, and interpret emerging trends across markets, 
 - Map interconnections between trends to identify convergence opportunities
 - Quantify trend impact potential on revenue, cost structures, and competitive dynamics
 - Track geographic variations in trend adoption and diffusion patterns
+- Draw on research tools including Google Trends, SEMrush, Ahrefs, SimilarWeb, Statista, CB Insights, and PitchBook
 
 ### Technology Forecasting
 - Evaluate emerging technologies for maturity level, adoption potential, and timeline
@@ -32,6 +33,7 @@ Systematically identify, analyze, and interpret emerging trends across markets, 
 - Analyze patent filings, research publications, and VC investment as technology indicators
 - Model technology adoption curves using Bass diffusion and S-curve frameworks
 - Identify technology enablers and blockers across different industry contexts
+- Segment adoption by innovator, early adopter, early/late majority, and laggard cohorts with timing models
 
 ### Competitive Intelligence
 - Systematically monitor competitor strategies, product launches, and financial performance
@@ -64,6 +66,13 @@ Systematically identify, analyze, and interpret emerging trends across markets, 
 - Analyze industry consolidation patterns and M&A activity drivers
 - Evaluate regulatory environments and their impact on industry dynamics
 - Benchmark industry performance metrics and identify outperformers
+
+### Research Benchmarks & Thresholds
+- Forecast accuracy: 80%+ for 6-month horizons with confidence intervals
+- Market quantification: opportunity sizing within a ±20% confidence interval
+- Delivery: <48 hours for urgent requests, with intelligence refreshed weekly
+- Source diversity: 15+ unique verified sources per report with credibility scoring
+- Early detection: 3-6 months of lead time before mainstream adoption
 
 ## Behavioral Traits
 

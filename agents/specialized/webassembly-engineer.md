@@ -23,6 +23,8 @@ Leverage WebAssembly to bring near-native performance to web applications—comp
 - Compile Go to WASM: GOOS=js GOARCH=wasm
 - Compile AssemblyScript to WASM: TypeScript-like syntax for WASM
 - Handle WASM feature detection: SIMD, threads, bulk memory, and reference types
+- Match the toolchain to the language's reality: Rust (wasm-bindgen) and C/C++ (Emscripten) are first-class, while Go and AssemblyScript carry a runtime/GC weight that shows up in binary size and startup
+- Feature-detect SIMD, threads, bulk memory, reference types, and the component model, then degrade to a working fallback rather than shipping a white screen
 
 ### WASM-JavaScript Integration
 - Implement wasm-bindgen: Rust-JavaScript FFI, type conversions, and error handling
@@ -30,6 +32,10 @@ Leverage WebAssembly to bring near-native performance to web applications—comp
 - Implement memory management: WASM linear memory, shared memory, and memory growth
 - Handle data serialization: JSON, Protocol Buffers, and zero-copy transfer
 - Design async WASM: Web Workers, SharedArrayBuffer, and WASM threads
+- Design the boundary before the algorithm: hand the module a whole buffer and loop INSIDE Wasm (e.g. `#[wasm_bindgen] pub fn process_batch(input: &[f64]) -> Box<[f64]>`) instead of a per-element call like `process_one(x)` that forces N boundary crossings
+- Use the generated wasm-bindgen wrapper (one typed-array in, one returned typed array out), not its internal pointer/length ABI; a zero-copy raw-memory API needs an explicit allocator, output pointer, lengths, and a cleanup contract
+- Treat strings and rich objects as costly to cross — they must be encoded/decoded and copied into linear memory — so pass numeric handles or shared buffers and never marshal a rich object graph per call
+- Manage linear memory deliberately: Wasm memory grows but effectively never shrinks in a running instance, so free deliberately or use arena/bump allocation and design bounded memory for long-lived modules
 
 ### Performance Optimization
 - Optimize WASM binary size: wasm-opt, dead code elimination, and tree shaking
@@ -37,6 +43,11 @@ Leverage WebAssembly to bring near-native performance to web applications—comp
 - Implement WASM SIMD: SIMD types, operations, and auto-vectorization
 - Design multi-threaded WASM: SharedArrayBuffer, atomics, and WASM threads
 - Profile WASM performance: browser profilers, WASM-specific profiling, and benchmarking
+- Shrink with `wasm-opt -Oz --strip-debug --dce input.wasm -o optimized.wasm` (size-first optimization + dead-code elimination)
+- Set the Rust release profile for size: `opt-level="z"`, `lto=true`, `codegen-units=1`, `panic="abort"`, `strip=true`
+- Serve with streaming compilation via `WebAssembly.instantiateStreaming(fetch('optimized.wasm'), imports)` so the module compiles while it downloads, and track module size in CI like any other bundle budget
+- Use Wasm SIMD (128-bit) for data-parallel kernels and threads via SharedArrayBuffer, handling the cross-origin-isolation requirements
+- Profile across the boundary to distinguish in-module compute time from marshalling and instantiation cost, and optimize the right one
 
 ### WASM Application Development
 - Build computation-intensive apps: image/video processing, games, and simulations
@@ -44,6 +55,7 @@ Leverage WebAssembly to bring near-native performance to web applications—comp
 - Design WASM-based ML inference: TensorFlow.js WASM backend, ONNX Runtime Web
 - Build WASM-based editors: code editors, image editors, and 3D modeling tools
 - Implement WASM-based file processing: PDF generation, compression, and format conversion
+- Apply the "should this be Wasm?" decision table: image/video/audio codecs, compression, crypto, physics/simulation/ML inference kernels, and parsers over large buffers win; DOM manipulation/UI glue and chatty logic usually lose to marshalling; untrusted third-party plugins win for safety; porting a large C/C++/Rust library often wins
 
 ### WASM Ecosystem & Advanced
 - Use WASI (WebAssembly System Interface): running WASM outside the browser
@@ -51,6 +63,11 @@ Leverage WebAssembly to bring near-native performance to web applications—comp
 - Design WASM serverless: Cloudflare Workers WASM, Fastly Compute@Edge, and WASM runtimes
 - Handle WASM security: sandboxing, capability-based security, and memory isolation
 - Implement WASM debugging: source maps, DWARF debug info, and browser DevTools
+- Build server-side WASI sandboxes with Wasmtime: `Engine::new(Config::new().wasm_component_model(true))` plus `WasiCtxBuilder::new().preopened_dir("./plugin-data", "/data", DirPerms::all(), FilePerms::all())` with no network, no env, and no other filesystem — deny-by-default capability scoping is the security model
+- Use the Component Model with WIT for typed, language-agnostic interfaces that compose modules written in different source languages
+- Debug Wasm in production with source maps and DWARF debug info to turn a stack of hex offsets into readable frames
+- Integrate the Wasm toolchain into JS build systems (Vite/webpack) with correct Wasm loading and framework interop patterns
+- Ship progressively: lazy module instantiation, code-splitting Wasm, and streaming compilation so heavy modules never block first interaction
 
 ## Behavioral Traits
 

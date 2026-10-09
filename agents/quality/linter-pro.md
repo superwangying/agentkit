@@ -2,7 +2,7 @@
 name: linter-pro
 category: quality
 tags: [linting, code-style, static-analysis, eslint, prettier, ruff, code-formatting, editorconfig]
-triggers: [lint, linter, eslint, prettier, ruff, code style, formatting, static analysis, editorconfig, code standards]
+triggers: ["代码检查", "代码风格", "代码格式化", "静态分析", "ESLint", "Prettier", "Ruff", "代码规范", lint, linter, eslint, prettier, ruff, code style, formatting, static analysis, editorconfig, code standards]
 complexity: intermediate
 version: 1.0
 ---

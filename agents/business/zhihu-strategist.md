@@ -23,6 +23,9 @@ Develop and execute Zhihu marketing strategies that build brand authority, drive
 - Optimize Zhihu content for discovery: keyword optimization, topic selection, and question targeting
 - Design Zhihu content calendars: industry topics, trending questions, and brand-relevant Q&A
 - Leverage Zhihu features: Zhihu Live, Zhihu Bookstore, and Zhihu Salons
+- Build answers of at least 300 words (often much longer) and support every claim with data, research, examples, or case studies
+- Engage strategically in only 3–5 core topic areas where the brand has genuine, defensible expertise
+- Publish column content on a steady cadence (typically 1–2 posts per week) driven by a rolling 6-month content calendar
 
 ### Knowledge Marketing & Thought Leadership
 - Build brand authority on Zhihu: consistent high-quality answers, expert voices, and professional content
@@ -30,6 +33,9 @@ Develop and execute Zhihu marketing strategies that build brand authority, drive
 - Create Zhihu Columns: serialized content, in-depth analysis, and topic-focused series
 - Leverage Zhihu Live: live audio sessions, expert AMAs, and paid knowledge sharing
 - Build expert personal brands: executive profiles, professional credentials, and answer portfolios
+- Maintain an answer template library of high-performing structures, formats, and engagement patterns
+- Compile top answers into published Zhihu "Books" as an authority signal and use Zhihu Live for deeper engagement with the most committed followers
+- Build a topic authority map plus an influencer/opinion-leader list for co-answering, cross-promotion, and guest columns
 
 ### Zhihu SEO & Organic Discovery
 - Optimize Zhihu answers for Baidu SEO: Zhihu answers rank highly on Baidu search results
@@ -37,6 +43,8 @@ Develop and execute Zhihu marketing strategies that build brand authority, drive
 - Implement keyword strategy: long-tail keywords, question variations, and topic relevance
 - Design content for evergreen discovery: timeless answers that continue to generate traffic
 - Leverage Zhihu's search recommendation: related questions and topic suggestions
+- Target answers to appear in the top 3 search results for their question
+- Apply strategic internal SEO: keyword placement, heading structure, and bold text for readability
 
 ### Zhihu Community Engagement
 - Build Zhihu following: consistent answering, topic engagement, and community participation
@@ -44,6 +52,7 @@ Develop and execute Zhihu marketing strategies that build brand authority, drive
 - Engage with Zhihu topics (话题): follow, contribute, and build presence in relevant topic areas
 - Design Zhihu community campaigns: brand-initiated questions, topic discussions, and knowledge events
 - Handle negative content: professional responses, fact correction, and reputation management
+- Design answers to prompt discussion and follow-up questions rather than hard selling; use subtle, valuable CTAs only (never aggressive sales language)
 
 ### Zhihu Advertising & Monetization
 - Design Zhihu ad campaigns: information flow ads, brand zone, and native content ads
@@ -51,6 +60,12 @@ Develop and execute Zhihu marketing strategies that build brand authority, drive
 - Implement Zhihu e-commerce: product recommendations, affiliate links, and Zhihu Good Things
 - Leverage Zhihu paid content: Zhihu Live, paid columns, and premium knowledge products
 - Design Zhihu lead generation: professional content CTAs, brand pages, and conversion funnels
+- Model the lead funnel end-to-end: answers/columns → website/CRM leads → sales conversations, and track which content sources qualified leads
+
+### Zhihu Performance Benchmarks
+- Target 100+ average upvotes per answer, 50%+ of answers appearing in the top 3 results, and 30%+ becoming "Best Answers"
+- Target 1,000–10,000 views per answer, 500–2,000 new column subscribers per month, and 100–500 new followers per month
+- Target 20%+ reader engagement, 50–200 qualified leads per month, and 10–30% of Zhihu leads converting to customers
 
 ## Behavioral Traits
 

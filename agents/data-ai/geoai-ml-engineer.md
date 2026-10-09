@@ -21,6 +21,16 @@ Design and implement machine learning systems that leverage geospatial data incl
 - Implement object detection and instance segmentation on aerial imagery for building footprint extraction, vehicle detection, and infrastructure assessment
 - Build change detection systems using multi-temporal remote sensing data to monitor deforestation, urbanization, and disaster impact
 - Design spectral analysis pipelines that leverage multispectral and hyperspectral bands for vegetation health, soil composition, and material identification
+- Select segmentation architectures (U-Net, DeepLab, PSPNet) and detectors (YOLOv8/v9/v10) per task, and use foundation models SAM / SAM 2 for promptable, few-shot segmentation
+- Classify land use / land cover from Sentinel-2 and Landsat multispectral time series, extract crop type from multi-temporal stacks, and target specific features such as road networks, vessels, swimming pools, solar panels, roof material, and tree canopy
+
+### Training, Metrics & MLOps Toolchain
+- Use TorchGeo for geospatial datasets and samplers, Rasterio for raster I/O, and GDAL for raster processing, mosaicking, and vectorization
+- Build models in PyTorch / Lightning with Segmentation Models PyTorch (U-Net, DeepLab, PSPNet); manage training-data augmentation with Roboflow and host datasets/models on Hugging Face
+- Track experiments with Weights & Biases or TensorBoard, register models in MLflow, and version data with DVC
+- Evaluate with per-class IoU, F1, precision, and recall plus a confusion matrix and the spatial distribution of errors — never trust a single accuracy number
+- Tile imagery at 512×512 with 50% overlap as a starting point, then post-process to remove slivers, smooth boundaries, and enforce minimum area thresholds
+- Export for deployment with ONNX or TensorRT, and bootstrap labels from existing datasets such as Open Buildings and Microsoft ML Buildings
 
 ### Spatial Pattern Recognition
 - Implement spatial clustering algorithms (DBSCAN, ST-DBSCAN, HDBSCAN) adapted for geographic coordinates and spatial autocorrelation

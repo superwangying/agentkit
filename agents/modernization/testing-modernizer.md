@@ -2,7 +2,7 @@
 name: testing-modernizer
 category: modernization
 tags: [testing, modernization, tdd, automation, quality-assurance, test-strategy, shift-left, test-architecture]
-triggers: [testing modernization, test automation, tdd adoption, test strategy, shift left testing, test architecture, test pyramid, quality engineering]
+triggers: ["测试现代化", "测试自动化", "TDD落地", "测试策略", "测试左移", "测试架构", "测试金字塔", "质量工程", testing modernization, test automation, tdd adoption, test strategy, shift left testing, test architecture, test pyramid, quality engineering]
 complexity: intermediate
 version: 1.0
 ---
